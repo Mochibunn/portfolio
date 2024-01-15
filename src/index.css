@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Mynerve";
+  src: url("../src/assets/fonts/Mynerve-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Caveat Brush";
+  src: url("../src/assets/fonts/CaveatBrush-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Monocraft";
+  src: url("../src/assets/fonts/Monocraft.ttf");
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* line-height: 1.5; */
+  /* font-weight: 400; */
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  background-color: #181a1b;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#cube0, #cube2 {
+  background-color: #282a36;
+}
+
+#cube1, #cube3 {
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+.z-1 {
+  z-index: 1;
+}
+
+.tabClass {
+  outline: transparent solid 2px;
+  outline-offset: 2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: text;
+  user-select: text;
+}
+
+.cm-editor {
+  height: 100vh !important;
+}
+
+.cm-editor * {
+  overflow: wrap !important;
+  font-family: "Monocraft";
+}
+
+.cm-lineNumbers {
+  margin-left: 0.5em;
+}
+
+.cm-gutterElement:has(.cm-activeLineGutter) {
+  border-radius: 10px 0 0 10px;
+}
+
+#hello::after {
+  content: "✨";
+  font-size: 4rem;
+  vertical-align: middle;
+}
+
+.codeGradient {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(24, 26, 27, 1) 0%,
+    rgba(16, 132, 208, 0) 85%
+  );
+}
