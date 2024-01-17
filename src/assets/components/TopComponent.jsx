@@ -32,6 +32,7 @@ const TopComponent = () => {
                 <div
                   contentEditable
                   suppressContentEditableWarning
+                  spellCheck="false"
                   className="tabClass text-sm"
                 >
                   Mochibun.me

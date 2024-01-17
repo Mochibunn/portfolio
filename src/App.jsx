@@ -6,7 +6,7 @@ function App() {
     <>
       <TopComponent />
       <HelloComponent />
-      
+      <script src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js" crossOrigin="anonymous"></script>
     </>
   );
 }
