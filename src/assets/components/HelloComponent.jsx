@@ -4,7 +4,9 @@ const HelloComponent = () => {
   return (
     <div className="min-h-[400px] mx-4 pb-4">
       <div className="flex justify-center">
-        
+        <Parallax speed={20}>
+          <div></div>
+        </Parallax>
         <h1 className="text-[8rem] py-6 font-mynerve" id="hello">
           Hello!
         </h1>
