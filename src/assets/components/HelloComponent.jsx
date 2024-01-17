@@ -1,12 +1,15 @@
 import { Parallax } from "react-scroll-parallax";
+import Sparkles from "./Sparkles";
 
 const HelloComponent = () => {
   return (
     <div className="min-h-[400px] mx-4 pb-4">
       <div className="flex justify-center">
         <Parallax speed={20}>
-          <div></div>
         </Parallax>
+        <div>
+          <Sparkles/>
+        </div>
           <h1
             className="text-[8rem] z-text py-6 font-mynerve font-bold"
             id="hello"

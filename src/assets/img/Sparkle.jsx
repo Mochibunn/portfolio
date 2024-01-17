@@ -1,4 +1,4 @@
-const Sparkles = () => {
+const Sparkle = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -18,4 +18,4 @@ const Sparkles = () => {
   );
 };
 
-export default Sparkles;
+export default Sparkle;
