@@ -7,15 +7,30 @@ const HelloComponent = () => {
         <Parallax speed={20}>
           <div></div>
         </Parallax>
-        <h1 className="text-[8rem] py-6 font-mynerve" id="hello">
-          Hello!
-        </h1>
+          <h1
+            className="text-[8rem] z-text py-6 font-mynerve font-bold"
+            id="hello"
+          >
+            Hello!
+          </h1>
       </div>
       <p className="text-xl mb-2"></p>
       <img src="../src/assets/img/1.jpg" className="rounded-xl" />
       <p className="text-xl mt-2">
         This is just some more texty text to fill in this empty space in the
-        div, you know!
+        div, you know! Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        Quos reiciendis quia provident facilis commodi error, in rem. Rem earum
+        impedit, soluta saepe ad veritatis voluptate dolore nostrum pariatur
+        assumenda corporis. Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Amet, odio nam! Porro libero quas dolorem eveniet harum id tenetur
+        illo recusandae a quisquam optio voluptatibus rerum, adipisci pariatur
+        cumque provident? Lorem ipsum dolor sit amet, consectetur adipisicing
+        elit. Animi accusantium quam amet ex nobis asperiores esse deleniti,
+        omnis distinctio impedit quae atque, placeat sapiente ad rerum expedita
+        assumenda aliquid. Consectetur! Lorem ipsum dolor sit amet consectetur,
+        adipisicing elit. Laudantium incidunt odio facere ea rem optio
+        voluptatum aliquid a! Error ducimus necessitatibus repellendus incidunt
+        eos nemo vero tempore tenetur quidem a.
       </p>
     </div>
   );
