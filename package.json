@@ -14,8 +14,10 @@
     "@codemirror/lang-markdown": "^6.2.3",
     "@codemirror/language-data": "^6.3.1",
     "@codemirror/view": "^6.22.3",
+    "@gsap/react": "^2.0.2",
     "@uiw/codemirror-theme-dracula": "^4.21.21",
     "@uiw/react-codemirror": "^4.21.21",
+    "gsap": "^3.12.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scroll-parallax": "^3.4.5"
@@ -31,6 +33,6 @@
     "eslint-plugin-react-refresh": "^0.4.5",
     "postcss": "^8.4.32",
     "tailwindcss": "^3.3.6",
-    "vite": "^5.0.8"
+    "vite": "^5.0.11"
   }
 }
