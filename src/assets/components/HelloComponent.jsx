@@ -13,7 +13,7 @@ const HelloComponent = () => {
           Hello!
         </h1>
         <div>
-          <Sparkles />
+          <Sparkles minX={180} maxX={240} minY={180} maxY={240} />
         </div>
       </div>
       <p className="text-xl mb-2"></p>

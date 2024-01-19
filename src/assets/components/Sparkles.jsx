@@ -2,9 +2,11 @@ import { useRef } from "react";
 import "../styles/sparkles.css";
 import Sparkle from "../img/Sparkle.jsx";
 
-const Sparkles = () => {
+const Sparkles = (minX, maxX, minY, maxY) => {
+  console.log(`minX:\n`, minX);
+  console.log(`maxX:\n`, maxX);
   const styles = useRef({
-    left: Math.trunc(Math.random() * (240 - 180) + 180),
+    left: Math.trunc(Math.random() * (maxX - minX) + minX),
   });
 
   const randomize = (min, max) => {
