@@ -1,34 +1,28 @@
 import { useRef } from "react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
 import "../styles/sparkles.css";
 import Sparkle from "../img/Sparkle.jsx";
 
 const Sparkles = () => {
-  const container = useRef();
-  useGSAP(
-    () => {
-      gsap.to(".star", {
-        y: "random(-50, 50)",
-        ease: "power2.inOut",
-        duration: "random(1.5, 2.2)",
-        repeat: -1,
-        yoyo: "true",
-        stagger: 0.23,
-      });
-    },
-    { scope: container }
-  );
+  const styles = useRef({
+    left: Math.trunc(Math.random() * (240 - 180) + 180),
+  });
+
+  const randomize = (min, max) => {
+    const a = Math.trunc(Math.random() * (max - min) + min);
+    const msg = `${a}`;
+    console.log(msg);
+    return `${a}px`;
+  };
 
   return (
-    <div ref={container} className="relative z-20">
-      <div className="center z-10 star">
+    <div className="z-20">
+      <div className="center z-10 starGroup1" id="star0" style={styles.current}>
         <Sparkle />
       </div>
-      <div className="center z-10 star ml-20">
+      <div className="center z-10 starGroup1" id="star1">
         <Sparkle />
       </div>
-      <div className="center z-10 star ml-40">
+      <div className="center z-10 starGroup1" id="star2">
         <Sparkle />
       </div>
     </div>
@@ -36,3 +30,4 @@ const Sparkles = () => {
 };
 
 export default Sparkles;
+//TODO finish up randomization for at least 1 sparkle

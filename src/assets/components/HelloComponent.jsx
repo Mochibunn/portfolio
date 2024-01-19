@@ -4,18 +4,17 @@ import Sparkles from "./Sparkles";
 const HelloComponent = () => {
   return (
     <div className="min-h-[400px] mx-4 pb-4">
-      <div className="flex justify-center">
-        <Parallax speed={20}>
-        </Parallax>
+      <div className="flex justify-center relative">
+        <Parallax speed={20}></Parallax>
+        <h1
+          className="text-[8rem] z-text py-6 font-mynerve font-bold"
+          id="hello"
+        >
+          Hello!
+        </h1>
         <div>
-          <Sparkles/>
+          <Sparkles />
         </div>
-          <h1
-            className="text-[8rem] z-text py-6 font-mynerve font-bold"
-            id="hello"
-          >
-            Hello!
-          </h1>
       </div>
       <p className="text-xl mb-2"></p>
       <img src="../src/assets/img/1.jpg" className="rounded-xl" />
