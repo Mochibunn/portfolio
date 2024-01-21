@@ -87,7 +87,7 @@ body {
 }
 
 #hello::after {
-  content: "✨";
+  /* content: "✨"; */
   font-size: 4rem;
   vertical-align: middle;
 }
