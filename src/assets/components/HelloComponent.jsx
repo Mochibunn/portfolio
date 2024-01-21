@@ -1,5 +1,6 @@
 import { Parallax } from "react-scroll-parallax";
 import Sparkles from "./Sparkles";
+import SparkleComponent from "./SparkleComponent";
 
 const HelloComponent = () => {
   return (
@@ -13,7 +14,33 @@ const HelloComponent = () => {
           Hello!
         </h1>
         <div>
-          <Sparkles minX={180} maxX={240} minY={180} maxY={240} />
+          <SparkleComponent
+            minX={180}
+            maxX={240}
+            minY={50}
+            maxY={100}
+            minS={0.5}
+            maxS={1.25}
+            stagger={0}
+          />
+          <SparkleComponent
+            minX={650}
+            maxX={790}
+            minY={100}
+            maxY={280}
+            minS={0.5}
+            maxS={1.25}
+            stagger={0.25}
+          />
+          <SparkleComponent
+            minX={800}
+            maxX={900}
+            minY={120}
+            maxY={220}
+            minS={0.5}
+            maxS={1.25}
+            stagger={0.33}
+          />
         </div>
       </div>
       <p className="text-xl mb-2"></p>

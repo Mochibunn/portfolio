@@ -2,11 +2,11 @@ import { useRef } from "react";
 import "../styles/sparkles.css";
 import Sparkle from "../img/Sparkle.jsx";
 
-const Sparkles = (minX, maxX, minY, maxY) => {
-  console.log(`minX:\n`, minX);
-  console.log(`maxX:\n`, maxX);
+const Sparkles = ({ minX, maxX, minY, maxY, minS, maxS }) => {
   const styles = useRef({
-    left: Math.trunc(Math.random() * (maxX - minX) + minX),
+    // left: Math.trunc(Math.random() * (maxX - minX) + minX),
+    // top: Math.trunc(Math.random() * (maxY - minY) + minY),
+    transform: `scale(${Math.random() * (maxS - minS) + minS})`,
   });
 
   const randomize = (min, max) => {
@@ -17,14 +17,8 @@ const Sparkles = (minX, maxX, minY, maxY) => {
   };
 
   return (
-    <div className="z-20">
-      <div className="center z-10 starGroup1" id="star0" style={styles.current}>
-        <Sparkle />
-      </div>
-      <div className="center z-10 starGroup1" id="star1">
-        <Sparkle />
-      </div>
-      <div className="center z-10 starGroup1" id="star2">
+    <div className="z-20 absolute">
+      <div className="absolute" style={styles.current}>
         <Sparkle />
       </div>
     </div>
@@ -32,4 +26,3 @@ const Sparkles = (minX, maxX, minY, maxY) => {
 };
 
 export default Sparkles;
-//TODO finish up randomization for at least 1 sparkle
