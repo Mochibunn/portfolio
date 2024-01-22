@@ -3,7 +3,6 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Parallax } from "react-scroll-parallax";
-import Sparkles from "./Sparkles";
 import SparkleComponent from "./SparkleComponent";
 
 const HelloComponent = () => {
@@ -12,7 +11,9 @@ const HelloComponent = () => {
   useGSAP(
     () => {
       gsap.registerPlugin(ScrollTrigger);
-      gsap.from(".hello", {
+      const timeline = gsap.timeline();
+
+      timeline.from(".hello", {
         scrollTrigger: {
           trigger: ".hello",
           scrub: 2,
@@ -25,9 +26,10 @@ const HelloComponent = () => {
         opacity: 0,
         duration: 1.5,
       });
-    }, { scope: container }
+    },
+    { scope: container }
   );
-  
+
   return (
     <div className="min-h-[400px] mx-4 pb-4" ref={container}>
       <div className="flex justify-center relative">
@@ -51,12 +53,12 @@ const HelloComponent = () => {
             maxS={1.25}
             stagger={0.25}
           />
-        <h1
-          className="text-[8rem] z-text py-6 font-mynerve font-bold hello"
-          id="hello"
-        >
-          Hello!
-        </h1>
+          <h1
+            className="text-[8rem] z-text py-6 font-mynerve font-bold hello select-none pointer-events-none"
+            id="hello"
+          >
+            Hello!
+          </h1>
           <SparkleComponent
             minX={75}
             maxX={80}
@@ -78,7 +80,11 @@ const HelloComponent = () => {
         </div>
       </div>
       <p className="text-xl mb-2"></p>
-      <img src="https://www.thesprucepets.com/thmb/PYJiButDwZb4JNzGE1gwfsI6YYs=/1733x0/filters:no_upscale():strip_icc()/Stocksy_txp14acff329Kw100_Medium_1360769-5aec7baefa6bcc00373c6cb7.jpg" className="rounded-xl w-[640px] mx-auto mb-12" alt="A bunny rabbit." />
+      <img
+        src="https://www.thesprucepets.com/thmb/PYJiButDwZb4JNzGE1gwfsI6YYs=/1733x0/filters:no_upscale():strip_icc()/Stocksy_txp14acff329Kw100_Medium_1360769-5aec7baefa6bcc00373c6cb7.jpg"
+        className="rounded-xl w-[640px] mx-auto mb-12"
+        alt="A bunny rabbit."
+      />
       <p className="text-xl mt-2 h-screen">
         This is just some more texty text to fill in this empty space in the
         div, you know! Lorem ipsum, dolor sit amet consectetur adipisicing elit.
