@@ -6,8 +6,8 @@ import Sparkles from "./Sparkles";
 const SparkleComponent = ({ minX, maxX, minY, maxY, minS, maxS, stagger }) => {
   const container = useRef();
   const styles = useRef({
-    left: Math.trunc(Math.random() * (maxX - minX) + minX),
-    top: Math.trunc(Math.random() * (maxY - minY) + minY),
+    left: `${Math.trunc(Math.random() * (maxX - minX) + minX)}vw`,
+    top: `${Math.trunc(Math.random() * (maxY - minY) + minY)}vh`,
 });
 
   useGSAP(

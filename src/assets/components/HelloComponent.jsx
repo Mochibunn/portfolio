@@ -34,19 +34,19 @@ const HelloComponent = () => {
         <Parallax speed={20}></Parallax>
         <div>
           <SparkleComponent
-            minX={180}
-            maxX={240}
-            minY={50}
-            maxY={100}
+            minX={10}
+            maxX={12}
+            minY={6}
+            maxY={8}
             minS={0.5}
             maxS={1.25}
             stagger={0}
           />
           <SparkleComponent
-            minX={650}
-            maxX={790}
-            minY={100}
-            maxY={280}
+            minX={2}
+            maxX={5}
+            minY={10}
+            maxY={20}
             minS={0.5}
             maxS={1.25}
             stagger={0.25}
@@ -58,19 +58,19 @@ const HelloComponent = () => {
           Hello!
         </h1>
           <SparkleComponent
-            minX={800}
-            maxX={900}
-            minY={120}
-            maxY={220}
+            minX={75}
+            maxX={80}
+            minY={5}
+            maxY={15}
             minS={0.5}
             maxS={1.25}
             stagger={0.33}
           />
           <SparkleComponent
-            minX={760}
-            maxX={860}
-            minY={220}
-            maxY={260}
+            minX={82}
+            maxX={86}
+            minY={22}
+            maxY={26}
             minS={0.5}
             maxS={1.25}
             stagger={0.69}
@@ -78,7 +78,7 @@ const HelloComponent = () => {
         </div>
       </div>
       <p className="text-xl mb-2"></p>
-      <img src="https://www.thesprucepets.com/thmb/PYJiButDwZb4JNzGE1gwfsI6YYs=/1733x0/filters:no_upscale():strip_icc()/Stocksy_txp14acff329Kw100_Medium_1360769-5aec7baefa6bcc00373c6cb7.jpg" className="rounded-xl w-[640px] mx-auto mb-12" />
+      <img src="https://www.thesprucepets.com/thmb/PYJiButDwZb4JNzGE1gwfsI6YYs=/1733x0/filters:no_upscale():strip_icc()/Stocksy_txp14acff329Kw100_Medium_1360769-5aec7baefa6bcc00373c6cb7.jpg" className="rounded-xl w-[640px] mx-auto mb-12" alt="A bunny rabbit." />
       <p className="text-xl mt-2 h-screen">
         This is just some more texty text to fill in this empty space in the
         div, you know! Lorem ipsum, dolor sit amet consectetur adipisicing elit.
