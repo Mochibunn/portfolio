@@ -17,7 +17,7 @@ const Sparkles = ({ minX, maxX, minY, maxY, minS, maxS }) => {
   };
 
   return (
-    <div className="z-20 absolute">
+    <div className="absolute z-20">
       <div className="absolute" style={styles.current}>
         <Sparkle />
       </div>

@@ -38,6 +38,15 @@
   background-color: #181a1b;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  scrollbar-width: none;
+  scrollbar-color: #000000;
+}
+
 body {
   margin: 0;
   padding: 0;

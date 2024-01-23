@@ -8,7 +8,7 @@ const SparkleComponent = ({ minX, maxX, minY, maxY, minS, maxS, stagger }) => {
   const styles = useRef({
     left: `${Math.trunc(Math.random() * (maxX - minX) + minX)}vw`,
     top: `${Math.trunc(Math.random() * (maxY - minY) + minY)}vh`,
-});
+  });
 
   useGSAP(
     () => {

@@ -13,13 +13,25 @@ const HelloComponent = () => {
       gsap.registerPlugin(ScrollTrigger);
       const timeline = gsap.timeline();
 
+      timeline.from(".sparkle", {
+        scrollTrigger: {
+          trigger: ".test",
+          scrub: 1.5,
+          // markers: true,
+          start: "bottom bottom",
+          end: "center center",
+        },
+        ease: "none",
+        opacity: 0,
+        duration:1.5,
+      });
       timeline.from(".hello", {
         scrollTrigger: {
           trigger: ".hello",
           scrub: 2,
           start: "center center",
           end: "top top",
-          markers: "true",
+          // markers: "true",
           pin: true,
         },
         ease: "none",
@@ -31,61 +43,80 @@ const HelloComponent = () => {
   );
 
   return (
-    <div className="min-h-[400px] mx-4 pb-4" ref={container}>
-      <div className="flex justify-center relative">
+    <div className="min-h-[400px] mx-4 pb-4 overflow-visible z-30" ref={container}>
+      <div className="relative flex justify-center test">
         <Parallax speed={20}></Parallax>
         <div>
-          <SparkleComponent
-            minX={10}
-            maxX={12}
-            minY={6}
-            maxY={8}
-            minS={0.5}
-            maxS={1.25}
-            stagger={0}
-          />
-          <SparkleComponent
-            minX={2}
-            maxX={5}
-            minY={10}
-            maxY={20}
-            minS={0.5}
-            maxS={1.25}
-            stagger={0.25}
-          />
+          <div className="sparkle">
+            <SparkleComponent
+              minX={10}
+              maxX={12}
+              minY={6}
+              maxY={8}
+              minS={0.5}
+              maxS={1.25}
+              stagger={0}
+            />
+          </div>
+          <div className="sparkle">
+            <SparkleComponent
+              minX={2}
+              maxX={5}
+              minY={10}
+              maxY={20}
+              minS={0.5}
+              maxS={1.25}
+              stagger={0.25}
+            />
+          </div>
+          <div className="sparkle">
+            <SparkleComponent
+              minX={25}
+              maxX={36}
+              minY={6}
+              maxY={9}
+              minS={0.5}
+              maxS={1.25}
+              stagger={0.25}
+            />
+          </div>
           <h1
             className="text-[8rem] z-text py-6 font-mynerve font-bold hello select-none pointer-events-none"
             id="hello"
           >
             Hello!
           </h1>
-          <SparkleComponent
-            minX={75}
-            maxX={80}
-            minY={5}
-            maxY={15}
-            minS={0.5}
-            maxS={1.25}
-            stagger={0.33}
-          />
-          <SparkleComponent
-            minX={82}
-            maxX={86}
-            minY={22}
-            maxY={26}
-            minS={0.5}
-            maxS={1.25}
-            stagger={0.69}
-          />
+          <div className="sparkle">
+            <SparkleComponent
+              minX={75}
+              maxX={80}
+              minY={6}
+              maxY={15}
+              minS={0.5}
+              maxS={1.25}
+              stagger={0.33}
+            />
+          </div>
+          <div className="sparkle">
+            <SparkleComponent
+              minX={82}
+              maxX={86}
+              minY={22}
+              maxY={26}
+              minS={0.5}
+              maxS={1.25}
+              stagger={0.69}
+            />
+          </div>
         </div>
       </div>
-      <p className="text-xl mb-2"></p>
+      <p className="mb-2 text-xl"></p>
       <img
         src="https://www.thesprucepets.com/thmb/PYJiButDwZb4JNzGE1gwfsI6YYs=/1733x0/filters:no_upscale():strip_icc()/Stocksy_txp14acff329Kw100_Medium_1360769-5aec7baefa6bcc00373c6cb7.jpg"
         className="rounded-xl w-[640px] mx-auto mb-12"
         alt="A bunny rabbit."
       />
-      <p className="text-xl mt-2 h-screen">
+      <p className="h-screen mt-2 text-xl">
         This is just some more texty text to fill in this empty space in the
         div, you know! Lorem ipsum, dolor sit amet consectetur adipisicing elit.
         Quos reiciendis quia provident facilis commodi error, in rem. Rem earum

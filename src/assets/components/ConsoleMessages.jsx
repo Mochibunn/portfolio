@@ -1,6 +1,6 @@
 const ConsoleMessages = () => {
   const msg =
-    "%c 🐰 My site is very new. Lettuce 🥬🐇 know if you find any issues 🐰";
+    "%c🐰 My site is very new. Lettuce 🥬🐇 know if you find any issues 🐰";
   const styles = [
     "font-size: 12px",
     "color: #e69a8dff",

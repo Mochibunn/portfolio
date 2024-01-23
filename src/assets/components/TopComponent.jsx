@@ -8,7 +8,7 @@ const TopComponent = () => {
         className="min-h-[35px] bg-[#343742] flex flex-col justify-end"
         aria-hidden
       >
-        <div className="ml-1 flex items-center justify-start gap-4 flex-shrink-0">
+        <div className="flex items-center justify-start flex-shrink-0 gap-4 ml-1">
           <OSXbuttons />
           <div className="flex flex-grow">
             <div className="flex bg-[#282a36] rounded-t-lg mt-1 h-[30px] pt-1 pl-[17px] pr-[25px] z-1 relative">
@@ -33,7 +33,7 @@ const TopComponent = () => {
                   contentEditable
                   suppressContentEditableWarning
                   spellCheck="false"
-                  className="tabClass text-sm"
+                  className="text-sm tabClass"
                 >
                   Mochibun.me
                 </div>
@@ -43,9 +43,9 @@ const TopComponent = () => {
         </div>
       </div>
       {/* End of top tab part */}
-      <div className="z-10 min-h-full relative">
+      <div className="relative z-10 min-h-full">
         <CodeEdit />
-        <div className="codeGradient absolute top-0 z-20 min-w-full min-h-full pointer-events-none"></div>
+        <div className="absolute top-0 z-20 min-w-full min-h-full pointer-events-none codeGradient"></div>
       </div>
     </div>
   );
