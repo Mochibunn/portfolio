@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        mynerve: ["Mynerve", "sans-serif"],
+        singleday: ["SingleDay", "sans-serif"],
         "caveat-brush": ["Caveat Brush", "sans-serif"],
         monocraft: ["Monocraft", "monospace"],
       },

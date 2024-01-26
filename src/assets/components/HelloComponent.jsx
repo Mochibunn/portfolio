@@ -5,92 +5,58 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Parallax } from "react-scroll-parallax";
 import SparkleComponent from "./SparkleComponent";
 
+gsap.registerPlugin(useGSAP, ScrollTrigger);
+
 const HelloComponent = () => {
   const container = useRef();
-  const main = useRef();
 
   useGSAP(
     () => {
-      gsap.registerPlugin(ScrollTrigger);
       const tl = gsap.timeline();
 
-      tl.from(".bae", {
-        opacity: 0,
-        x: 200,
-        rotateZ: 360,
-        scrollTrigger: {
-          trigger: ".bae",
-          scrub: 2,
-        },
-        ease: "none",
-      });
       tl.from(".sparkle", {
         scrollTrigger: {
           trigger: ".test",
           scrub: 2,
           // markers: true,
           start: "bottom bottom",
-          // end: "center center",
+          end: "+=200",
+          // pin: true,
         },
         ease: "none",
         opacity: 0,
         y: 500,
         duration: 4,
       });
-      gsap.from("#workPls", {
+      gsap.from("#hello", {
         scrollTrigger: {
-          trigger: "#workPls",
+          trigger: "#hello",
           scrub: 1,
           start: "bottom 80%",
           end: "+=800",
           // markers: "true",
-          // pin: true,
+          pin: true,
         },
-        // ease: "none",
+        ease: "none",
         opacity: 0,
-        rotate: 20,
         // delay: 0.2,
-        // duration: 3,
-        x: 100,
+        duration: 3,
       });
     },
     { scope: container }
   );
 
-  useGSAP(
-    () => {
-      const boxes = gsap.utils.toArray(".box");
-      boxes.forEach((box) => {
-        gsap.to(box, {
-          x: 150,
-          scrollTrigger: {
-            trigger: box,
-            start: "bottom bottom",
-            end: "top 20%",
-            scrub: 2,
-            // markers: true,
-          },
-        });
-      });
-    },
-    { scope: main }
-  );
-
   return (
     <>
-      <div ref={main}>
-        <div className="box gradient-blue">box</div>
-        <div className="box gradient-blue">box</div>
-        <div className="box gradient-blue">box</div>
-      </div>
+      <div></div>
       <div
         className="min-h-[400px] mx-4 pb-4 overflow-visible z-30"
         ref={container}
       >
-        <div className="bae">🥰</div>
+        {/* <div className="bae">🥰</div> */}
         <div className="relative flex justify-center test">
           <Parallax speed={20}></Parallax>
-          <div>
+          <div className="">
             <div className="sparkle">
               <SparkleComponent
                 minX={10}
@@ -147,8 +113,8 @@ const HelloComponent = () => {
               />
             </div>
             <div
-              className="text-[8rem] z-text py-6 font-mynerve font-bold hello select-none pointer-events-none"
-              id="workPls"
+              className="text-[8rem] z-text py-6 font-singleday font-bold hello select-none pointer-events-none"
+              id="hello"
             >
               Hello!
             </div>
