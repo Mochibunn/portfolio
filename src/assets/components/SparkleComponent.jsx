@@ -41,3 +41,5 @@ const SparkleComponent = ({ minX, maxX, minY, maxY, minS, maxS, stagger }) => {
 };
 
 export default SparkleComponent;
+
+//Randomly places a sparkle and wiggles it up and down

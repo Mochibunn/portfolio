@@ -9,13 +9,6 @@ const Sparkles = ({ minX, maxX, minY, maxY, minS, maxS }) => {
     transform: `scale(${Math.random() * (maxS - minS) + minS})`,
   });
 
-  const randomize = (min, max) => {
-    const a = Math.trunc(Math.random() * (max - min) + min);
-    const msg = `${a}`;
-    console.log(msg);
-    return `${a}px`;
-  };
-
   return (
     <div className="absolute z-20">
       <div className="absolute" style={styles.current}>
@@ -26,3 +19,5 @@ const Sparkles = ({ minX, maxX, minY, maxY, minS, maxS }) => {
 };
 
 export default Sparkles;
+
+// Takes the sparkle SVG and randomly scales is up or down
