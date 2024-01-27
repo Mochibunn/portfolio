@@ -4,6 +4,7 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Parallax } from "react-scroll-parallax";
 import SparkleComponent from "./SparkleComponent";
+import MarqueeComponent from "./MarqueeComponent";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -19,7 +20,7 @@ const HelloComponent = () => {
           trigger: ".test",
           scrub: 2,
           start: "top 90%",
-          end: "+=500",
+          end: "+=800",
           id: "sparkle",
           // markers: {
           //   startColor: "orange",
@@ -44,6 +45,7 @@ const HelloComponent = () => {
         },
         ease: "none",
         opacity: 0,
+        color: "#ffffff",
         // delay: 0.2,
         duration: 3,
       });
@@ -53,13 +55,10 @@ const HelloComponent = () => {
 
   return (
     <>
-      <div></div>
-      <div
-        className="min-h-[400px] mx-4 pb-4 overflow-visible z-30"
-        ref={container}
-      >
+      <div className="min-h-[400px] helloMain" ref={container}>
         {/* <div className="bae">🥰</div> */}
-        <div className="relative flex justify-center test">
+        <div className="h-1/2"></div>
+        <div className="relative flex justify-center min-h-screen test purpGradient">
           <Parallax speed={20}></Parallax>
           <div className="">
             <div className="sparkle">
@@ -118,35 +117,47 @@ const HelloComponent = () => {
               />
             </div>
             <div
-              className="text-[8rem] z-text py-6 font-singleday font-bold hello select-none pointer-events-none"
+              className="text-[8rem] z-text py-6 font-singleday font-bold select-none pointer-events-none h-50 text-star"
               id="hello"
             >
               Hello!
             </div>
           </div>
         </div>
-        <p className="mb-2 text-xl"></p>
-        <img
-          src="https://www.thesprucepets.com/thmb/PYJiButDwZb4JNzGE1gwfsI6YYs=/1733x0/filters:no_upscale():strip_icc()/Stocksy_txp14acff329Kw100_Medium_1360769-5aec7baefa6bcc00373c6cb7.jpg"
-          className="rounded-xl w-[640px] mx-auto mb-12"
-          alt="A bunny rabbit."
-        />
-        <p className="h-screen mt-2 text-xl">
-          This is just some more texty text to fill in this empty space in the
-          div, you know! Lorem ipsum, dolor sit amet consectetur adipisicing
-          elit. Quos reiciendis quia provident facilis commodi error, in rem.
-          Rem earum impedit, soluta saepe ad veritatis voluptate dolore nostrum
-          pariatur assumenda corporis. Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Amet, odio nam! Porro libero quas dolorem eveniet
-          harum id tenetur illo recusandae a quisquam optio voluptatibus rerum,
-          adipisci pariatur cumque provident? Lorem ipsum dolor sit amet,
-          consectetur adipisicing elit. Animi accusantium quam amet ex nobis
-          asperiores esse deleniti, omnis distinctio impedit quae atque, placeat
-          sapiente ad rerum expedita assumenda aliquid. Consectetur! Lorem ipsum
-          dolor sit amet consectetur, adipisicing elit. Laudantium incidunt odio
-          facere ea rem optio voluptatum aliquid a! Error ducimus necessitatibus
-          repellendus incidunt eos nemo vero tempore tenetur quidem a.
-        </p>
+        <div className="relative bg-purp">
+          <div className="relative z-50">
+            <div className="w-[640px] mx-auto mb-12">
+              <img
+                src="https://www.thesprucepets.com/thmb/PYJiButDwZb4JNzGE1gwfsI6YYs=/1733x0/filters:no_upscale():strip_icc()/Stocksy_txp14acff329Kw100_Medium_1360769-5aec7baefa6bcc00373c6cb7.jpg"
+                className="rounded-xl"
+                alt="A bunny rabbit."
+              />
+              <h4 className="ml-3 italic text-gray-400">
+                Yup, I&apos;m a rabbit!
+              </h4>
+            </div>
+          </div>
+          <div className="absolute top-80 z-1">
+            <MarqueeComponent />
+          </div>
+          <p className="h-screen mx-10 mt-2 text-xl">
+            This is just some more texty text to fill in this empty space in the
+            div, you know! Lorem ipsum, dolor sit amet consectetur adipisicing
+            elit. Quos reiciendis quia provident facilis commodi error, in rem.
+            Rem earum impedit, soluta saepe ad veritatis voluptate dolore
+            nostrum pariatur assumenda corporis. Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Amet, odio nam! Porro libero quas
+            dolorem eveniet harum id tenetur illo recusandae a quisquam optio
+            voluptatibus rerum, adipisci pariatur cumque provident? Lorem ipsum
+            dolor sit amet, consectetur adipisicing elit. Animi accusantium quam
+            amet ex nobis asperiores esse deleniti, omnis distinctio impedit
+            quae atque, placeat sapiente ad rerum expedita assumenda aliquid.
+            Consectetur! Lorem ipsum dolor sit amet consectetur, adipisicing
+            elit. Laudantium incidunt odio facere ea rem optio voluptatum
+            aliquid a! Error ducimus necessitatibus repellendus incidunt eos
+            nemo vero tempore tenetur quidem a.
+          </p>
+        </div>
       </div>
     </>
   );
