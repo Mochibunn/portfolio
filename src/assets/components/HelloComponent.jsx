@@ -22,16 +22,16 @@ const HelloComponent = () => {
           start: "top 90%",
           end: "+=800",
           id: "sparkle",
-          // markers: {
-          //   startColor: "orange",
-          //   endColor: "white",
-          //   fontWeight: "bold",
-          // },
+          markers: {
+            startColor: "orange",
+            endColor: "white",
+            fontWeight: "bold",
+          },
         },
         ease: "none",
         opacity: 0,
         y: 500,
-        duration: 4,
+        // duration: 4,
       });
       gsap.from("#hello", {
         scrollTrigger: {
@@ -55,13 +55,12 @@ const HelloComponent = () => {
 
   return (
     <>
-      <div className="min-h-[400px] helloMain" ref={container}>
+      <div className="min-h-[1400px] helloMain" ref={container}>
         {/* <div className="bae">🥰</div> */}
-        <div className="h-1/2"></div>
-        <div className="relative flex justify-center min-h-screen test purpGradient">
-          <Parallax speed={20}></Parallax>
-          <div className="">
-            <div className="sparkle">
+        {/* <div className="h-[1000px]">{` `}</div> */}
+        <div className="relative flex justify-center purpGradient">
+          <div className="test">
+            <div className="relative sparkle">
               <SparkleComponent
                 minX={10}
                 maxX={12}
@@ -72,7 +71,7 @@ const HelloComponent = () => {
                 stagger={0}
               />
             </div>
-            <div className="sparkle">
+            <div className="relative sparkle">
               <SparkleComponent
                 minX={2}
                 maxX={5}
@@ -83,7 +82,7 @@ const HelloComponent = () => {
                 stagger={0.25}
               />
             </div>
-            <div className="sparkle">
+            <div className="relative sparkle">
               <SparkleComponent
                 minX={25}
                 maxX={36}
@@ -94,7 +93,7 @@ const HelloComponent = () => {
                 stagger={0.25}
               />
             </div>
-            <div className="sparkle">
+            <div className="relative sparkle">
               <SparkleComponent
                 minX={-2}
                 maxX={-8}
@@ -105,7 +104,7 @@ const HelloComponent = () => {
                 stagger={0.33}
               />
             </div>
-            <div className="sparkle">
+            <div className="relative sparkle">
               <SparkleComponent
                 minX={-10}
                 maxX={-15}
@@ -117,7 +116,7 @@ const HelloComponent = () => {
               />
             </div>
             <div
-              className="text-[8rem] z-text py-6 font-singleday font-bold select-none pointer-events-none h-50 text-star"
+              className="text-[8rem] z-text py-6 font-singleday font-bold select-none pointer-events-none text-star"
               id="hello"
             >
               Hello!
@@ -125,7 +124,7 @@ const HelloComponent = () => {
           </div>
         </div>
         <div className="relative bg-purp">
-          <div className="relative z-50">
+          <div className="relative">
             <div className="w-[640px] mx-auto mb-12">
               <img
                 src="https://www.thesprucepets.com/thmb/PYJiButDwZb4JNzGE1gwfsI6YYs=/1733x0/filters:no_upscale():strip_icc()/Stocksy_txp14acff329Kw100_Medium_1360769-5aec7baefa6bcc00373c6cb7.jpg"
@@ -140,7 +139,7 @@ const HelloComponent = () => {
           <div className="absolute top-80 z-1">
             <MarqueeComponent />
           </div>
-          <p className="h-screen mx-10 mt-2 text-xl">
+          <p className="h-[1000px] mx-10 mt-2 text-xl">
             This is just some more texty text to fill in this empty space in the
             div, you know! Lorem ipsum, dolor sit amet consectetur adipisicing
             elit. Quos reiciendis quia provident facilis commodi error, in rem.
