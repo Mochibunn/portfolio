@@ -15,9 +15,12 @@
     "@codemirror/language-data": "^6.4.0",
     "@codemirror/view": "^6.23.1",
     "@gsap/react": "^2.1.0",
+    "@motionone/utils": "^10.17.0",
     "@uiw/codemirror-theme-dracula": "^4.21.21",
     "@uiw/react-codemirror": "^4.21.21",
+    "framer-motion": "^11.0.3",
     "gsap": "^3.12.5",
+    "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scroll-parallax": "^3.4.5"

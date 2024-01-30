@@ -5,72 +5,112 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Parallax } from "react-scroll-parallax";
 import SparkleComponent from "./SparkleComponent";
 import MarqueeComponent from "./MarqueeComponent";
+import {
+  motion,
+  useScroll,
+  useSpring,
+  useTransform,
+  MotionValue,
+} from "framer-motion";
+import ParallaxText from "./Temp";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
+const useParallax = (value, distance) => {
+  return useTransform(value, [0, 1], [-distance, distance]);
+};
+
+const HelloText = () => {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({ target: ref });
+  const y = useParallax(scrollYProgress, 600);
+
+  return (
+    <div ref={ref}>
+      <div className="h-[500px]" />
+      <motion.h2
+        style={{ y }}
+        className="text-[8rem] z-50 py-6 font-singleday font-bold select-none pointer-events-none text-star"
+        transition={{
+          duration: 3,
+          ease: "easeInOut",
+          times: []
+        }}
+
+      >
+        Hello!
+      </motion.h2>
+    </div>
+  );
+};
+
 const HelloComponent = () => {
   const container = useRef();
+  // const target = useRef(null);
+  // const { scrollYProgress } = useScroll({ target: target });
+  const { scrollYProgress } = useScroll();
 
-  useGSAP(
-    () => {
-      const tl = gsap.timeline();
+  // useGSAP(
+  //   () => {
+  //     const tl = gsap.timeline();
 
-      tl.from(".sparkle", {
-        scrollTrigger: {
-          trigger: ".test",
-          scrub: 2,
-          start: "top 90%",
-          end: "+=800",
-          id: "sparkle",
-          markers: {
-            startColor: "orange",
-            endColor: "white",
-            fontWeight: "bold",
-          },
-        },
-        ease: "none",
-        opacity: 0,
-        y: 500,
-        // duration: 4,
-      });
-      gsap.from("#hello", {
-        scrollTrigger: {
-          trigger: "#hello",
-          scrub: 1,
-          start: "100 70%",
-          end: "+=600",
-          pin: true,
-          id: "hello",
-          // markers: "true",
-        },
-        ease: "none",
-        opacity: 0,
-        color: "#ffffff",
-        // delay: 0.2,
-        duration: 3,
-      });
-    },
-    { scope: container }
-  );
+  //     tl.from(".sparkle", {
+  //       scrollTrigger: {
+  //         trigger: ".test",
+  //         scrub: 2,
+  //         start: "top 90%",
+  //         end: "+=800",
+  //         id: "sparkle",
+  //         markers: {
+  //           startColor: "orange",
+  //           endColor: "white",
+  //           fontWeight: "bold",
+  //         },
+  //       },
+  //       ease: "none",
+  //       opacity: 0,
+  //       y: 500,
+  //       // duration: 4,
+  //     });
+  //     gsap.from("#hello", {
+  //       scrollTrigger: {
+  //         trigger: ".test",
+  //         scrub: 1,
+  //         start: "100% 70%",
+  //         end: "+=800",
+  //         pin: true,
+  //         id: "hello",
+  //         markers: "true",
+  //       },
+  //       ease: "none",
+  //       opacity: 0,
+  //       color: "#ffffff",
+  //       // delay: 0.2,
+  //       // duration: 3,
+  //     });
+  //   },
+  //   { scope: container }
+  // );
 
   return (
     <>
       <div className="min-h-[1400px] helloMain" ref={container}>
         {/* <div className="bae">🥰</div> */}
         {/* <div className="h-[1000px]">{` `}</div> */}
-        <div className="relative flex justify-center purpGradient">
-          <div className="test">
-            <div className="relative sparkle">
+        <div className="relative flex justify-center min-h-screen purpGradient">
+          <div className="overflow-visible test">
+            <div id="FOLDED_CONTENT">
+              {/* <div className="relative sparkle">
               <SparkleComponent
-                minX={10}
-                maxX={12}
+              minX={10}
+              maxX={12}
                 minY={6}
                 maxY={8}
                 minS={0.5}
                 maxS={1.25}
                 stagger={0}
               />
-            </div>
+              </div>
             <div className="relative sparkle">
               <SparkleComponent
                 minX={2}
@@ -84,17 +124,17 @@ const HelloComponent = () => {
             </div>
             <div className="relative sparkle">
               <SparkleComponent
-                minX={25}
+              minX={25}
                 maxX={36}
                 minY={6}
                 maxY={9}
                 minS={0.5}
                 maxS={1.25}
                 stagger={0.25}
-              />
-            </div>
-            <div className="relative sparkle">
-              <SparkleComponent
+                />
+                </div>
+                <div className="relative sparkle">
+                <SparkleComponent
                 minX={-2}
                 maxX={-8}
                 minY={6}
@@ -102,8 +142,8 @@ const HelloComponent = () => {
                 minS={0.5}
                 maxS={1.25}
                 stagger={0.33}
-              />
-            </div>
+                />
+                </div>
             <div className="relative sparkle">
               <SparkleComponent
                 minX={-10}
@@ -113,14 +153,16 @@ const HelloComponent = () => {
                 minS={0.5}
                 maxS={1.25}
                 stagger={0.69}
-              />
+                />
+              </div> */}
             </div>
-            <div
-              className="text-[8rem] z-text py-6 font-singleday font-bold select-none pointer-events-none text-star"
+            {/* <div
+              className="text-[8rem] h- z-text py-6 font-singleday font-bold select-none pointer-events-none text-star"
               id="hello"
             >
               Hello!
-            </div>
+            </div> */}
+            <HelloText />
           </div>
         </div>
         <div className="relative bg-purp">
@@ -137,7 +179,10 @@ const HelloComponent = () => {
             </div>
           </div>
           <div className="absolute top-80 z-1">
+            
+
             <MarqueeComponent />
+            {/* <ParallaxText /> */}
           </div>
           <p className="h-[1000px] mx-10 mt-2 text-xl">
             This is just some more texty text to fill in this empty space in the
