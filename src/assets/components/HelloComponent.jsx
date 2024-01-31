@@ -2,34 +2,34 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Parallax } from "react-scroll-parallax";
-import SparkleComponent from "./SparkleComponent";
+// import { Parallax } from "react-scroll-parallax";
+// import SparkleComponent from "./SparkleComponent";
 import MarqueeComponent from "./MarqueeComponent";
 import {
   motion,
   useScroll,
-  useSpring,
-  useTransform,
-  MotionValue,
+  // useSpring,
+  // useTransform,
+  // MotionValue,
 } from "framer-motion";
-import ParallaxText from "./Temp";
+// import ParallaxText from "./Temp";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
-const useParallax = (value, distance) => {
-  return useTransform(value, [0, 1], [-distance, distance]);
-};
+// const useParallax = (value, distance) => {
+//   return useTransform(value, [0, 1], [-distance, distance]);
+// };
 
 const HelloText = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
-  const y = useParallax(scrollYProgress, 600);
+  // const y = useParallax(scrollYProgress, 600);
 
   return (
     <div ref={ref}>
       <div className="h-[500px]" />
       <motion.h2
-        style={{ y }}
+        style={{ scrollYProgress }}
         className="text-[8rem] z-50 py-6 font-singleday font-bold select-none pointer-events-none text-star"
         transition={{
           duration: 3,
@@ -48,7 +48,7 @@ const HelloComponent = () => {
   const container = useRef();
   // const target = useRef(null);
   // const { scrollYProgress } = useScroll({ target: target });
-  const { scrollYProgress } = useScroll();
+  // const { scrollYProgress } = useScroll();
 
   // useGSAP(
   //   () => {
