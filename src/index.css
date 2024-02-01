@@ -94,13 +94,39 @@ body {
   margin-left: 0.5em;
 }
 
-.codeGradient {
+#codeGradient {
   background: rgb(255, 255, 255);
   background: linear-gradient(
     0deg,
     rgba(255, 255, 255, 1) 0%,
     rgba(24, 26, 27, 1) 0%,
     rgba(0, 0, 0, 0) 85%
+  );
+}
+
+#postCodeGradient {
+  background: rgb(24, 26, 27);
+  background: linear-gradient(
+    180deg,
+    rgba(24, 26, 27, 1) 0%,
+    rgba(0, 0, 0, 0) 40%
+  );
+}
+
+#houseGradient {
+  background: rgb(5, 14, 22);
+  background: linear-gradient(
+    0deg,
+    rgba(5, 14, 22, 1) 1%,
+    rgba(41, 8, 73, 0) 15%
+  );
+}
+#postHouseGradient {
+  background: rgb(5, 14, 22);
+  background: linear-gradient(
+    180deg,
+    rgba(5, 14, 22, 1) 0%,
+    rgba(41, 8, 73, 1) 50%
   );
 }
 
@@ -189,5 +215,4 @@ body {
     -webkit-text-stroke: 2px rgba(24, 26, 27, 0.8);
     filter: drop-shadow(4px 3px 1px rgba(0, 0, 0, 0.65));
   }
-  
 }

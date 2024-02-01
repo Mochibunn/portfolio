@@ -45,7 +45,10 @@ const TopComponent = () => {
       {/* End of top tab part */}
       <div className="relative z-10 min-h-full">
         <CodeEdit />
-        <div className="absolute top-0 z-20 min-w-full min-h-full pointer-events-none codeGradient"></div>
+        <div
+          className="absolute top-0 z-20 min-w-full min-h-full pointer-events-none codeGradient"
+          id="codeGradient"
+        ></div>
       </div>
     </div>
   );

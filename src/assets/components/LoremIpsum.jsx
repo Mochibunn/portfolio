@@ -1,7 +1,7 @@
 const LoremIpsum = () => {
   return (
-    <div className="pb-4">
-      <h1 className="mx-16 mt-4 text-2xl">
+    <div className="pb-4 bg-purp">
+      <h1 className="mx-16 text-2xl">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus hic
         molestias reiciendis aliquam accusantium error dolorum illo ea
         dignissimos mollitia ipsa atque, enim nisi deleniti deserunt rerum
