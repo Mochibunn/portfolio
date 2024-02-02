@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        singleday: ["SingleDay", "sans-serif"],
+        "protest-revolution": ["ProtestRevolution", "sans-serif"],
         "caveat-brush": ["Caveat Brush", "sans-serif"],
         monocraft: ["Monocraft", "monospace"],
         barlow: ["Barlow Condensed Semibold Italic", "sans-serif"],

@@ -25,7 +25,7 @@ const Parallax = () => {
             y: parallaxTxt,
             top: -Math.round(80 * scaling),
           }}
-          className="text-[30vw] xl:text-[20vw] 2xl:text-[10vw] font-singleday font-bold select-none pointer-events-none text-star relative z-10 bottom-0"
+          className="text-[30vw] xl:text-[20vw] 2xl:text-[10vw] font-protest-revolution font-bold select-none pointer-events-none text-star relative z-10 bottom-0"
         >
           Hello!
         </motion.h1>
