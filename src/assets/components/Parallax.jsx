@@ -49,7 +49,7 @@ const Parallax = () => {
           }}
         />
       </div>
-      <div className="absolute inset-0 z-30" id="houseGradient" />
+      <div className="absolute inset-0 z-30 min-h-0" id="houseGradient" />
     </div>
   );
 };

@@ -21,6 +21,10 @@
   font-family: "Barlow Condensed Semibold Italic";
   src: url("../src/assets/fonts/BarlowCondensed-SemiBoldItalic.ttf");
 }
+@font-face {
+  font-family: "Gochi Hand Regular";
+  src: url("../src/assets/fonts/GochiHand-Regular.ttf");
+}
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;

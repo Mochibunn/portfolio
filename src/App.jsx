@@ -8,17 +8,7 @@ function App() {
   return (
     <>
       <TopComponent />
-      <div className="" height="800px">
-        <img
-          className="pointer-events-none select-none"
-          src="/bg-back.webp"
-          height="0px"
-          aria-hidden
-          width="0px"
-          alt="bg"
-        />
-        {/* Perhaps I will remove this img, it's to try and force the bg to preload */}
-      </div>
+      <div className="" height="800px" />
       <Parallax />
       <div className="relative min-h-[1400px]" id="postHouseGradient">
         <div className="h-[300px]" />
