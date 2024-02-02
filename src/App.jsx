@@ -11,7 +11,7 @@ function App() {
       <div className="" height="800px">
         <img
           className="pointer-events-none select-none"
-          src="/bg-back.jpg"
+          src="/bg-back.webp"
           height="0px"
           aria-hidden
           width="0px"

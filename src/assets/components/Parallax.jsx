@@ -33,7 +33,7 @@ const Parallax = () => {
         <motion.div
           className="absolute top-0 bottom-0 left-0 right-0 z-0"
           style={{
-            backgroundImage: "url(/bg-back.jpg)",
+            backgroundImage: "url(/bg-back.webp)",
             backgroundPosition: "bottom",
             backgroundSize: "cover",
             y: parallaxBg,
@@ -42,7 +42,7 @@ const Parallax = () => {
         <div
           className="absolute inset-0 z-20 w-full bg-cover top-4"
           style={{
-            backgroundImage: "url(/bg-front.png)",
+            backgroundImage: "url(/bg-front.webp)",
             backgroundPosition: "bottom",
             // backgroundSize: "150%",
             backgroundRepeat: "no-repeat",
