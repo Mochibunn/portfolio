@@ -23,7 +23,7 @@ const HelloComponent = () => {
           <div className="flex flex-col items-center mx-auto">
             <img
               src="https://www.thesprucepets.com/thmb/PYJiButDwZb4JNzGE1gwfsI6YYs=/1733x0/filters:no_upscale():strip_icc()/Stocksy_txp14acff329Kw100_Medium_1360769-5aec7baefa6bcc00373c6cb7.jpg"
-              className="rounded-xl w-[30%]"
+              className="rounded-xl w-[30%] select-none pointer-events-none"
               height="480px"
               width="640px"
               alt="A bunny rabbit."

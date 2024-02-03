@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 
 const Parallax = () => {
   const ref = useRef(null);
@@ -7,8 +7,24 @@ const Parallax = () => {
     target: ref,
     offset: ["start", "end start"],
   });
-  const parallaxBg = useTransform(scrollYProgress, [0, 1], ["0%", "-10%"]);
-  const parallaxTxt = useTransform(scrollYProgress, [0, 1], ["0%", "300%"]);
+
+  const pbgs = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
+  const parallaxBg = useTransform(pbgs, [0.0, 1.0], ["0%", "-10%"]);
+
+  const ptxs = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 10,
+    restDelta: 0.001,
+  });
+  const parallaxTxt = useTransform(
+    ptxs,
+    [0.0, 1.0],
+    ["0%", "300%"]
+  );
 
   const scaling =
     Math.round((window.devicePixelRatio + Number.EPSILON) * 100) / 100;
