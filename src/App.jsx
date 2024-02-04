@@ -9,15 +9,18 @@ function App() {
   return (
     <>
       <TopComponent />
-      <div className="" height="800px" />
-      <Parallax />
-      <div className="relative min-h-[1400px]" id="postHouseGradient">
-        <div className="h-[300px]" />
-        {/* <Zoom /> */}
-        <HelloComponent />
-        <TechStuff />
+      <div className="" aria-hidden height="800px" />
+      {/* <div className="pointer-events-none select-none"> */}
+      <div>
+        <Parallax />
+        <div className="relative min-h-[1400px]" id="postHouseGradient">
+          <div className="h-[300px]" />
+          {/* <Zoom /> */}
+          <HelloComponent />
+          <TechStuff />
+        </div>
+        <LoremIpsum />
       </div>
-      <LoremIpsum />
 
       <script
         src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js"
