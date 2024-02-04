@@ -1,90 +1,58 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { useState, useEffect, useRef } from "react";
 
 const TechStuff = () => {
-  const [mouseDown, setMouseDown] = useState(false);
-
-  const logo = document.getElementById("react");
-  const test1 = () => {
-    console.log("🐰 Event listener added!\n");
-    document.addEventListener("mousemove", (e) => {
-      const logoX = logo.offsetLeft + logo.offsetWidth / 2;
-      const logoY = logo.offsetTop + logo.offsetHeight / 2;
-      const dX = logoX - e.clientX;
-      const dY = logoY - e.clientY;
-      let deg = (Math.atan(-dX / dY) * 180) / Math.PI;
-      if (dY > 0) {
-        deg += 180;
-      }
-      logo.style.transform = "rotate(" + deg + "deg)";
-    });
-  };
-  const testMsg = console.log("🐇 Event listener cleared!\n");
-
-  const test2 = () => {
-    document.removeEventListener("mousemove", testMsg);
-  };
-
-  const handleMouseMove = () => {};
-
-  const stop = () => {
-    document.removeEventListener("mousemove");
-  };
-
-  useEffect(() => {
-    const handleMouseUp = (e) => {
-      if (e.button !== 2) {
-        setTimeout(() => setMouseDown(false), 10);
-      }
-    };
-
-    document.addEventListener("mouseup", handleMouseUp);
-    return () => {
-      document.removeEventListener("mouseup", handleMouseUp);
-    };
-  }, []);
-
-  const handleMouseDown = (e) => {
-    if (e.button !== 2) {
-      setMouseDown(true);
-      handleMouseMove();
-    }
-  };
-
   return (
     <AnimatePresence>
       <div className="relative">
         <h1 className="text-9xl font-alegreya-bold">MY TOOLS</h1>
-        <motion.div
-          className="relative flex justify-center"
-          // onDragStart={test1}
-          // onClick={test1}
-
-          // onDragEnd={test2}
-        >
-          <div id="react-wrap"
-            onMouseDown={test1}
-            onMouseUp={test2}>
-            <div
-              id="react"
-              className="absolute"
-              
-            >
+        <motion.div className="flex justify-center">
+          <div id="react-wrap">
+            <div id="react" className="absolute">
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
                 alt="React icon"
                 height="128px"
                 width="128px"
+                draggable={false}
                 className="pointer-events-none select-none cursor-grab"
               />
             </div>
           </div>
         </motion.div>
         <div className="h-[128px] flex items-center">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/768px-Tailwind_CSS_Logo.svg.png?20230715030042"
+          <motion.img
+            animate={{
+              x: Math.floor((Math.random() * 5) + 1),
+              y: Math.floor((Math.random() * 5) + 0),
+            }}
+            transition={{
+              duration: 1.5,
+              repeat: Infinity,
+              repeatType: "reverse",
+              ease: "easeInOut",
+            }}
+            src="./1.svg"
             alt="Tailwind CSS logo"
-            height="128px"
+            // height="32px"
+            width="128px"
+            id="nice"
+            className="absolute select-none"
+          />
+          <motion.img
+            animate={{
+              x: Math.floor(Math.random() * 21) -10,
+              y: Math.floor(Math.random() * 13) -6,
+            }}
+            transition={{
+              duration: 1.5,
+              delay: 0.3,
+              repeat: Infinity,
+              repeatType: "reverse",
+              ease: "easeInOut",
+            }}
+            src="./2.svg"
+            alt="Tailwind CSS logo"
+            // height="32px"
             width="128px"
             id="nice"
             className="select-none"
