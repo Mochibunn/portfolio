@@ -64,10 +64,10 @@ const viewSettings = {
   amount: 0.8,
 };
 
-const  cardClasses = "sm:h-[164px] md:h-[190px] lg:h-[250px] xl:h-[300px] flex items-center";
-const   divClasses = "sm:gap-5 md:gap-6 lg:gap-8 xl:gap-12 flex";
-const labelClasses = "sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl my-auto font-alegreya-bold";
-const imageClasses = "sm:w-[110px] md:w-[132px] lg:w-[192px] xl:w-[256px]";
+const  cardClasses = "h-[128px] sm:h-[164px] md:h-[190px] lg:h-[250px] xl:h-[300px] flex items-center";
+const   divClasses = "gap-4 sm:gap-5 md:gap-6 lg:gap-8 xl:gap-12 flex";
+const labelClasses = "text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl my-auto font-alegreya-bold";
+const imageClasses = "w-[100px] sm:w-[110px] md:w-[132px] lg:w-[192px] xl:w-[256px]";
 
 const TechStuff = () => {
   return (
