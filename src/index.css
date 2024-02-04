@@ -32,16 +32,17 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
+  background-color: #181a1b;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
+
   padding: 0;
   border: 0;
   margin: 0;
-  background-color: #181a1b;
+  position: relative;
 }
 
 ::-webkit-scrollbar {
@@ -71,6 +72,15 @@ body {
   to {
     transform: rotate(360deg);
   }
+}
+
+.debug {
+  border: double red 4px;
+  background-color: rgba(0, 255, 0, 0.70);
+}
+
+.clearfix {
+  overflow: auto;
 }
 
 #rect0,
