@@ -75,8 +75,20 @@ body {
 }
 
 .debug {
-  border: double red 4px;
-  background-color: rgba(0, 255, 0, 0.70);
+  border: dotted red 15px;
+  animation: debug infinite 4s ease-in-out;
+}
+
+@keyframes debug {
+  from {
+    background-color: rgba(0, 255, 0, 0.3);
+  }
+  50% {
+    background-color: rgba(0, 255, 0, 0.6);
+  }
+  to {
+    background-color: rgba(0, 255, 0, 0.3);
+  }
 }
 
 .clearfix {
