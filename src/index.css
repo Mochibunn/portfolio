@@ -61,16 +61,31 @@ body {
 
 @media (prefers-reduced-motion: no-preference) {
   #react {
-    animation: react-spin infinite 20s linear;
+    --d: 20s;
+    --s: 5;
+    --_a: r linear infinite;
+    animation: var(--_a) var(--d), var(--_a) calc(var(--d) / var(--s)) paused;
+    animation-composition: add;
   }
-}
+  #react:hover {
+    animation-play-state: running;
+  }
+  @keyframes r {
+    to {
+      rotate: 1turn;
+    }
+  }
 
-@keyframes react-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+  /* the fallback is also interesting because we use 2 different animations with 2 different properties that do the same thing! */
+  @supports not (animation-composition: add) {
+    #react {
+      animation-name: r, r1;
+    }
+    @keyframes r1 {
+      to {
+        transform: rotate(1turn);
+      }
+    }
   }
 }
 

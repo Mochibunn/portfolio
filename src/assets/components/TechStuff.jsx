@@ -74,7 +74,7 @@ const TechStuff = () => {
     <AnimatePresence>
       <div className="relative flex flex-col items-center py-12">
         <h1 className="text-9xl font-alegreya-bold">MY TOOLS</h1>
-        <div className="relative h-screen"></div>
+        <div className="relative h-[200px]"></div>
         <motion.div
           className={cardClasses}
           id="react-div"
@@ -83,7 +83,7 @@ const TechStuff = () => {
           viewport={viewSettings}
         >
           <motion.div variants={itemsRight}>
-            <div className={divClasses}>
+            <div id="reasct-wrapper" className={divClasses}>
               <div id="react" className="">
                 <img
                   alt="React icon"
