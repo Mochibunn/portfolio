@@ -1,29 +1,36 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { useState, useEffect } from "react";
-
-const [mouseDown, setMouseDown] = useState(false);
-
-const handleMouseMove = () => {
-  const logo = document.getElementById("react");
-
-  document.addEventListener("mousemove", (e) => {
-    const logoX = logo.offsetLeft + logo.offsetWidth / 2;
-    const logoY = logo.offsetTop + logo.offsetHeight / 2;
-    const dX = logoX - e.clientX;
-    const dY = logoY - e.clientY;
-    let deg = (Math.atan(-dX / dY) * 180) / Math.PI;
-    if (dY > 0) {
-      deg += 180;
-    }
-    logo.style.transform = "rotate(" + deg + "deg)";
-  });
-};
-
-const stop = () => {
-  document.removeEventListener("mousemove");
-}
+import { useState, useEffect, useRef } from "react";
 
 const TechStuff = () => {
+  const [mouseDown, setMouseDown] = useState(false);
+
+  const logo = document.getElementById("react");
+  const test1 = () => {
+    console.log("🐰 Event listener added!\n");
+    document.addEventListener("mousemove", (e) => {
+      const logoX = logo.offsetLeft + logo.offsetWidth / 2;
+      const logoY = logo.offsetTop + logo.offsetHeight / 2;
+      const dX = logoX - e.clientX;
+      const dY = logoY - e.clientY;
+      let deg = (Math.atan(-dX / dY) * 180) / Math.PI;
+      if (dY > 0) {
+        deg += 180;
+      }
+      logo.style.transform = "rotate(" + deg + "deg)";
+    });
+  };
+  const testMsg = console.log("🐇 Event listener cleared!\n");
+
+  const test2 = () => {
+    document.removeEventListener("mousemove", testMsg);
+  };
+
+  const handleMouseMove = () => {};
+
+  const stop = () => {
+    document.removeEventListener("mousemove");
+  };
+
   useEffect(() => {
     const handleMouseUp = (e) => {
       if (e.button !== 2) {
@@ -50,10 +57,19 @@ const TechStuff = () => {
         <h1 className="text-9xl font-alegreya-bold">MY TOOLS</h1>
         <motion.div
           className="relative flex justify-center"
-          whileTap={handleMouseDown}
+          // onDragStart={test1}
+          // onClick={test1}
+
+          // onDragEnd={test2}
         >
-          <div id="react" className="absolute">
-            <div id="react-wrap">
+          <div id="react-wrap"
+            onMouseDown={test1}
+            onMouseUp={test2}>
+            <div
+              id="react"
+              className="absolute"
+              
+            >
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
                 alt="React icon"

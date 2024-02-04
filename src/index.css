@@ -59,7 +59,7 @@ body {
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  #react-wrap {
+  #react {
     animation: react-spin infinite 20s linear;
   }
 }
@@ -75,7 +75,7 @@ body {
 
 #rect0,
 #rect2 {
-  background-color: #282a36;
+  background-color: rgb(40, 42, 54);
 }
 
 #rect1,
