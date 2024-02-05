@@ -88,20 +88,23 @@ div.cm-content.cm-lineWrapping {
     --_a: r linear infinite;
     animation: var(--_a) var(--d), var(--_a) calc(var(--d) / var(--s)) paused;
     animation-composition: add;
+    will-change: animation;
   }
   #react:hover {
     animation-play-state: running;
+    will-change: animation;
   }
   @keyframes r {
     to {
       rotate: 1turn;
     }
   }
-
+  
   /* the fallback is also interesting because we use 2 different animations with 2 different properties that do the same thing! */
   @supports not (animation-composition: add) {
     #react {
       animation-name: r, r1;
+      will-change: animation;
     }
     @keyframes r1 {
       to {
@@ -128,6 +131,40 @@ div.cm-content.cm-lineWrapping {
   }
 }
 
+.mask img{
+  position: relative;
+  display:block;
+  width:256px;
+  height: 256px;
+  text-align:center;
+  margin: -1px auto;
+  filter: drop-shadow(1px 1px 2px rgba(0,0,0,.5));
+}
+.mask div{
+  background-position: -550px -50px;
+  animation: shimmer 3.5s linear infinite;
+  
+}
+@keyframes shimmer {
+  from {
+    background-position: -550px -50px;
+  }
+  to {
+    background-position: 90px 50px;
+  }
+}
+.mask div::after{
+  content:'';
+  position: absolute;
+  pointer-events: none;
+  top:0; left:0; right:0; bottom: 0;
+  background: radial-gradient(circle farthest-side at 0 0, rgba(255,255,255,0) 90%,rgba(255,255,255,.8) 98%,rgba(255,255,255,0) 100%) no-repeat;
+  background: radial-gradient(circle farthest-side at 0 0, rgba(255,255,255,0) 90%,rgba(255,255,255,.8) 98%,rgba(255,255,255,0) 100%) no-repeat;
+  background-position: inherit; 
+  -webkit-mask: url('./Vite.svg') center;
+  mask: url('#mask-firefox');
+}
+
 .clearfix {
   overflow: auto;
 }
@@ -151,6 +188,10 @@ div.cm-content.cm-lineWrapping {
   user-select: text;
 }
 
+.cm-lineWrapping * {
+  min-width: 100vw;
+}
+
 .cm-editor {
   height: 100vh !important;
   outline: none !important;
@@ -162,7 +203,7 @@ div.cm-content.cm-lineWrapping {
 
 .cm-editor * {
   overflow: clip !important;
-  font-family: "Monocraft";
+  font-family: "Monocraft", monospace !important;
 }
 
 /* .cm-lineNumbers {

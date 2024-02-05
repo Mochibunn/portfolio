@@ -64,10 +64,13 @@ const viewSettings = {
   amount: 0.8,
 };
 
-const  cardClasses = "h-[128px] sm:h-[164px] md:h-[190px] lg:h-[250px] xl:h-[300px] flex items-center";
-const   divClasses = "gap-4 sm:gap-5 md:gap-6 lg:gap-8 xl:gap-12 flex";
-const labelClasses = "text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl my-auto font-alegreya-bold";
-const imageClasses = "w-[100px] sm:w-[110px] md:w-[132px] lg:w-[192px] xl:w-[256px] aspect-square";
+const cardClasses =
+  "h-[128px] sm:h-[164px] md:h-[190px] lg:h-[250px] xl:h-[300px] flex items-center";
+const divClasses = "gap-3 sm:gap-5 md:gap-6 lg:gap-8 xl:gap-12 flex";
+const labelClasses =
+  "text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl my-auto font-alegreya-bold";
+const imageClasses =
+  "w-[100px] sm:w-[110px] md:w-[132px] lg:w-[192px] xl:w-[256px] aspect-square";
 
 const TechStuff = () => {
   return (
@@ -110,7 +113,7 @@ const TechStuff = () => {
                   alt="Top part of the Tailwind CSS logo"
                   animate={new AnimateTw().props}
                   transition={transitionTw}
-                  src="./1.svg"
+                  src="./twTop.svg"
                   id="twTop"
                   className={`${imageClasses} absolute`}
                 />
@@ -121,7 +124,7 @@ const TechStuff = () => {
                     delay: 0.3,
                     ...transitionTw,
                   }}
-                  src="./2.svg"
+                  src="./twBot.svg"
                   id="twBot"
                   className={imageClasses}
                 />
@@ -141,7 +144,7 @@ const TechStuff = () => {
               <img
                 alt="JavaScript logo"
                 src="./javascript.svg"
-                className={`${imageClasses} rounded-md`}
+                className={`${imageClasses} rounded-md bg-[#FFD600]`}
               />
               <h1 className={labelClasses}>JAVASCRIPT</h1>
             </div>
@@ -174,7 +177,15 @@ const TechStuff = () => {
         >
           <motion.div variants={itemsRight}>
             <div className={divClasses}>
-              <img
+              <motion.img
+                initial={{
+                  rotate: -10,
+                }}
+                whileInView={{
+                  rotate: 5,
+                  transition:transitionTw,
+                }}
+                viewport={viewSettings}
                 alt="MongoDB logo"
                 src="./MongoDB.svg"
                 className={imageClasses}
@@ -209,12 +220,14 @@ const TechStuff = () => {
           viewport={viewSettings}
         >
           <motion.div variants={itemsRight}>
-            <div className={divClasses}>
-              <img
-                alt="Vite logo (pronounced 'veet')"
-                src="Vite.svg"
-                className={imageClasses}
-              />
+            <div className={`${divClasses} mask`}>
+              <div className={imageClasses}>
+                  <img
+                    alt="Vite logo (pronounced 'veet')"
+                    src="Vite.svg"
+                    className={imageClasses}
+                  />
+              </div>
               <h1 className={labelClasses}>VITE</h1>
             </div>
           </motion.div>
@@ -238,6 +251,16 @@ const TechStuff = () => {
           </motion.div>
         </motion.div>
         <h2 className="pb-12 text-6xl font-alegreya-bold">..AND MORE!</h2>
+{/* Shimmer mask for Vite logo */}
+      <svg height="0"> 
+        <mask id="mask-firefox">
+          <image className={imageClasses}  xlinkHref="./Vite.svg" filter="url(#filter)" /> 
+        </mask>
+        <filter id="filter">
+          <feFlood floodColor="white" />
+          <feComposite in2="SourceAlpha" operator="in" />
+        </filter>
+      </svg>
       </div>
     </AnimatePresence>
   );
