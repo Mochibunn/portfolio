@@ -4,26 +4,35 @@
 
 @font-face {
   font-family: "Monocraft";
-  src: url("../src/assets/fonts/Monocraft.ttf");
+  font-style: normal;
+  src: 
+    url("../src/assets/fonts/Monocraft.ttf"),
+    local("MONOCRAFT-NERD-FONTS-PATCHED"),
+    local("Monocraft Nerd Font");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "ProtestRevolution";
   src: url("../src/assets/fonts/protestrevolution-regular-webfont.woff2");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Caveat Brush";
   src: url("../src/assets/fonts/CaveatBrush-Regular.ttf");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Barlow Condensed Semibold Italic";
   src: url("../src/assets/fonts/BarlowCondensed-SemiBoldItalic.ttf");
+  font-display: swap;
 }
 @font-face {
   font-family: "Gochi Hand Regular";
   src: url("../src/assets/fonts/GochiHand-Regular.ttf");
+  font-display: swap;
 }
 
 :root {
@@ -57,6 +66,19 @@
 body {
   margin: 0;
   padding: 0;
+}
+
+.cm-line * {
+  min-width: 100% !important;
+  min-height: 22px !important;
+}
+div.cm-line * {
+  min-width: 100% !important;
+  min-height: 22px !important;
+}
+
+div.cm-content.cm-lineWrapping {
+  min-width: fit-content !important;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -139,7 +161,7 @@ body {
 }
 
 .cm-editor * {
-  overflow: wrap !important;
+  overflow: clip !important;
   font-family: "Monocraft";
 }
 

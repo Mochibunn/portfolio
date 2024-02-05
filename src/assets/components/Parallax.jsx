@@ -47,7 +47,7 @@ const Parallax = () => {
         </motion.h1>
         <div className="absolute inset-0 z-30" id="postCodeGradient" />
         <motion.div
-          className="absolute top-0 bottom-0 left-0 right-0 z-0"
+          className="absolute top-0 bottom-0 left-0 right-0 z-0 min-h-screen"
           style={{
             backgroundImage: "url(/bg-back.webp)",
             backgroundPosition: "bottom",
@@ -65,7 +65,7 @@ const Parallax = () => {
           }}
         />
       </div>
-      <div className="absolute inset-0 z-30 min-h-0" id="houseGradient" />
+      <div className="absolute inset-0 z-30 min-h-[2500px]" id="houseGradient" />
     </div>
   );
 };

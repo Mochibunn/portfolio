@@ -1,5 +1,5 @@
 import MarqueeComponent from "./MarqueeComponent";
-import ParallaxText from "./Temp";
+// import ParallaxText from "./Temp";
 
 const HelloComponent = () => {
   return (
@@ -22,15 +22,15 @@ const HelloComponent = () => {
           </div>
           <div className="flex flex-col items-center mx-auto">
             <img
-              src="https://www.thesprucepets.com/thmb/PYJiButDwZb4JNzGE1gwfsI6YYs=/1733x0/filters:no_upscale():strip_icc()/Stocksy_txp14acff329Kw100_Medium_1360769-5aec7baefa6bcc00373c6cb7.jpg"
+              src="./bnu.webp"
               className="rounded-xl w-[30%] select-none pointer-events-none"
-              height="480px"
-              width="640px"
+              width="1733px"
+              height="1155px"
               alt="A bunny rabbit."
             />
-            <h4 className="pb-4 ml-3 italic text-gray-400">
+            <span aria-roledescription="caption" className="pb-4 ml-3 italic text-gray-400">
               Yup, I&apos;m a rabbit!
-            </h4>
+            </span>
           </div>
         </div>
         <div className="absolute inset-0 z-0 top-64 overflow-x-clip">

@@ -8,10 +8,12 @@ import TechStuff from "./assets/components/TechStuff";
 function App() {
   return (
     <>
-      <TopComponent />
+      <div className="h-screen">
+        <TopComponent />
+      </div>
       <div className="" aria-hidden height="800px" />
       {/* <div className="pointer-events-none select-none"> */}
-      <div>
+      <div className="min-h-screen">
         <Parallax />
         <div className="relative min-h-[1400px]" id="postHouseGradient">
           <div className="h-[300px]" />
