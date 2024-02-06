@@ -52,31 +52,33 @@
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
     <noscript id="nojs">
-      <div
+      <h1
         style="
           width: 100vw;
           height: 100vh;
           display: flex;
           justify-content: center;
-          align-items: flex-end;
+          align-items: flex-start;
           font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
           color: rgba(255, 255, 255, 1);
           font-size: 10vw;
-          background: fixed url(./nojs.jpg);
-          background-size:  100vw 100vh;
+          margin: 0;
           word-break: break-all;
           -webkit-text-stroke: 0.25vw rgba(0, 0, 0, 1);
         "
       >
         NO JAVASCRIPT?
-      </div>
+      </h1>
       <style>
         * {
           margin: 0;
         }
         html {
-          width: 100vw;
-          height: 100vh;
+          width: 100%;
+          height: 100%;
+          background: fixed url(./nojs.jpg);
+          background-size: 100vw 100vh;
+          background-color: rgba(0, 0, 0, 1);
         }
       </style>
     </noscript>
