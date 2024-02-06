@@ -65,6 +65,7 @@
 html {
   margin: 0;
   padding: 0;
+  background-color: rgba(32, 32, 32, 1);
 }
 
 .cm-line {
@@ -148,7 +149,7 @@ div.cm-content.cm-lineWrapping {
 
 .mask div {
   background-position: -550px -40px;
-  animation: shimmer 2.5s linear infinite;
+  animation: shimmer 5s linear infinite;
 }
 @keyframes shimmer {
   from {
@@ -160,8 +161,8 @@ div.cm-content.cm-lineWrapping {
 }
 .mask div::after {
   content: "";
-  width: 300px;
-  height: 300px;
+  width: inherit;
+  height: inherit;
   position: absolute;
   pointer-events: none;
   top: 0;

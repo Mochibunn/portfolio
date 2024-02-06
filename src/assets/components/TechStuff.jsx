@@ -1,5 +1,26 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { Component } from "react";
+import { Component, useRef } from "react";
+import useOnScreen from "./useOnScreen";
+import WidthWatchdog from "./WidthWatchdog";
+
+const cardClasses =
+  "h-[128px] sm:h-[164px] md:h-[190px] lg:h-[250px] xl:h-[300px] flex items-center";
+const divClasses = "gap-3 sm:gap-5 md:gap-6 lg:gap-8 xl:gap-12 flex";
+const labelClasses =
+  "text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl my-auto font-alegreya-bold";
+const imageClasses =
+  "w-[100px] sm:w-[110px] md:w-[132px] lg:w-[192px] xl:w-[256px] aspect-square";
+
+const transition = {
+  duration: 1.5,
+  repeat: Infinity,
+  repeatType: "reverse",
+  ease: "easeInOut",
+};
+const viewSettings = {
+  once: false,
+  amount: 0.8,
+};
 
 const itemsRight = {
   initial: {
@@ -70,26 +91,11 @@ class AnimateWiggle extends Component {
   }
 }
 
-const transition = {
-  duration: 1.5,
-  repeat: Infinity,
-  repeatType: "reverse",
-  ease: "easeInOut",
-};
-const viewSettings = {
-  once: false,
-  amount: 0.8,
-};
-
-const cardClasses =
-  "h-[128px] sm:h-[164px] md:h-[190px] lg:h-[250px] xl:h-[300px] flex items-center";
-const divClasses = "gap-3 sm:gap-5 md:gap-6 lg:gap-8 xl:gap-12 flex";
-const labelClasses =
-  "text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl my-auto font-alegreya-bold";
-const imageClasses =
-  "w-[100px] sm:w-[110px] md:w-[132px] lg:w-[192px] xl:w-[256px] aspect-square";
-
 const TechStuff = () => {
+  const elementRef = useRef(null);
+  const isOnScreen = useOnScreen(elementRef);
+  // console.log("Returned data: \n", Event.currentTarget.getAttribute("react-div"));
+
   return (
     <AnimatePresence>
       <div className="relative flex flex-col items-center py-12">
@@ -104,7 +110,7 @@ const TechStuff = () => {
         >
           <motion.div variants={itemsRight}>
             <div id="reasct-wrapper" className={divClasses}>
-              <div id="react" className="">
+              <div id="react">
                 <img
                   alt="React icon"
                   src="./React.svg"
@@ -236,8 +242,8 @@ const TechStuff = () => {
           whileInView="expo"
           viewport={viewSettings}
         >
-          <motion.div variants={itemsRight}>
-            <div className={`${divClasses} mask`}>
+          <motion.div variants={itemsRight} ref={elementRef}>
+            <div className={divClasses + " " + (isOnScreen ? "mask" : ``)}>
               <div className={imageClasses}>
                 <img
                   alt="Vite logo (pronounced 'veet')"
@@ -285,6 +291,7 @@ const TechStuff = () => {
             <feComposite in2="SourceAlpha" operator="in" />
           </filter>
         </svg>
+        <WidthWatchdog />
       </div>
     </AnimatePresence>
   );

@@ -5,6 +5,7 @@ import "./index.css";
 import "./assets/styles/fonts.css";
 import ConsoleMessages from "./assets/components/ConsoleMessages.jsx";
 
+document.getElementById("nojs").remove();
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <App />
