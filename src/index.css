@@ -5,10 +5,8 @@
 @font-face {
   font-family: "Monocraft";
   font-style: normal;
-  src: 
-    url("../src/assets/fonts/Monocraft.ttf"),
-    local("MONOCRAFT-NERD-FONTS-PATCHED"),
-    local("Monocraft Nerd Font");
+  src: url("../src/assets/fonts/Monocraft.ttf"),
+    local("MONOCRAFT-NERD-FONTS-PATCHED"), local("Monocraft Nerd Font");
   font-display: swap;
 }
 
@@ -61,24 +59,27 @@
 * {
   scrollbar-width: none;
   scrollbar-color: #000000;
+  overflow-wrap: break-word !important;
 }
 
-body {
+html {
   margin: 0;
   padding: 0;
 }
 
-.cm-line * {
-  min-width: 100% !important;
+.cm-line {
+  min-width: 70% !important;
   min-height: 22px !important;
+  max-width: 100% !important;
 }
-div.cm-line * {
-  min-width: 100% !important;
+div.cm-line {
+  min-width: 70% !important;
   min-height: 22px !important;
+  max-width: 100% !important;
 }
 
 div.cm-content.cm-lineWrapping {
-  min-width: fit-content !important;
+  max-width: 100% !important;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -99,7 +100,7 @@ div.cm-content.cm-lineWrapping {
       rotate: 1turn;
     }
   }
-  
+
   /* the fallback is also interesting because we use 2 different animations with 2 different properties that do the same thing! */
   @supports not (animation-composition: add) {
     #react {
@@ -131,38 +132,52 @@ div.cm-content.cm-lineWrapping {
   }
 }
 
-.mask img{
+.mask img {
   position: relative;
-  display:block;
-  width:256px;
-  height: 256px;
-  text-align:center;
+  display: block;
+  text-align: center;
   margin: -1px auto;
-  filter: drop-shadow(1px 1px 2px rgba(0,0,0,.5));
+  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5));
 }
-.mask div{
-  background-position: -550px -50px;
-  animation: shimmer 3.5s linear infinite;
-  
+
+@media (min-width: 1024px) {
+  .mask img {
+    margin: -2px auto;
+  }
+}
+
+.mask div {
+  background-position: -550px -40px;
+  animation: shimmer 2.5s linear infinite;
 }
 @keyframes shimmer {
   from {
-    background-position: -550px -50px;
+    background-position: -550px -40px;
   }
   to {
-    background-position: 90px 50px;
+    background-position: 90px 20px;
   }
 }
-.mask div::after{
-  content:'';
+.mask div::after {
+  content: "";
+  width: 300px;
+  height: 300px;
   position: absolute;
   pointer-events: none;
-  top:0; left:0; right:0; bottom: 0;
-  background: radial-gradient(circle farthest-side at 0 0, rgba(255,255,255,0) 90%,rgba(255,255,255,.8) 98%,rgba(255,255,255,0) 100%) no-repeat;
-  background: radial-gradient(circle farthest-side at 0 0, rgba(255,255,255,0) 90%,rgba(255,255,255,.8) 98%,rgba(255,255,255,0) 100%) no-repeat;
-  background-position: inherit; 
-  -webkit-mask: url('./Vite.svg') center;
-  mask: url('#mask-firefox');
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+      circle farthest-side at 0 0,
+      rgba(255, 255, 255, 0) 90%,
+      rgba(255, 255, 255, 0.8) 98%,
+      rgba(255, 255, 255, 0) 100%
+    )
+    no-repeat;
+  background-position: inherit;
+  -webkit-mask: url("./Vite.svg") center;
+  mask: url("#mask-firefox");
 }
 
 .clearfix {
@@ -194,6 +209,7 @@ div.cm-content.cm-lineWrapping {
 
 .cm-editor {
   height: 100vh !important;
+  width: 100vw !important;
   outline: none !important;
 }
 
@@ -202,13 +218,9 @@ div.cm-content.cm-lineWrapping {
 }
 
 .cm-editor * {
-  overflow: clip !important;
+  overflow: auto !important;
   font-family: "Monocraft", monospace !important;
 }
-
-/* .cm-lineNumbers {
-  margin-left: 0.5em;
-} */
 
 #codeGradient {
   background: rgb(255, 255, 255);

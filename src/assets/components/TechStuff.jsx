@@ -52,8 +52,25 @@ class AnimateTw extends Component {
   }
 }
 //First time I managed to make a class on my own :D
+class AnimateWiggle extends Component {
+  constructor() {
+    super();
+    this.props = {
+      initial: {
+        y: 20,
+      },
+      wiggle: {
+        y: -20,
+        transition: transition,
+      },
+    };
+  }
+  render() {
+    return this.props;
+  }
+}
 
-const transitionTw = {
+const transition = {
   duration: 1.5,
   repeat: Infinity,
   repeatType: "reverse",
@@ -112,7 +129,7 @@ const TechStuff = () => {
                 <motion.img
                   alt="Top part of the Tailwind CSS logo"
                   animate={new AnimateTw().props}
-                  transition={transitionTw}
+                  transition={transition}
                   src="./twTop.svg"
                   id="twTop"
                   className={`${imageClasses} absolute`}
@@ -122,7 +139,7 @@ const TechStuff = () => {
                   animate={new AnimateTw().props}
                   transition={{
                     delay: 0.3,
-                    ...transitionTw,
+                    ...transition,
                   }}
                   src="./twBot.svg"
                   id="twBot"
@@ -183,7 +200,7 @@ const TechStuff = () => {
                 }}
                 whileInView={{
                   rotate: 5,
-                  transition:transitionTw,
+                  transition: transition,
                 }}
                 viewport={viewSettings}
                 alt="MongoDB logo"
@@ -222,11 +239,11 @@ const TechStuff = () => {
           <motion.div variants={itemsRight}>
             <div className={`${divClasses} mask`}>
               <div className={imageClasses}>
-                  <img
-                    alt="Vite logo (pronounced 'veet')"
-                    src="Vite.svg"
-                    className={imageClasses}
-                  />
+                <img
+                  alt="Vite logo (pronounced 'veet')"
+                  src="Vite.svg"
+                  className={imageClasses}
+                />
               </div>
               <h1 className={labelClasses}>VITE</h1>
             </div>
@@ -242,7 +259,10 @@ const TechStuff = () => {
           <motion.div variants={itemsLeft}>
             <div className={divClasses}>
               <h1 className={labelClasses}>VS CODE</h1>
-              <img
+              <motion.img
+                // initial={new AnimateWiggle().props.initial}
+                // whileInView={new AnimateWiggle().props.wiggle}
+                // viewport={viewSettings}
                 alt="Microsoft Visual Studio Code logo"
                 src="./VSCode.svg"
                 className={imageClasses}
@@ -251,16 +271,20 @@ const TechStuff = () => {
           </motion.div>
         </motion.div>
         <h2 className="pb-12 text-6xl font-alegreya-bold">..AND MORE!</h2>
-{/* Shimmer mask for Vite logo */}
-      <svg height="0"> 
-        <mask id="mask-firefox">
-          <image className={imageClasses}  xlinkHref="./Vite.svg" filter="url(#filter)" /> 
-        </mask>
-        <filter id="filter">
-          <feFlood floodColor="white" />
-          <feComposite in2="SourceAlpha" operator="in" />
-        </filter>
-      </svg>
+        {/* Shimmer mask for Vite logo */}
+        <svg height="0">
+          <mask id="mask-firefox">
+            <image
+              className={imageClasses}
+              xlinkHref="./Vite.svg"
+              filter="url(#filter)"
+            />
+          </mask>
+          <filter id="filter">
+            <feFlood floodColor="white" />
+            <feComposite in2="SourceAlpha" operator="in" />
+          </filter>
+        </svg>
       </div>
     </AnimatePresence>
   );
