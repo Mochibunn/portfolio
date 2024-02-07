@@ -137,7 +137,7 @@ div.cm-content.cm-lineWrapping {
   position: relative;
   display: block;
   text-align: center;
-  margin: -1px auto;
+  margin: 6px auto;
   filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5));
 }
 
@@ -147,13 +147,19 @@ div.cm-content.cm-lineWrapping {
   }
 }
 
+@media (min-width: 1280px) {
+  .mask img {
+    margin: -4px auto;
+  }
+}
+
 .mask div {
-  background-position: -550px -40px;
-  animation: shimmer 5s linear infinite;
+  background-position: -650px -40px;
+  animation: shimmer 2s ease-in-out;
 }
 @keyframes shimmer {
   from {
-    background-position: -550px -40px;
+    background-position: -650px -40px;
   }
   to {
     background-position: 90px 20px;
@@ -161,8 +167,10 @@ div.cm-content.cm-lineWrapping {
 }
 .mask div::after {
   content: "";
-  width: inherit;
-  height: inherit;
+  width: 120%;
+  height: 120%;
+  margin: 0;
+  overflow: clip;
   position: absolute;
   pointer-events: none;
   top: 0;

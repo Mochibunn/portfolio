@@ -1,7 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { Component, useRef } from "react";
 import useOnScreen from "./useOnScreen";
-import WidthWatchdog from "./WidthWatchdog";
 
 const cardClasses =
   "h-[128px] sm:h-[164px] md:h-[190px] lg:h-[250px] xl:h-[300px] flex items-center";
@@ -73,15 +72,16 @@ class AnimateTw extends Component {
   }
 }
 //First time I managed to make a class on my own :D
+
 class AnimateWiggle extends Component {
   constructor() {
     super();
     this.props = {
       initial: {
-        y: 20,
+        y: 8,
       },
       wiggle: {
-        y: -20,
+        y: -8,
         transition: transition,
       },
     };
@@ -94,11 +94,10 @@ class AnimateWiggle extends Component {
 const TechStuff = () => {
   const elementRef = useRef(null);
   const isOnScreen = useOnScreen(elementRef);
-  // console.log("Returned data: \n", Event.currentTarget.getAttribute("react-div"));
 
   return (
     <AnimatePresence>
-      <div className="relative flex flex-col items-center py-12">
+      <div className="relative flex flex-col items-center w-screen py-12">
         <h1 className="text-9xl font-alegreya-bold">MY TOOLS</h1>
         <div className="relative h-[200px]"></div>
         <motion.div
@@ -245,7 +244,10 @@ const TechStuff = () => {
           <motion.div variants={itemsRight} ref={elementRef}>
             <div className={divClasses + " " + (isOnScreen ? "mask" : ``)}>
               <div className={imageClasses}>
-                <img
+                <motion.img
+                  initial={new AnimateWiggle().props.initial}
+                  whileInView={new AnimateWiggle().props.wiggle}
+                  viewport={viewSettings}
                   alt="Vite logo (pronounced 'veet')"
                   src="Vite.svg"
                   className={imageClasses}
@@ -266,9 +268,9 @@ const TechStuff = () => {
             <div className={divClasses}>
               <h1 className={labelClasses}>VS CODE</h1>
               <motion.img
-                // initial={new AnimateWiggle().props.initial}
-                // whileInView={new AnimateWiggle().props.wiggle}
-                // viewport={viewSettings}
+                initial={new AnimateWiggle().props.initial}
+                whileInView={new AnimateWiggle().props.wiggle}
+                viewport={viewSettings}
                 alt="Microsoft Visual Studio Code logo"
                 src="./VSCode.svg"
                 className={imageClasses}
@@ -291,7 +293,6 @@ const TechStuff = () => {
             <feComposite in2="SourceAlpha" operator="in" />
           </filter>
         </svg>
-        <WidthWatchdog />
       </div>
     </AnimatePresence>
   );

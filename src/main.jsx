@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
 import "./index.css";
 import "./assets/styles/fonts.css";
+import App from "./App.jsx";
 import ConsoleMessages from "./assets/components/ConsoleMessages.jsx";
 
 document.getElementById("nojs").remove();
