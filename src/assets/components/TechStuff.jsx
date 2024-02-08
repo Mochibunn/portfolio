@@ -16,7 +16,14 @@ const transition = {
   repeatType: "reverse",
   ease: "easeInOut",
 };
-const viewSettings = {
+
+const transitionOnce = {
+  type: "spring",
+  bounce: 0.6,
+  duration: 1.5,
+};
+
+const viewport = {
   once: false,
   amount: 0.8,
 };
@@ -105,7 +112,7 @@ const TechStuff = () => {
           id="react-div"
           initial="initial"
           whileInView="expo"
-          viewport={viewSettings}
+          viewport={viewport}
         >
           <motion.div variants={itemsRight}>
             <div id="reasct-wrapper" className={divClasses}>
@@ -125,7 +132,7 @@ const TechStuff = () => {
           className={cardClasses}
           initial="initial"
           whileInView="expo"
-          viewport={viewSettings}
+          viewport={viewport}
         >
           <motion.div variants={itemsLeft}>
             <div className={divClasses}>
@@ -159,7 +166,7 @@ const TechStuff = () => {
           className={cardClasses}
           initial="initial"
           whileInView="expo"
-          viewport={viewSettings}
+          viewport={viewport}
         >
           <motion.div variants={itemsRight}>
             <div className={divClasses}>
@@ -177,7 +184,7 @@ const TechStuff = () => {
           className={cardClasses}
           initial="initial"
           whileInView="expo"
-          viewport={viewSettings}
+          viewport={viewport}
         >
           <motion.div variants={itemsLeft}>
             <div className={divClasses}>
@@ -195,7 +202,7 @@ const TechStuff = () => {
           className={cardClasses}
           initial="initial"
           whileInView="expo"
-          viewport={viewSettings}
+          viewport={viewport}
         >
           <motion.div variants={itemsRight}>
             <div className={divClasses}>
@@ -207,7 +214,7 @@ const TechStuff = () => {
                   rotate: 5,
                   transition: transition,
                 }}
-                viewport={viewSettings}
+                viewport={viewport}
                 alt="MongoDB logo"
                 src="./MongoDB.svg"
                 className={imageClasses}
@@ -221,7 +228,7 @@ const TechStuff = () => {
           className={cardClasses}
           initial="initial"
           whileInView="expo"
-          viewport={viewSettings}
+          viewport={viewport}
         >
           <motion.div variants={itemsLeft}>
             <div className={divClasses}>
@@ -239,7 +246,7 @@ const TechStuff = () => {
           className={cardClasses}
           initial="initial"
           whileInView="expo"
-          viewport={viewSettings}
+          viewport={viewport}
         >
           <motion.div variants={itemsRight} ref={elementRef}>
             <div className={divClasses + " " + (isOnScreen ? "mask" : ``)}>
@@ -247,7 +254,7 @@ const TechStuff = () => {
                 <motion.img
                   initial={new AnimateWiggle().props.initial}
                   whileInView={new AnimateWiggle().props.wiggle}
-                  viewport={viewSettings}
+                  viewport={viewport}
                   alt="Vite logo (pronounced 'veet')"
                   src="Vite.svg"
                   className={imageClasses}
@@ -262,7 +269,7 @@ const TechStuff = () => {
           className={cardClasses}
           initial="initial"
           whileInView="expo"
-          viewport={viewSettings}
+          viewport={viewport}
         >
           <motion.div variants={itemsLeft}>
             <div className={divClasses}>
@@ -270,7 +277,7 @@ const TechStuff = () => {
               <motion.img
                 initial={new AnimateWiggle().props.initial}
                 whileInView={new AnimateWiggle().props.wiggle}
-                viewport={viewSettings}
+                viewport={viewport}
                 alt="Microsoft Visual Studio Code logo"
                 src="./VSCode.svg"
                 className={imageClasses}
@@ -279,6 +286,77 @@ const TechStuff = () => {
           </motion.div>
         </motion.div>
         <h2 className="pb-12 text-6xl font-alegreya-bold">..AND MORE!</h2>
+        <div className="flex gap-12 align-middle">
+          <div className="relative flex">
+            <motion.p
+              initial={{
+                y: 20,
+                opacity: 0,
+                rotate: 5,
+              }}
+              whileInView={{
+                y: 0,
+                opacity: 1,
+                rotate: 0,
+                transition: transitionOnce,
+              }}
+              viewport={{
+                once: true,
+                amount: 0.8,
+              }}
+              className="self-center text-5xl font-gochi-hand -rotate-[2deg]"
+            >
+              More info on my github
+            </motion.p>
+            <motion.img
+              initial={{
+                y: 10,
+                opacity: 0,
+                rotate: 5,
+                scaleY: -1,
+              }}
+              whileInView={{
+                y: 0,
+                opacity: 1,
+                rotate: 0,
+                scaleY: -1,
+                transition: transitionOnce,
+              }}
+              viewport={{
+                once: true,
+                amount: 0.8,
+              }}
+              className="w-[128px] -scale-y-100 opacity-[0.87] absolute -right-12 top-12"
+              src="./arrow-curved.svg"
+            />
+          </div>
+          <motion.a
+            href="https://github.com/Mochibunn#%EF%B8%8Fwhats-my-tech-stack"
+            target="_blank"
+            initial={{
+              opacity: 0,
+            }}
+            whileInView={{
+              opacity: 1,
+              transition: transitionOnce,
+            }}
+          >
+            <motion.img
+              initial={{
+                y: -5,
+                rotate: 8,
+              }}
+              whileInView={{
+                y: 5,
+                rotate: 8,
+                transition: transition,
+              }}
+              viewport={viewport}
+              src="./github.svg"
+              className="w-[128px]"
+            />
+          </motion.a>
+        </div>
         {/* Shimmer mask for Vite logo */}
         <svg height="0">
           <mask id="mask-firefox">
