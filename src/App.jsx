@@ -1,9 +1,10 @@
 import TopComponent from "./assets/components/TopComponent";
 import HelloComponent from "./assets/components/HelloComponent";
 import Parallax from "./assets/components/Parallax";
-import LoremIpsum from "./assets/components/LoremIpsum";
-// import Zoom from "./assets/components/Zoom";
 import TechStuff from "./assets/components/TechStuff";
+import Projects from "./assets/components/Projects";
+// import Zoom from "./assets/components/Zoom";
+import LoremIpsum from "./assets/components/LoremIpsum";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <HelloComponent />
           <TechStuff />
         </div>
+        <Projects />
         <LoremIpsum />
       </div>
 

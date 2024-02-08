@@ -106,7 +106,7 @@ const TechStuff = () => {
     <AnimatePresence>
       <div className="relative flex flex-col items-center w-screen py-12">
         <h1 className="text-9xl font-alegreya-bold">MY TOOLS</h1>
-        <div className="relative h-[200px]"></div>
+        <div className="relative h-[200px]" />
         <motion.div
           className={cardClasses}
           id="react-div"
@@ -290,21 +290,23 @@ const TechStuff = () => {
           <div className="relative flex">
             <motion.p
               initial={{
+                x: -40,
                 y: 20,
                 opacity: 0,
-                rotate: 5,
+                rotate: 2,
               }}
               whileInView={{
+                x: 0,
                 y: 0,
                 opacity: 1,
-                rotate: 0,
+                rotate: -2,
                 transition: transitionOnce,
               }}
               viewport={{
                 once: true,
                 amount: 0.8,
               }}
-              className="self-center text-5xl font-gochi-hand -rotate-[2deg]"
+              className="self-center text-5xl font-gochi-hand"
             >
               More info on my github
             </motion.p>
@@ -326,12 +328,12 @@ const TechStuff = () => {
                 once: true,
                 amount: 0.8,
               }}
-              className="w-[128px] -scale-y-100 opacity-[0.87] absolute -right-12 top-12"
+              className="w-[128px] -scale-y-100 opacity-[0.87] absolute -right-12 top-12 select-none pointer-events-none"
               src="./arrow-curved.svg"
             />
           </div>
           <motion.a
-            href="https://github.com/Mochibunn#%EF%B8%8Fwhats-my-tech-stack"
+            href="https://github.com/Mochibunn/"
             target="_blank"
             initial={{
               opacity: 0,
@@ -353,7 +355,7 @@ const TechStuff = () => {
               }}
               viewport={viewport}
               src="./github.svg"
-              className="w-[128px]"
+              className="w-[128px] pointer-events-none"
             />
           </motion.a>
         </div>

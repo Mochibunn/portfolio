@@ -117,7 +117,7 @@ div.cm-content.cm-lineWrapping {
 }
 
 .debug {
-  border: dotted red 15px;
+  border: solid red 1px;
   animation: debug infinite 4s ease-in-out;
 }
 
