@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from "react";
+import { RiExternalLinkLine } from "react-icons/ri";
 import {
   AnimatePresence,
   motion,
@@ -60,7 +61,7 @@ const Projects = () => {
       <div
         ref={scope}
         id="projects-root"
-        className="relative flex flex-col items-center w-screen min-h-screen bg-purp"
+        className="relative flex flex-col items-center w-screen min-h-screen bg-purp deez"
       >
         <h1 className="mb-12 text-9xl font-alegreya-bold">MY PROJECTS</h1>
         {/* Card component */}
@@ -76,59 +77,77 @@ const Projects = () => {
               glarePosition="right"
               className="w-fit overflow-clip rounded-2xl"
             >
-              <div>
+              <a href="https://legacyvinylcountdown.netlify.app/">
                 <img
                   src="./vinylC.webp"
                   alt="Website screenshot"
-                  className="rounded-2xl"
+                  className="pointer-events-none rounded-2xl"
                 />
-              </div>
+              </a>
             </Tilt>
           </div>
           <div className="block w-6/12">
-            <h1 className="text-6xl text-center font-alegreya-bold">
-              Vinyl Countdown
-            </h1>
+            <div className="flex items-baseline justify-center">
+              <a href="https://legacyvinylcountdown.netlify.app/">
+                <h1 className="text-6xl text-center font-alegreya-bold">
+                  Vinyl Countdown
+                </h1>
+              </a>
+                <RiExternalLinkLine className="scale-[1.30]" />
+            </div>
             <BubbleText content="Vinyl countdown is my personal favorite. Most of the front end and some of the back end done by me. All of the albums available are from my physical vinyl collection." />
-            <div className="relative flex mt-4 justify-stretch">
+            <div className="relative flex justify-start mt-4">
               <div id="stack-gh-vc" className="min-w-5/12">
-                <h1 className="text-2xl font-alegreya-bold">TECH STACK:</h1>
+                <h1 className="text-3xl font-alegreya-bold">TECH STACK:</h1>
                 <div className="flex gap-2" id="stack-container-vc">
-                  <img
-                    className="aspect-square w-[64px]"
-                    src="./React.svg"
-                    alt="React logo"
-                  />
-                  <img
-                    className="aspect-square w-[64px]"
-                    src="./Tailwind.svg"
-                    alt="Tailwind logo"
-                  />
-                  <img
-                    className="aspect-square w-[64px]"
-                    src="./NextUI.svg"
-                    alt="NextUI logo"
-                  />
+                  <a href="https://react.dev/">
+                    <img
+                      className="aspect-square w-[64px] pointer-events-none"
+                      src="./React.svg"
+                      alt="React logo"
+                    />
+                  </a>
+                  <a href="https://tailwindcss.com/">
+                    <img
+                      className="aspect-square w-[64px] pointer-events-none"
+                      src="./Tailwind.svg"
+                      alt="Tailwind logo"
+                    />
+                  </a>
+                  <a href="https://nextui.org/">
+                    <img
+                      className="aspect-square w-[64px] pointer-events-none"
+                      src="./NextUI.svg"
+                      alt="NextUI logo"
+                    />
+                  </a>
                   <div className="relative" id="PostgreSQL-circle">
                     <img
                       src="./circle.svg"
-                      className="aspect-square w-[64px] z-30 relative origin-center scale-[1.25]"
+                      className="aspect-square w-[64px] z-30 relative origin-center scale-[1.25] pointer-events-none"
                       alt="Scribble circle"
                     />
-                    <img
-                      src="./PostgreSQL.svg"
-                      className="aspect-square w-[64px] z-20 absolute inset-0"
-                      alt="PostgreSQL logo"
-                    />
+                    <a
+                      href="https://www.postgresql.org/"
+                      className="absolute inset-0 z-20"
+                    >
+                      <img
+                        src="./PostgreSQL.svg"
+                        className="aspect-square w-[64px] pointer-events-none"
+                        alt="PostgreSQL logo"
+                      />
+                    </a>
                   </div>
                 </div>
-                <h1 className="mt-4 text-2xl font-alegreya-bold">REPO:</h1>
-                <div className="relative">
-                  <img
-                    src="./github.svg"
-                    alt="Octocat logo"
-                    className="aspect-square w-[96px] mt-4 absolute -left-5"
-                  />
+                <h1 className="mt-4 text-3xl font-alegreya-bold">REPO:</h1>
+                <div>
+                  <a href="https://github.com/Mochibunn/VinylCountdownLegacy" className="aspect-square">
+                    <img
+                      src="./github.svg"
+                      alt="Octocat logo"
+                      className="aspect-square w-[96px] mt-4 pointer-events-none"
+                    />
+                  </a>
                 </div>
               </div>
               <div className="relative">
@@ -138,12 +157,27 @@ const Projects = () => {
                 />
               </div>
               <div className="min-w-5/12">
-                <h1 className="text-2xl font-alegreya-bold">ALTERNATE VERSION:</h1>
+                <h1 className="text-3xl font-alegreya-bold">
+                  ALTERNATE VERSION:
+                </h1>
+                <a
+                href="https://legacyvinylcountdown.netlify.app/">
                 <img
                   src="./vinylC.svg"
                   alt="Viny Countdown logo"
-                  className="h-[64px]"
-                />
+                  className="h-[64px] pointer-events-none"
+                  />
+                  </a>
+                <h1 className="mt-4 text-3xl font-alegreya-bold">REPO:</h1>
+                <div>
+                  <a href="https://github.com/gjlander/VinylCountdown">
+                    <img
+                      src="./github.svg"
+                      alt="Octocat logo"
+                      className="aspect-square w-[96px] mt-4 pointer-events-none"
+                    />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
