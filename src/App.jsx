@@ -24,6 +24,12 @@ function App() {
         </div>
         <Projects />
         <LoremIpsum />
+        <LoremIpsum />
+        <LoremIpsum />
+        <LoremIpsum />
+        <LoremIpsum />
+        <LoremIpsum />
+        <LoremIpsum />
       </div>
 
       <script
