@@ -325,7 +325,7 @@ const TechStuff = () => {
                 transition: transitionOnce,
               }}
               viewport={{
-                once: true,
+                once: false,
                 amount: 0.8,
               }}
               className="w-[128px] -scale-y-100 opacity-[0.87] absolute -right-12 top-12 select-none pointer-events-none"

@@ -77,7 +77,9 @@ const Projects = () => {
               glarePosition="right"
               className="w-fit overflow-clip rounded-2xl"
             >
-              <a href="https://legacyvinylcountdown.netlify.app/">
+              <a href="https://legacyvinylcountdown.netlify.app/"
+                target="_blank"
+                rel="noreferrer">
                 <img
                   src="./vinylC.webp"
                   alt="Website screenshot"
@@ -88,33 +90,41 @@ const Projects = () => {
           </div>
           <div className="block w-6/12">
             <div className="flex items-baseline justify-center">
-              <a href="https://legacyvinylcountdown.netlify.app/">
+              <a href="https://legacyvinylcountdown.netlify.app/"
+                target="_blank"
+                rel="noreferrer">
                 <h1 className="text-6xl text-center font-alegreya-bold">
                   Vinyl Countdown
                 </h1>
               </a>
-                <RiExternalLinkLine className="scale-[1.30]" />
+              <RiExternalLinkLine className="scale-[1.30]" />
             </div>
             <BubbleText content="Vinyl countdown is my personal favorite. Most of the front end and some of the back end done by me. All of the albums available are from my physical vinyl collection." />
             <div className="relative flex justify-start mt-4">
               <div id="stack-gh-vc" className="min-w-5/12">
                 <h1 className="text-3xl font-alegreya-bold">TECH STACK:</h1>
                 <div className="flex gap-2" id="stack-container-vc">
-                  <a href="https://react.dev/">
+                  <a href="https://react.dev/"
+                    target="_blank"
+                    rel="noreferrer">
                     <img
                       className="aspect-square w-[64px] pointer-events-none"
                       src="./React.svg"
                       alt="React logo"
                     />
                   </a>
-                  <a href="https://tailwindcss.com/">
+                  <a href="https://tailwindcss.com/"
+                    target="_blank"
+                    rel="noreferrer">
                     <img
                       className="aspect-square w-[64px] pointer-events-none"
                       src="./Tailwind.svg"
                       alt="Tailwind logo"
                     />
                   </a>
-                  <a href="https://nextui.org/">
+                  <a href="https://nextui.org/"
+                    target="_blank"
+                    rel="noreferrer">
                     <img
                       className="aspect-square w-[64px] pointer-events-none"
                       src="./NextUI.svg"
@@ -129,6 +139,8 @@ const Projects = () => {
                     />
                     <a
                       href="https://www.postgresql.org/"
+                      target="_blank"
+                      rel="noreferrer"
                       className="absolute inset-0 z-20"
                     >
                       <img
@@ -141,7 +153,12 @@ const Projects = () => {
                 </div>
                 <h1 className="mt-4 text-3xl font-alegreya-bold">REPO:</h1>
                 <div>
-                  <a href="https://github.com/Mochibunn/VinylCountdownLegacy" className="aspect-square">
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://github.com/Mochibunn/VinylCountdownLegacy"
+                    className="aspect-square"
+                  >
                     <img
                       src="./github.svg"
                       alt="Octocat logo"
@@ -153,7 +170,7 @@ const Projects = () => {
               <div className="relative">
                 <img
                   src="./arrow-orang.svg"
-                  className="h-[100px] relative -top-6"
+                  className="h-[100px] relative -top-6 pointer-events-none"
                 />
               </div>
               <div className="min-w-5/12">
@@ -161,22 +178,49 @@ const Projects = () => {
                   ALTERNATE VERSION:
                 </h1>
                 <a
-                href="https://legacyvinylcountdown.netlify.app/">
-                <img
-                  src="./vinylC.svg"
-                  alt="Viny Countdown logo"
-                  className="h-[64px] pointer-events-none"
+                  href="https://vinylcountdown.netlify.app/"
+                  target="_blank"
+                  rel="noreferrer"
+                  >
+                  <img
+                    src="./vinylC.svg"
+                    alt="Viny Countdown logo"
+                    className="h-[64px] pointer-events-none"
                   />
-                  </a>
-                <h1 className="mt-4 text-3xl font-alegreya-bold">REPO:</h1>
-                <div>
-                  <a href="https://github.com/gjlander/VinylCountdown">
-                    <img
-                      src="./github.svg"
-                      alt="Octocat logo"
-                      className="aspect-square w-[96px] mt-4 pointer-events-none"
-                    />
-                  </a>
+                </a>
+                <div className="flex justify-start">
+                  <div className="w-1/2">
+                    <h1 className="mt-4 text-3xl font-alegreya-bold">REPO:</h1>
+                    <div>
+                      <a
+                        href="https://github.com/gjlander/VinylCountdown"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <img
+                          src="./github.svg"
+                          alt="Octocat logo"
+                          className="aspect-square w-[96px] mt-4 pointer-events-none"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                  <div className="w-1/2">
+                    <h1 className="mt-4 text-3xl font-alegreya-bold">BACKEND:</h1>
+                    <div>
+                      <a
+                        href="https://github.com/Mochibunn/VinylCountdownBackend"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <img
+                          src="./github.svg"
+                          alt="Octocat logo"
+                          className="aspect-square w-[96px] mt-4 pointer-events-none"
+                        />
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
