@@ -1,0 +1,106 @@
+:root {
+  --color-front:rgb(149, 52, 199);
+  --color-back:rgb(255, 183, 74);
+  --color-mid:rgb(240, 235, 75);
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+.nav-li {
+  position: relative;
+  line-height: 0.76471;
+}
+
+.nav-li + .nav-li {
+  margin-top: 1rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-a {
+  display: inline-block;
+  position: relative;
+  transition: 0.4s linear color;
+}
+
+.nav-a-letters {
+  display: flex;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .nav-a > * {
+    pointer-events: none;
+  }
+}
+
+.nav-a-stripe {
+  position: absolute;
+  background-color: var(--color-back);
+  width: calc(100% + 0.075em);
+  left: 0;
+  top: 0.5em;
+  height: 0.115em;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0, 1);
+}
+
+.nav-a-stripe--front {
+  background-color: var(--color-front);
+  transition-delay: 0.1s;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .nav-a:hover .nav-a-stripe {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+  .nav-a:hover .nav-a-stripe--front {
+    transition-delay: 0s;
+  }
+}
+
+.nav-a-stripe--mid {
+  background-color: var(--color-mid);
+  transition-delay: 50ms;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .nav-a:hover .nav-a-stripe--mid {
+    transition-delay: 50ms;
+  }
+  .nav-a:hover .nav-a-stripe--back {
+    transition-delay: 0.1s;
+  }
+}
+
+.nav-a-letters-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+}
+
+.nav-a-letter {
+  display: block;
+  will-change: transform, opacity;
+}
+
+.nav-a-letters .nav-a-letter:nth-child(2n) {
+  opacity: 0;
+}
+
+.nav-a-letters-top .nav-a-letter:nth-child(2n + 1) {
+  opacity: 0 !important;
+}
+/* Original code by https://twitter.com/juxtopposed */
+/* Modified by https://github.com/Mochibunn */

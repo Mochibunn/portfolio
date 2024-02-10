@@ -84,4 +84,4 @@ Text.propTypes = {
   export default BubbleText;
 
   //Original code from https://www.hover.dev/components/other#bubble-text
-  // Modified by https://github.com/Mochibunn
+  //Modified by https://github.com/Mochibunn
