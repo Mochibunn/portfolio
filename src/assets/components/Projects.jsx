@@ -1,63 +1,21 @@
-import { useEffect, useState, useRef } from "react";
 import { RiExternalLinkLine } from "react-icons/ri";
-import {
-  AnimatePresence,
-  motion,
-  useAnimate,
-  useMotionValue,
-  useInView,
-  useTransform,
-  useScroll,
-} from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import Tilt from "react-parallax-tilt";
 import BubbleText from "./BubbleText";
 import LinkStripe from "./LinkStripe";
+import PropTypes from "prop-types";
 
 const Projects = () => {
-  const [scope, animate] = useAnimate();
-
-  const variants = {
-    popUp: {
-      scale: 1.15,
-      rotate: 10,
-    },
-    wiggle: {
-      y: 10,
-      transition: {
-        ease: "easeInOut",
-        duration: 1.5,
-        repeat: Infinity,
-        repeatType: "reverse",
-      },
-    },
-  };
-
-  const handleHover = () => {
-    animate(scope.current, {
-      scale: 1.15,
-      rotate: 10,
-    });
-    animate("img", {
-      y: 10,
-      transition: {
-        ease: "easeInOut",
-        duration: 1.5,
-        repeat: Infinity,
-        repeatType: "reverse",
-      },
-    });
-  };
-
   return (
     <AnimatePresence>
       <div
         id="projects-root"
-        className="relative flex flex-col items-center w-screen min-h-screen bg-purp deez"
+        className="relative flex flex-col items-center w-screen min-h-screen pt-20 bg-purp"
       >
         <h1 className="mb-12 text-9xl font-alegreya-bold">MY PROJECTS</h1>
         {/* Card component */}
         <div className="flex w-full px-12 justify-evenly rounded-2xl">
-          <div className="sticky w-5/12 h-full rounded-2xl top-20">
+          <div className="sticky w-5/12 h-full rounded-2xl top-[30%]">
             <Tilt
               tiltAngleXInitial={0}
               tiltAngleYInitial={-10}
@@ -144,23 +102,7 @@ const Projects = () => {
                   </div>
                 </div>
                 <h1 className="mt-4 text-3xl font-alegreya-bold">REPO:</h1>
-
-                <a
-                  target="_blank"
-                  rel="noreferrer"
-                  href="https://github.com/Mochibunn/VinylCountdownLegacy"
-                  className="aspect-square w-[96px]"
-                >
-                  <motion.img
-                    whileHover={{
-                      scale: 1.15,
-                      rotate: 10,
-                    }}
-                    src="./github.svg"
-                    alt="Octocat logo"
-                    className="aspect-square w-[96px] mt-4"
-                  />
-                </a>
+                <GitHubLogo href="https://github.com/Mochibunn/VinylCountdownLegacy" />
               </div>
               <div className="relative">
                 <img
@@ -172,76 +114,42 @@ const Projects = () => {
                 <h1 className="text-3xl font-alegreya-bold">
                   ALTERNATE VERSION:
                 </h1>
-                <a
-                  href="https://vinylcountdown.netlify.app/"
-                  target="_blank"
-                  rel="noreferrer"
+                <motion.div
+                  initial={{
+                    filter: "drop-shadow(0px 0px 0px rgba(0, 0, 0, 0))",
+                    scale: 1,
+                  }}
+                  whileHover={{
+                    filter: "drop-shadow(0px 0px 15px rgba(149, 52, 199, 1))",
+                    scale: 1.2,
+                    transition: {
+                      ease: "easeInOut",
+                    },
+                  }}
+                  className="w-fit"
                 >
-                  <img
-                    src="./vinylC.svg"
-                    alt="Viny Countdown logo"
-                    className="h-[64px] pointer-events-none"
-                  />
-                </a>
+                  <a
+                    href="https://vinylcountdown.netlify.app/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img
+                      src="./vinylC.svg"
+                      alt="Viny Countdown logo"
+                      className="h-[64px] pointer-events-none"
+                    />
+                  </a>
+                </motion.div>
                 <div className="flex justify-start">
                   <div className="w-1/2">
                     <h1 className="mt-4 text-3xl font-alegreya-bold">REPO:</h1>
-                    <div>
-                      <a
-                        href="https://github.com/gjlander/VinylCountdown"
-                        target="_blank"
-                        rel="noreferrer"
-                        className="aspect-square w-[96px]"
-                      >
-                        <motion.img
-                          whileHover={{
-                            scale: 1.15,
-                            rotate: 10,
-                          }}
-                          src="./github.svg"
-                          alt="Octocat logo"
-                          className="aspect-square w-[96px] mt-4"
-                        />
-                      </a>
-                    </div>
+                    <GitHubLogo href="https://github.com/gjlander/VinylCountdown" />
                   </div>
                   <div className="w-1/2">
                     <h1 className="mt-4 text-3xl font-alegreya-bold">
                       BACKEND:
                     </h1>
-                    <motion.div
-                      whileHover={{
-                        y: 10,
-                        transition: {
-                          ease: "easeInOut",
-                          duration: 1.5,
-                          repeat: Infinity,
-                          repeatType: "reverse",
-                        }
-                      }}
-                      className="aspect-square w-[96px]"
-                    >
-                      <motion.div
-                        whileHover={{
-                          scale: 1.15,
-                          rotate: 10,
-                        }}
-                        className="origin-center"
-                      >
-                        <a
-                          href="https://github.com/Mochibunn/VinylCountdownBackend"
-                          target="_blank"
-                          rel="noreferrer"
-                          className="aspect-square w-[96px]"
-                        >
-                          <img
-                            src="./github.svg"
-                            alt="Octocat logo"
-                            className="aspect-square w-[96px] mt-4 pointer-events-none"
-                          />
-                        </a>
-                      </motion.div>
-                    </motion.div>
+                    <GitHubLogo href="https://github.com/Mochibunn/VinylCountdownBackend" />
                   </div>
                 </div>
               </div>
@@ -251,6 +159,53 @@ const Projects = () => {
       </div>
     </AnimatePresence>
   );
+};
+
+const GitHubLogo = ({ href }) => {
+  const ghClasses = {
+    img: "aspect-square w-[96px] mt-4 pointer-events-none",
+    div: "aspect-square w-[96px] origin-center",
+  };
+
+  return (
+    <motion.div
+      whileHover={{
+        y: 10,
+        transition: {
+          ease: "easeInOut",
+          duration: 1.5,
+          repeat: Infinity,
+          repeatType: "reverse",
+        },
+      }}
+      className={ghClasses.div}
+    >
+      <motion.div
+        whileHover={{
+          scale: 1.15,
+          rotate: 10,
+        }}
+        className="origin-center"
+      >
+        <a
+          href={href}
+          target="_blank"
+          rel="noreferrer"
+          className={ghClasses.div}
+        >
+          <img
+            src="./github.svg"
+            alt="Octocat logo"
+            className="aspect-square w-[96px] mt-4 pointer-events-none"
+          />
+        </a>
+      </motion.div>
+    </motion.div>
+  );
+};
+
+GitHubLogo.propTypes = {
+  href: PropTypes.string,
 };
 
 export default Projects;
