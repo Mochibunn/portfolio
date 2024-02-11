@@ -14,7 +14,6 @@ const Projects = () => {
         <h1 className="mb-12 text-9xl font-alegreya-bold">MY PROJECTS</h1>
         {/* Card component */}
         <VinylCountdownCard />
-        <div className="h-4" />
         <LazyPressCard />
       </div>
     </AnimatePresence>
