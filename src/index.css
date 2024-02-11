@@ -34,6 +34,11 @@
   src: url("../src/assets/fonts/Asap-VariableFont_wdth,wght.ttf");
   font-display: swap;
 }
+@font-face {
+  font-family: "Alegreya Sans SC Bold";
+  src: url("../src/assets/fonts/AlegreyaSansSC-Bold.ttf");
+  font-display: swap;
+}
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;

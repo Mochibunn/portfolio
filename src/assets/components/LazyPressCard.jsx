@@ -1,6 +1,5 @@
 import { RiExternalLinkLine } from "react-icons/ri";
 import { GitHubLogo } from "./GitHubLogo";
-import { motion } from "framer-motion";
 import Tilt from "react-parallax-tilt";
 import LinkStripe from "./LinkStripe";
 import BubbleText from "./BubbleText";
