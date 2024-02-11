@@ -42,10 +42,10 @@ const VinylCountdownCard = () => {
           />
           <RiExternalLinkLine className="scale-[1.30]" />
         </div>
-        <BubbleText content="Vinyl Countdown is my personal favorite. Most of the front end and some of the back end done by me. All of the albums available are from my physical vinyl collection. Feel free to constact me to discuss music!" />
+        <BubbleText content="Vinyl Countdown is my personal favorite. Most of the front end and some of the back end done by me. All of the albums available are from my physical vinyl collection. Feel free to contact me to discuss music!" />
         <div className="relative flex justify-start mt-4">
           <div id="stack-gh-vc" className="min-w-5/12">
-            <h1 className="text-3xl font-alegreya-bold">TECH STACK:</h1>
+            <h1 className="text-3xl font-alegreya-medium">TECH STACK:</h1>
             <div className="flex gap-2" id="stack-container-vc">
               <a href="https://react.dev/" target="_blank" rel="noreferrer">
                 <img
@@ -94,7 +94,7 @@ const VinylCountdownCard = () => {
                 </a>
               </div>
             </div>
-            <h1 className="mt-4 text-3xl font-alegreya-bold">REPO:</h1>
+            <h1 className="mt-4 text-3xl font-alegreya-medium">REPO:</h1>
             <GitHubLogo href="https://github.com/Mochibunn/VinylCountdownLegacy" />
           </div>
           <div className="relative">
@@ -104,7 +104,7 @@ const VinylCountdownCard = () => {
             />
           </div>
           <div className="min-w-5/12">
-            <h1 className="text-3xl font-alegreya-bold">ALTERNATE VERSION:</h1>
+            <h1 className="text-3xl font-alegreya-medium">ALTERNATE VERSION:</h1>
             <motion.div
               initial={{
                 filter: "drop-shadow(0px 0px 0px rgba(0, 0, 0, 0))",
@@ -133,11 +133,11 @@ const VinylCountdownCard = () => {
             </motion.div>
             <div className="flex justify-start">
               <div className="w-1/2">
-                <h1 className="mt-4 text-3xl font-alegreya-bold">REPO:</h1>
+                <h1 className="mt-4 text-3xl font-alegreya-medium">REPO:</h1>
                 <GitHubLogo href="https://github.com/gjlander/VinylCountdown" />
               </div>
               <div className="w-1/2">
-                <h1 className="mt-4 text-3xl font-alegreya-bold">BACKEND:</h1>
+                <h1 className="mt-4 text-3xl font-alegreya-medium">BACKEND:</h1>
                 <GitHubLogo href="https://github.com/Mochibunn/VinylCountdownBackend" />
               </div>
             </div>

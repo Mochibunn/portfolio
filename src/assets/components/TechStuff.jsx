@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { Component, useRef } from "react";
 import useOnScreen from "./useOnScreen";
+import createScrollSnap from "scroll-snap";
 
 const cardClasses =
   "h-[128px] sm:h-[164px] md:h-[190px] lg:h-[250px] xl:h-[300px] flex items-center";
@@ -107,184 +108,184 @@ const TechStuff = () => {
       <div className="relative flex flex-col items-center w-screen py-12">
         <h1 className="text-9xl font-alegreya-bold">MY TOOLS</h1>
         <div className="relative h-[200px]" />
-        <motion.div
-          className={cardClasses}
-          id="react-div"
-          initial="initial"
-          whileInView="expo"
-          viewport={viewport}
-        >
-          <motion.div variants={itemsRight}>
-            <div id="reasct-wrapper" className={divClasses}>
-              <div id="react">
+          <motion.div
+            className={cardClasses}
+            id="react-div"
+            initial="initial"
+            whileInView="expo"
+            viewport={viewport}
+          >
+            <motion.div variants={itemsRight}>
+              <div id="reasct-wrapper" className={divClasses}>
+                <div id="react">
+                  <img
+                    alt="React icon"
+                    src="./React.svg"
+                    className={imageClasses}
+                  />
+                </div>
+                <h1 className={labelClasses}>REACT</h1>
+              </div>
+            </motion.div>
+          </motion.div>
+          <motion.div
+            id="tailwind-div"
+            className={cardClasses}
+            initial="initial"
+            whileInView="expo"
+            viewport={viewport}
+          >
+            <motion.div variants={itemsLeft}>
+              <div className={divClasses}>
+                <h1 className={labelClasses}>TAILWIND</h1>
+                <div className="relative">
+                  <motion.img
+                    alt="Top part of the Tailwind CSS logo"
+                    animate={new AnimateTw().props}
+                    transition={transition}
+                    src="./twTop.svg"
+                    id="twTop"
+                    className={`${imageClasses} absolute`}
+                  />
+                  <motion.img
+                    alt="Bottom part of the Tailwind CSS logo"
+                    animate={new AnimateTw().props}
+                    transition={{
+                      delay: 0.3,
+                      ...transition,
+                    }}
+                    src="./twBot.svg"
+                    id="twBot"
+                    className={imageClasses}
+                  />
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+          <motion.div
+            id="js-div"
+            className={cardClasses}
+            initial="initial"
+            whileInView="expo"
+            viewport={viewport}
+          >
+            <motion.div variants={itemsRight}>
+              <div className={divClasses}>
                 <img
-                  alt="React icon"
-                  src="./React.svg"
-                  className={imageClasses}
+                  alt="JavaScript logo"
+                  src="./javascript.svg"
+                  className={`${imageClasses} rounded-md bg-[#FFD600]`}
+                />
+                <h1 className={labelClasses}>JAVASCRIPT</h1>
+              </div>
+            </motion.div>
+          </motion.div>
+          <motion.div
+            id="express-div"
+            className={cardClasses}
+            initial="initial"
+            whileInView="expo"
+            viewport={viewport}
+          >
+            <motion.div variants={itemsLeft}>
+              <div className={divClasses}>
+                <h1 className={labelClasses}>EXPRESS</h1>
+                <img
+                  alt="Express JS logo"
+                  src="./Express.svg"
+                  className={`${imageClasses} p-4 rounded-md bg-slate-200`}
                 />
               </div>
-              <h1 className={labelClasses}>REACT</h1>
-            </div>
+            </motion.div>
           </motion.div>
-        </motion.div>
-        <motion.div
-          id="tailwind-div"
-          className={cardClasses}
-          initial="initial"
-          whileInView="expo"
-          viewport={viewport}
-        >
-          <motion.div variants={itemsLeft}>
-            <div className={divClasses}>
-              <h1 className={labelClasses}>TAILWIND</h1>
-              <div className="relative">
+          <motion.div
+            id="mongo-div"
+            className={cardClasses}
+            initial="initial"
+            whileInView="expo"
+            viewport={viewport}
+          >
+            <motion.div variants={itemsRight}>
+              <div className={divClasses}>
                 <motion.img
-                  alt="Top part of the Tailwind CSS logo"
-                  animate={new AnimateTw().props}
-                  transition={transition}
-                  src="./twTop.svg"
-                  id="twTop"
-                  className={`${imageClasses} absolute`}
-                />
-                <motion.img
-                  alt="Bottom part of the Tailwind CSS logo"
-                  animate={new AnimateTw().props}
-                  transition={{
-                    delay: 0.3,
-                    ...transition,
+                  initial={{
+                    rotate: -10,
                   }}
-                  src="./twBot.svg"
-                  id="twBot"
+                  whileInView={{
+                    rotate: 5,
+                    transition: transition,
+                  }}
+                  viewport={viewport}
+                  alt="MongoDB logo"
+                  src="./MongoDB.svg"
+                  className={imageClasses}
+                />
+                <h1 className={labelClasses}>MONGODB</h1>
+              </div>
+            </motion.div>
+          </motion.div>
+          <motion.div
+            id="postgre-div"
+            className={cardClasses}
+            initial="initial"
+            whileInView="expo"
+            viewport={viewport}
+          >
+            <motion.div variants={itemsLeft}>
+              <div className={divClasses}>
+                <h1 className={labelClasses}>POSTGRESQL</h1>
+                <img
+                  alt="PostgreSQL logo"
+                  src="./PostgreSQL.svg"
                   className={imageClasses}
                 />
               </div>
-            </div>
+            </motion.div>
           </motion.div>
-        </motion.div>
-        <motion.div
-          id="js-div"
-          className={cardClasses}
-          initial="initial"
-          whileInView="expo"
-          viewport={viewport}
-        >
-          <motion.div variants={itemsRight}>
-            <div className={divClasses}>
-              <img
-                alt="JavaScript logo"
-                src="./javascript.svg"
-                className={`${imageClasses} rounded-md bg-[#FFD600]`}
-              />
-              <h1 className={labelClasses}>JAVASCRIPT</h1>
-            </div>
+          <motion.div
+            id="vite-div"
+            className={cardClasses}
+            initial="initial"
+            whileInView="expo"
+            viewport={viewport}
+          >
+            <motion.div variants={itemsRight} ref={elementRef}>
+              <div className={divClasses + " " + (isOnScreen ? "mask" : ``)}>
+                <div className={imageClasses}>
+                  <motion.img
+                    initial={new AnimateWiggle().props.initial}
+                    whileInView={new AnimateWiggle().props.wiggle}
+                    viewport={viewport}
+                    alt="Vite logo (pronounced 'veet')"
+                    src="Vite.svg"
+                    className={imageClasses}
+                  />
+                </div>
+                <h1 className={labelClasses}>VITE</h1>
+              </div>
+            </motion.div>
           </motion.div>
-        </motion.div>
-        <motion.div
-          id="express-div"
-          className={cardClasses}
-          initial="initial"
-          whileInView="expo"
-          viewport={viewport}
-        >
-          <motion.div variants={itemsLeft}>
-            <div className={divClasses}>
-              <h1 className={labelClasses}>EXPRESS</h1>
-              <img
-                alt="Express JS logo"
-                src="./Express.svg"
-                className={`${imageClasses} p-4 rounded-md bg-slate-200`}
-              />
-            </div>
-          </motion.div>
-        </motion.div>
-        <motion.div
-          id="mongo-div"
-          className={cardClasses}
-          initial="initial"
-          whileInView="expo"
-          viewport={viewport}
-        >
-          <motion.div variants={itemsRight}>
-            <div className={divClasses}>
-              <motion.img
-                initial={{
-                  rotate: -10,
-                }}
-                whileInView={{
-                  rotate: 5,
-                  transition: transition,
-                }}
-                viewport={viewport}
-                alt="MongoDB logo"
-                src="./MongoDB.svg"
-                className={imageClasses}
-              />
-              <h1 className={labelClasses}>MONGODB</h1>
-            </div>
-          </motion.div>
-        </motion.div>
-        <motion.div
-          id="postgre-div"
-          className={cardClasses}
-          initial="initial"
-          whileInView="expo"
-          viewport={viewport}
-        >
-          <motion.div variants={itemsLeft}>
-            <div className={divClasses}>
-              <h1 className={labelClasses}>POSTGRESQL</h1>
-              <img
-                alt="PostgreSQL logo"
-                src="./PostgreSQL.svg"
-                className={imageClasses}
-              />
-            </div>
-          </motion.div>
-        </motion.div>
-        <motion.div
-          id="vite-div"
-          className={cardClasses}
-          initial="initial"
-          whileInView="expo"
-          viewport={viewport}
-        >
-          <motion.div variants={itemsRight} ref={elementRef}>
-            <div className={divClasses + " " + (isOnScreen ? "mask" : ``)}>
-              <div className={imageClasses}>
+          <motion.div
+            id="vscode-div"
+            className={cardClasses}
+            initial="initial"
+            whileInView="expo"
+            viewport={viewport}
+          >
+            <motion.div variants={itemsLeft}>
+              <div className={divClasses}>
+                <h1 className={labelClasses}>VS CODE</h1>
                 <motion.img
                   initial={new AnimateWiggle().props.initial}
                   whileInView={new AnimateWiggle().props.wiggle}
                   viewport={viewport}
-                  alt="Vite logo (pronounced 'veet')"
-                  src="Vite.svg"
+                  alt="Microsoft Visual Studio Code logo"
+                  src="./VSCode.svg"
                   className={imageClasses}
                 />
               </div>
-              <h1 className={labelClasses}>VITE</h1>
-            </div>
+            </motion.div>
           </motion.div>
-        </motion.div>
-        <motion.div
-          id="vscode-div"
-          className={cardClasses}
-          initial="initial"
-          whileInView="expo"
-          viewport={viewport}
-        >
-          <motion.div variants={itemsLeft}>
-            <div className={divClasses}>
-              <h1 className={labelClasses}>VS CODE</h1>
-              <motion.img
-                initial={new AnimateWiggle().props.initial}
-                whileInView={new AnimateWiggle().props.wiggle}
-                viewport={viewport}
-                alt="Microsoft Visual Studio Code logo"
-                src="./VSCode.svg"
-                className={imageClasses}
-              />
-            </div>
-          </motion.div>
-        </motion.div>
         <h2 className="pb-12 text-6xl font-alegreya-bold">..AND MORE!</h2>
         <div className="flex gap-12 align-middle">
           <div className="relative flex">

@@ -14,10 +14,13 @@ const LazyPressCard = () => {
           <LinkStripe href="https://lazypress.net/" content="LazyPress" />
           <RiExternalLinkLine className="scale-[1.30]" />
         </div>
-        <BubbleText content="LazyPress was my final group project for the web dev school. It's a working CMS and custom website solution. Originally, the idea was to also include a full on website builder but that would've taken too long for the deadline so the current solution offers you professional website building services with your own CMS for it." />
+        <BubbleText
+          noLigatures
+          content="LazyPress was my final group project for the web dev school. It's a working CMS and custom website solution. Originally, the idea was to also include a full on website builder but that would've taken too long for the deadline so the current solution offers you professional website building services with your own CMS for it."
+        />
         <div className="relative flex justify-end mt-4 gap-x-12">
           <div id="stack-gh-lazy" className="w-1/2">
-            <h1 className="text-3xl font-alegreya-bold">TECH STACK:</h1>
+            <h1 className="text-3xl font-alegreya-medium">TECH STACK:</h1>
             <div className="flex gap-2" id="stack-container-lazy">
               <a href="https://react.dev/" target="_blank" rel="noreferrer">
                 <img
@@ -64,29 +67,29 @@ const LazyPressCard = () => {
               </a>
             </div>
             <div className="flex">
-              <div className="mr-10">
-                <h1 className="mt-4 text-3xl font-alegreya-bold">REPO:</h1>
+              <div className="mr-9">
+                <h1 className="mt-4 text-3xl font-alegreya-medium">REPO:</h1>
                 <GitHubLogo href="https://github.com/Mochibunn/product-lazypress" />
               </div>
               <div className="">
-                <h1 className="mt-4 text-3xl font-alegreya-bold">BACKEND:</h1>
+                <h1 className="mt-4 text-3xl font-alegreya-medium">BACKEND:</h1>
                 <GitHubLogo href="https://github.com/gjlander/backend-lazypress" />
               </div>
             </div>
           </div>
           <div className="w-1/2">
-            <h1 className="text-3xl font-alegreya-bold">SAMPLE WEBSITE:</h1>
+            <h1 className="text-3xl font-alegreya-medium">SAMPLE WEBSITE:</h1>
             <div className="h-[64px] flex flex-col justify-center items-start">
               <div className="flex items-baseline justify-center pb-2">
                 <LinkStripe
                   href="https://foodblog-lazypress.netlify.app/"
                   content="Food&nbsp;&nbsp;Blog"
-                  />
+                />
                 <RiExternalLinkLine className="scale-[1.30]" />
               </div>
             </div>
             <div className="w-full">
-              <h1 className="mt-4 text-3xl font-alegreya-bold">REPO:</h1>
+              <h1 className="mt-4 text-3xl font-alegreya-medium">REPO:</h1>
               <GitHubLogo href="https://github.com/Mochibunn/product-lazypress" />
             </div>
           </div>

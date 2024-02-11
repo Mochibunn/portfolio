@@ -39,6 +39,11 @@
   src: url("../src/assets/fonts/AlegreyaSansSC-Bold.ttf");
   font-display: swap;
 }
+@font-face {
+  font-family: "Alegreya Sans SC Medium";
+  src: url("../src/assets/fonts/AlegreyaSansSC-Medium.ttf");
+  font-display: swap;
+}
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -70,16 +75,28 @@
   font-synthesis-weight: auto;
 }
 
-.bubble {
-  font-family:'Asap' ,'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-weight: 100;
-  font-synthesis-weight: auto;
-}
-
 html {
   margin: 0;
   padding: 0;
   background-color: rgba(32, 32, 32, 1);
+}
+
+.scroll-snap {
+  scroll-snap-type: y mandatory;
+}
+
+.scrollable {
+  scroll-snap-align: center;
+}
+
+.bubble {
+  font-family: "Asap", "Franklin Gothic Medium", "Arial Narrow", Arial,
+    sans-serif;
+  font-weight: 100;
+  font-synthesis-weight: auto;
+}
+.no-ligatures {
+  font-variant-ligatures: no-common-ligatures;
 }
 
 .cm-line {

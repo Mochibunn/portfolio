@@ -3,7 +3,8 @@ import PropTypes from "prop-types";
 
 /**
  * LinkStripe - Simple yet nice looking link component
- * @param {*} param0
+ * @param {content} string
+ * @param {href} string
  * @returns
  */
 const LinkStripe = ({ content, href}) => {

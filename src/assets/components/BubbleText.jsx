@@ -5,10 +5,11 @@ import PropTypes from "prop-types";
 /**
  * BubbleText - A pretty, visual component for rendering "bubble" text.
  * @requires prop-types
- * @param {string} content Text for the component to transform 
- * @returns 
+ * @param {string} content Text for the component to transform
+ * @param {noLigatures} boolean
+ * @returns
  */
-const BubbleText = ({content}) => {
+const BubbleText = ({ content, noLigatures }) => {
   useEffect(() => {
     const spans = document.querySelectorAll(".hover-text span");
 
@@ -51,7 +52,12 @@ const BubbleText = ({content}) => {
   }, []);
 
   return (
-    <h2 className="text-4xl font-thin text-justify text-indigo-300 hover-text bubble">
+    <h2
+      className={
+        "text-4xl font-thin text-justify text-indigo-300 hover-text bubble" +
+        (noLigatures ? " no-ligatures" : "")
+      }
+    >
       <Text>{content}</Text>
     </h2>
   );
@@ -66,7 +72,7 @@ const Text = ({ children }) => {
             transition: "0.15s font-weight, 0.15s color",
           }}
           key={idx}
-          >
+        >
           {child}
         </span>
       ))}
@@ -76,12 +82,13 @@ const Text = ({ children }) => {
 
 BubbleText.propTypes = {
   content: PropTypes.string.isRequired,
-}
+  noLigatures: PropTypes.bool,
+};
 Text.propTypes = {
   children: PropTypes.string.isRequired,
-}
+};
 
-  export default BubbleText;
+export default BubbleText;
 
-  //Original code from https://www.hover.dev/components/other#bubble-text
-  //Modified by https://github.com/Mochibunn
+//Original code from https://www.hover.dev/components/other#bubble-text
+//Modified by https://github.com/Mochibunn
