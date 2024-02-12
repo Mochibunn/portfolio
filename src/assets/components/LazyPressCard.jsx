@@ -3,24 +3,33 @@ import { GitHubLogo } from "./GitHubLogo";
 import Tilt from "react-parallax-tilt";
 import LinkStripe from "./LinkStripe";
 import BubbleText from "./BubbleText";
+import { useContext } from "react";
+import { ClassContext } from "../../Contexts";
 
 const LazyPressCard = () => {
-  const stackClasses = "aspect-square w-[64px] pointer-events-none";
+  const context = useContext(ClassContext);
+  const stackClasses = context.stackClasses;
+  const subheadingClasses = context.stackSubheadingClasses;
+  const topCardClasses = context.topCardClasses;
+  const tiltClasses = context.tiltClasses;
 
   return (
-    <div className="flex w-full p-12 justify-evenly rounded-2xl">
+    <div className={topCardClasses}>
       <div className="w-1/2">
         <div className="flex items-baseline justify-center pb-2">
-          <LinkStripe href="https://lazypress.net/" content="LazyPress" />
+          <LinkStripe href="https://lazypress.net/">LazyPress</LinkStripe>
           <RiExternalLinkLine className="scale-[1.30]" />
         </div>
-        <BubbleText
-          noLigatures
-          content="LazyPress was my final group project for the web dev school. It's a working CMS and custom website solution. Originally, the idea was to also include a full on website builder but that would've taken too long for the deadline so the current solution offers you professional website building services with your own CMS for it."
-        />
+        <BubbleText noLigatures>
+          LazyPress was my final group project for the web dev school. It&apos;s
+          a working CMS and custom website solution. Originally, the idea was to
+          also include a full on website builder but that would&apos;ve taken
+          too long for the deadline so the current solution offers you
+          professional website building services with your own CMS for it.
+        </BubbleText>
         <div className="relative flex justify-end mt-4 gap-x-12">
           <div id="stack-gh-lazy" className="w-1/2">
-            <h1 className="text-3xl font-alegreya-medium">TECH STACK:</h1>
+            <h1 className={subheadingClasses}>TECH STACK:</h1>
             <div className="flex gap-2" id="stack-container-lazy">
               <a href="https://react.dev/" target="_blank" rel="noreferrer">
                 <img
@@ -66,37 +75,36 @@ const LazyPressCard = () => {
                 />
               </a>
             </div>
-            <div className="flex">
+            <div className="flex mt-4">
               <div className="mr-9">
-                <h1 className="mt-4 text-3xl font-alegreya-medium">REPO:</h1>
+                <h1 className={subheadingClasses}>REPO:</h1>
                 <GitHubLogo href="https://github.com/Mochibunn/product-lazypress" />
               </div>
-              <div className="">
-                <h1 className="mt-4 text-3xl font-alegreya-medium">BACKEND:</h1>
+              <div>
+                <h1 className={subheadingClasses}>BACKEND:</h1>
                 <GitHubLogo href="https://github.com/gjlander/backend-lazypress" />
               </div>
             </div>
           </div>
           <div className="w-1/2">
-            <h1 className="text-3xl font-alegreya-medium">SAMPLE WEBSITE:</h1>
+            <h1 className={subheadingClasses}>SAMPLE WEBSITE:</h1>
             <div className="h-[64px] flex flex-col justify-center items-start">
               <div className="flex items-baseline justify-center pb-2">
-                <LinkStripe
-                  href="https://foodblog-lazypress.netlify.app/"
-                  content="Food&nbsp;&nbsp;Blog"
-                />
+                <LinkStripe href="https://foodblog-lazypress.netlify.app/">
+                  Food&nbsp;&nbsp;Blog
+                </LinkStripe>
                 <RiExternalLinkLine className="scale-[1.30]" />
               </div>
             </div>
-            <div className="w-full">
-              <h1 className="mt-4 text-3xl font-alegreya-medium">REPO:</h1>
-              <GitHubLogo href="https://github.com/Mochibunn/product-lazypress" />
+            <div className="w-full mt-4">
+              <h1 className={subheadingClasses}>REPO:</h1>
+              <GitHubLogo href="https://github.com/priyankapasrija/FoodBlogLazyPress" />
             </div>
           </div>
         </div>
       </div>
       {/* Tilt */}
-      <div className="sticky w-5/12 h-full rounded-2xl top-[30%]">
+      <div className={tiltClasses}>
         <Tilt
           tiltAngleXInitial={0}
           tiltAngleYInitial={10}

@@ -9,7 +9,7 @@ import PropTypes from "prop-types";
  * @param {noLigatures} boolean
  * @returns
  */
-const BubbleText = ({ content, noLigatures }) => {
+const BubbleText = ({ children, noLigatures }) => {
   useEffect(() => {
     const spans = document.querySelectorAll(".hover-text span");
 
@@ -58,7 +58,7 @@ const BubbleText = ({ content, noLigatures }) => {
         (noLigatures ? " no-ligatures" : "")
       }
     >
-      <Text>{content}</Text>
+      <Text>{children}</Text>
     </h2>
   );
 };
@@ -68,9 +68,7 @@ const Text = ({ children }) => {
     <>
       {children.split("").map((child, idx) => (
         <span
-          style={{
-            transition: "0.15s font-weight, 0.15s color",
-          }}
+          style={{ transition: "0.15s font-weight, 0.15s color" }}
           key={idx}
         >
           {child}
@@ -81,7 +79,7 @@ const Text = ({ children }) => {
 };
 
 BubbleText.propTypes = {
-  content: PropTypes.string.isRequired,
+  children: PropTypes.string.isRequired,
   noLigatures: PropTypes.bool,
 };
 Text.propTypes = {

@@ -98,7 +98,6 @@ html {
 .no-ligatures {
   font-variant-ligatures: no-common-ligatures;
 }
-
 .cm-line {
   min-width: 70% !important;
   min-height: 22px !important;

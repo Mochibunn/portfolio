@@ -3,11 +3,10 @@ import PropTypes from "prop-types";
 
 /**
  * LinkStripe - Simple yet nice looking link component
- * @param {content} string
  * @param {href} string
  * @returns
  */
-const LinkStripe = ({ content, href}) => {
+const LinkStripe = ({ children, href}) => {
   return (
     <ul className="text-6xl text-center nav-ul font-alegreya-bold">
       <li className="nav-li">
@@ -18,13 +17,13 @@ const LinkStripe = ({ content, href}) => {
           href={href || "#"}
           >
           <span className="nav-a-letters">
-            <Text>{content}</Text>
+            <Text>{children}</Text>
           </span>
           <span className="nav-a-stripe nav-a-stripe--front"> </span>
           <span className="nav-a-stripe nav-a-stripe--mid"> </span>
           <span className="nav-a-stripe nav-a-stripe--back"> </span>
           <span className="nav-a-letters-top">
-            <Text>{content}</Text>
+            <Text>{children}</Text>
           </span>
         </a>
       </li>
@@ -45,7 +44,7 @@ const Text = ({ children }) => {
 };
 
 LinkStripe.propTypes = {
-  content: PropTypes.string.isRequired,
+  children: PropTypes.string.isRequired,
   href: PropTypes.string,
 };
 Text.propTypes = {
