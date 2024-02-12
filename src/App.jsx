@@ -13,12 +13,10 @@ function App() {
         <TopComponent />
       </div>
       <div className="" aria-hidden height="800px" />
-      {/* <div className="pointer-events-none select-none"> */}
       <div className="min-h-screen">
         <Parallax />
         <div className="relative min-h-[1400px]" id="postHouseGradient">
           <div className="h-[300px]" />
-          {/* <Zoom /> */}
           <HelloComponent />
           <TechStuff />
         </div>

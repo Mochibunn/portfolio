@@ -14,6 +14,7 @@ const VinylCountdownCard = () => {
   const subheadingClasses = context.stackSubheadingClasses;
   const topCardClasses = context.topCardClasses;
   const tiltClasses = context.tiltClasses;
+  const infoClasses = context.infoClasses;
 
   return (
     <div className={topCardClasses}>
@@ -41,7 +42,7 @@ const VinylCountdownCard = () => {
           </a>
         </Tilt>
       </div>
-      <div className="w-6/12">
+      <div className={infoClasses}>
         <div className="flex items-baseline justify-center pb-2">
           <LinkStripe href="https://legacyvinylcountdown.netlify.app">
             Vinyl&nbsp;&nbsp;Countdown
@@ -49,40 +50,33 @@ const VinylCountdownCard = () => {
           <RiExternalLinkLine className="scale-[1.30]" />
         </div>
         <BubbleText>
-          Vinyl Countdown is my personal favorite. Most of the front end and
-          some of the back end done by me. All of the albums available are from
-          my physical vinyl collection. Feel free to contact me to discuss
-          music!
+          Vinyl Countdown is my personal favorite. It was the most fun time I
+          had while studying. Everyday I would find some cool new feature or
+          component and put it in the code. NextUI was abolutely the right
+          choice for the UI. Most of the front end and some of the back end done
+          by me. All of the albums available are from my physical vinyl
+          collection. Feel free to contact me to discuss music! Feel free to
+          contact me to discuss music!
         </BubbleText>
         <div className="relative flex justify-start mt-4">
           <div id="stack-gh-vc" className="min-w-5/12">
             <h1 className={subheadingClasses}>TECH STACK:</h1>
             <div className="flex gap-2" id="stack-container-vc">
-              <a href="https://react.dev/" target="_blank" rel="noreferrer">
-                <img
-                  className={stackClasses}
-                  src="./React.svg"
-                  alt="React logo"
-                />
-              </a>
-              <a
+              <StackImage
+                href="https://react.dev/"
+                src="./React.svg"
+                alt="React logo"
+              />
+              <StackImage
                 href="https://tailwindcss.com/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img
-                  className={stackClasses}
-                  src="./Tailwind.svg"
-                  alt="Tailwind logo"
-                />
-              </a>
-              <a href="https://nextui.org/" target="_blank" rel="noreferrer">
-                <img
-                  className={stackClasses}
-                  src="./NextUI.svg"
-                  alt="NextUI logo"
-                />
-              </a>
+                src="./Tailwind.svg"
+                alt="Tailwind logo"
+              />
+              <StackImage
+                href="https://nextui.org/"
+                src="./NextUI.svg"
+                alt="NextUI logo"
+              />
               <div className="relative" id="PostgreSQL-circle">
                 <img
                   src="./circle.svg"
@@ -105,7 +99,7 @@ const VinylCountdownCard = () => {
                 </a>
               </div>
             </div>
-            <h1 className={"mt-4 " + subheadingClasses}>REPO:</h1>
+            <h1 className={subheadingClasses}>REPO:</h1>
             <GitHubLogo href="https://github.com/Mochibunn/VinylCountdownLegacy" />
           </div>
           <div className="relative">

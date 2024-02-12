@@ -1,6 +1,7 @@
 import { AnimatePresence } from "framer-motion";
 import VinylCountdownCard from "./VinylCountdownCard";
 import LazyPressCard from "./LazyPressCard";
+import ToDoJSCard from "./ToDoJSCard";
 
 const Projects = () => {
 
@@ -15,6 +16,7 @@ const Projects = () => {
         {/* Card component */}
         <VinylCountdownCard />
         <LazyPressCard />
+        <ToDoJSCard />
       </div>
     </AnimatePresence>
   );
