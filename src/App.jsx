@@ -5,6 +5,8 @@ import TechStuff from "./assets/components/TechStuff";
 import Projects from "./assets/components/Projects";
 // import Zoom from "./assets/components/Zoom";
 import LoremIpsum from "./assets/components/LoremIpsum";
+import ContactStuff from "./assets/components/ContactStuff";
+import Footer from "./assets/components/Footer";
 
 function App() {
   return (
@@ -21,9 +23,12 @@ function App() {
           <TechStuff />
         </div>
         <Projects />
+        <ContactStuff />
+        <Footer />
+        {/* <div className="min-h-[600px] bg-purp" /> */}
+        {/* <LoremIpsum />
         <LoremIpsum />
-        <LoremIpsum />
-        <LoremIpsum />
+        <LoremIpsum /> */}
       </div>
 
       <script

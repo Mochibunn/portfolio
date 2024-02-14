@@ -1,7 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { Component, useRef } from "react";
 import useOnScreen from "./useOnScreen";
-import createScrollSnap from "scroll-snap";
 
 const cardClasses =
   "h-[128px] sm:h-[164px] md:h-[190px] lg:h-[250px] xl:h-[300px] flex items-center";
