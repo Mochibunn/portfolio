@@ -24,10 +24,6 @@ function App() {
         <LoremIpsum />
         <LoremIpsum />
         <LoremIpsum />
-        <LoremIpsum />
-        <LoremIpsum />
-        <LoremIpsum />
-        <LoremIpsum />
       </div>
 
       <script

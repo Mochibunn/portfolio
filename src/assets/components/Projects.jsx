@@ -2,6 +2,8 @@ import { AnimatePresence } from "framer-motion";
 import VinylCountdownCard from "./VinylCountdownCard";
 import LazyPressCard from "./LazyPressCard";
 import ToDoJSCard from "./ToDoJSCard";
+import MochiblogCard from "./MochiblogCard";
+import PsdToHtmlCard from "./PsdToHtmlCard";
 
 const Projects = () => {
 
@@ -17,6 +19,8 @@ const Projects = () => {
         <VinylCountdownCard />
         <LazyPressCard />
         <ToDoJSCard />
+        <MochiblogCard />
+        <PsdToHtmlCard />
       </div>
     </AnimatePresence>
   );
