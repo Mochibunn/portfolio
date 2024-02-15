@@ -156,7 +156,7 @@ const ContactStuff = () => {
             />
           </div>
           <div className="w-7/12 mt-4">
-            <label htmlFor="name">
+            <label htmlFor="email">
               <motion.p
               initial={{
                 rotate: 5,
