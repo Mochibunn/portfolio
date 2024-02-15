@@ -104,8 +104,8 @@ const ContactStuff = () => {
         </div> */}
         <form
           name="form-name"
-          netlify="true"
-          action={{}}
+          data-netlify="true"
+          method="POST"
           className="flex flex-col items-center w-7/12"
         >
           <div className="w-7/12">
@@ -267,7 +267,7 @@ const ContactStuff = () => {
             }}
             type="submit"
             className="mt-6 text-5xl font-gochi-hand"
-            onSubmit={handleSubmit}
+            // onSubmit={handleSubmit}
           />
         </form>
       </div>
