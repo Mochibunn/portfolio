@@ -68,7 +68,7 @@ const Text = ({ children }) => {
     <>
       {children.split("").map((child, idx) => (
         <span
-          style={{ transition: "0.15s font-weight, 0.15s color" }}
+          style={{ transition: "0.1s font-weight, 0.08s color" }}
           key={idx}
         >
           {child}

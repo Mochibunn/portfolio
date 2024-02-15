@@ -10,16 +10,6 @@
   font-display: swap;
 }
 @font-face {
-  font-family: "ProtestRevolution";
-  src: url("../src/assets/fonts/protestrevolution-regular-webfont.woff2");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Caveat Brush";
-  src: url("../src/assets/fonts/CaveatBrush-Regular.ttf");
-  font-display: swap;
-}
-@font-face {
   font-family: "Barlow Condensed Semibold Italic";
   src: url("../src/assets/fonts/BarlowCondensed-SemiBoldItalic.ttf");
   font-display: swap;
@@ -42,6 +32,11 @@
 @font-face {
   font-family: "Alegreya Sans SC Medium";
   src: url("../src/assets/fonts/AlegreyaSansSC-Medium.woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Oleo Script";
+  src: url("../src/assets/fonts/OleoScript-Regular.ttf");
   font-display: swap;
 }
 
@@ -98,11 +93,16 @@ html {
   border: 1px solid rgba(29, 1, 57, 0.821);
 
 }
-
+.formfield {
+  /* border: 1px solid rgba(255, 255, 255, 1); */
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.7);
+  outline: none;
+}
 .bubble {
   font-family: "Asap", "Franklin Gothic Medium", "Arial Narrow", Arial,
     sans-serif;
   font-weight: 100;
+  font-kerning: none;
   font-synthesis-weight: auto;
 }
 .no-ligatures {
