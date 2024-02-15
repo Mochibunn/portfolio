@@ -9,6 +9,10 @@ const ContactStuff = () => {
   const contactClasses =
     "w-full p-4 rounded-2xl bg-purple-950 font-asap text-2xl formfield relative z-10";
 
+  const handleSubmit = () => {
+
+  };
+
   return (
     <AnimatePresence>
       <div className="relative flex flex-col items-center w-screen py-12 bg-purp min-h-[600px]">
@@ -100,7 +104,7 @@ const ContactStuff = () => {
         </div> */}
         <form
           name="contact"
-          netlify=""
+          netlify
           className="flex flex-col items-center w-7/12"
         >
           <div className="w-7/12">
@@ -255,12 +259,14 @@ const ContactStuff = () => {
             whileHover={{
               scale: 1.75,
             }}
+            whileTap={{}}
             viewport={{
               once: true,
               amount: 0.8,
             }}
             type="submit"
             className="mt-6 text-5xl font-gochi-hand"
+            onSubmit={handleSubmit}
           />
         </form>
       </div>
