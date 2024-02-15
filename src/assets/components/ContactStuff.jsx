@@ -9,10 +9,6 @@ const ContactStuff = () => {
   const contactClasses =
     "w-full p-4 rounded-2xl bg-purple-950 font-asap text-2xl formfield relative z-10";
 
-  const handleSubmit = () => {
-
-  };
-
   return (
     <AnimatePresence>
       <div className="relative flex flex-col items-center w-screen py-12 bg-purp min-h-[600px]">
@@ -269,7 +265,7 @@ const ContactStuff = () => {
               amount: 0.8,
             }}
             type="submit"
-            className="mt-6 text-5xl font-gochi-hand"
+            className="mt-6 text-5xl cursor-pointer font-gochi-hand"
             // onSubmit={handleSubmit}
           />
         </form>
