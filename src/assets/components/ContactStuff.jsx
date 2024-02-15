@@ -103,11 +103,12 @@ const ContactStuff = () => {
           </div>
         </div> */}
         <form
-          name="form-name"
+          name="contact"
           data-netlify="true"
           method="POST"
           className="flex flex-col items-center w-7/12"
         >
+          <input type="hidden" name="form-name" value="contact" />
           <div className="w-7/12">
             <label htmlFor="name">
               <motion.p
@@ -237,7 +238,7 @@ const ContactStuff = () => {
                 once: true,
                 amount: 0.8,
               }}
-              name="name"
+              name="message"
               required
               className={contactClasses + " rounded-br-3xl"}
               rows="15"
@@ -260,7 +261,9 @@ const ContactStuff = () => {
             whileHover={{
               scale: 1.75,
             }}
-            whileTap={{}}
+            whileTap={{
+              scale: 1.4,
+            }}
             viewport={{
               once: true,
               amount: 0.8,
