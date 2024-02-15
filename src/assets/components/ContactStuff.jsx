@@ -103,8 +103,9 @@ const ContactStuff = () => {
           </div>
         </div> */}
         <form
-          name="contact"
-          netlify
+          name="form-name"
+          netlify="true"
+          action={{}}
           className="flex flex-col items-center w-7/12"
         >
           <div className="w-7/12">
