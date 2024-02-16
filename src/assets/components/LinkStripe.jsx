@@ -3,12 +3,14 @@ import PropTypes from "prop-types";
 
 /**
  * LinkStripe - Simple yet nice looking link component
- * @param {href} string
+ * @param {string} extra - Add text size if adding extra classes!
+ * @param {string} href
  * @returns
  */
-const LinkStripe = ({ children, href}) => {
+const LinkStripe = ({ children, href, extra}) => {
+  const text = extra || "text-6xl";
   return (
-    <ul className="text-6xl text-center nav-ul font-alegreya-bold">
+    <ul className={"text-center nav-ul font-alegreya-bold " + text}>
       <li className="nav-li">
         <a
           target="_blank"
@@ -46,6 +48,7 @@ const Text = ({ children }) => {
 LinkStripe.propTypes = {
   children: PropTypes.string.isRequired,
   href: PropTypes.string,
+  extra: PropTypes.string,
 };
 Text.propTypes = {
   children: PropTypes.string.isRequired,

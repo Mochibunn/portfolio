@@ -99,7 +99,7 @@ const VinylCountdownCard = () => {
                 </a>
               </div>
             </div>
-            <h1 className={subheadingClasses}>REPO:</h1>
+            <h1 className={subheadingClasses + " mt-4"}>REPO:</h1>
             <GitHubLogo href="https://github.com/Mochibunn/VinylCountdownLegacy" />
           </div>
           <div className="relative">

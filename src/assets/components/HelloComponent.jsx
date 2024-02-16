@@ -22,7 +22,7 @@ const HelloComponent = () => {
           <div className="flex flex-col items-center mx-auto">
             <img
               src="./bnu.webp"
-              className="rounded-xl w-[30%] select-none pointer-events-none"
+              className="rounded-xl xl:w-[60%] 2xl:w-[30%] select-none pointer-events-none"
               width="1733px"
               height="1155px"
               alt="A bunny rabbit."
@@ -33,7 +33,7 @@ const HelloComponent = () => {
             >
               Yup, I&apos;m a rabbit!
             </span>
-            <div className="w-9/12 mx-auto *:mb-5 mt-4">
+            <div className="xl:w-11/12 2xl:w-9/12 mx-auto *:mb-5 mt-4">
               <div>
                 <BubbleText noLigatures>
                   I felt shocked when I saw my brother change the Windows XP

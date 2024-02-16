@@ -89,9 +89,12 @@ const LazyPressCard = () => {
           </div>
           <div className="w-1/2">
             <h1 className={subheadingClasses}>SAMPLE WEBSITE:</h1>
-            <div className="h-[64px] flex flex-col justify-center items-start">
-              <div className="flex items-baseline justify-center pb-2">
-                <LinkStripe href="https://foodblog-lazypress.netlify.app/">
+            <div className="xl:h-[48px] 2xl:h-[60px] flex flex-col justify-center items-start">
+              <div className="flex items-baseline justify-center py-auto">
+                <LinkStripe
+                  extra="xl:text-5xl 2xl:text-6xl"
+                  href="https://foodblog-lazypress.netlify.app/"
+                >
                   Food&nbsp;&nbsp;Blog
                 </LinkStripe>
                 <RiExternalLinkLine className="scale-[1.30]" />

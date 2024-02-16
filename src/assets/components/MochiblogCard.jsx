@@ -19,7 +19,7 @@ const MochiblogCard = () => {
       <div className={infoClasses}>
         <div className="flex items-baseline justify-center pb-2">
           <LinkStripe href="https://mochibunn.github.io/Mochiblog/">
-            Mochiblog
+            MochibloG
           </LinkStripe>
           <RiExternalLinkLine className="scale-[1.30]" />
         </div>
@@ -29,7 +29,7 @@ const MochiblogCard = () => {
         <div className="relative flex justify-start mt-4 gap-x-12">
           <div id="stack-todo" className="mt-4 mr-9 w-fit">
             <h1 className={subheadingClasses}>TECH STACK:</h1>
-            <div className="flex gap-2" id="stack-container-todo">
+            <div className="flex gap-2 mt-2" id="stack-container-todo">
               <StackImage
                 href="https://developer.mozilla.org/en-US/docs/Web/HTML"
                 src="./HTML5.svg"
