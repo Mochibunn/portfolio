@@ -102,7 +102,7 @@ const ContactStuff = () => {
           name="contact"
           data-netlify="true"
           method="POST"
-          className="flex flex-col items-center w-7/12"
+          className="flex flex-col items-center lg:w-10/12 xl:w-7/12"
         >
           <input type="hidden" name="form-name" value="contact" />
           <div className="w-7/12">
@@ -232,7 +232,7 @@ const ContactStuff = () => {
               }}
               viewport={{
                 once: true,
-                amount: 0.8,
+                amount: 0,
               }}
               name="message"
               required
@@ -259,6 +259,7 @@ const ContactStuff = () => {
             }}
             whileTap={{
               scale: 1.4,
+              opacity: 0.5,
             }}
             viewport={{
               once: true,

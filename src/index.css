@@ -91,7 +91,11 @@ html {
 
 #divider {
   border: 1px solid rgba(29, 1, 57, 0.821);
-
+}
+.whiteDivide {
+  border: 1px solid rgba(255, 255, 255, 0.87);
+  width: 64px;
+  margin: 0.15em auto;
 }
 .formfield {
   /* border: 1px solid rgba(255, 255, 255, 1); */

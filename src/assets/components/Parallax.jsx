@@ -26,8 +26,8 @@ const Parallax = () => {
     ["0%", "300%"]
   );
 
-  const scaling =
-    Math.round((window.devicePixelRatio + Number.EPSILON) * 100) / 100;
+  // const scaling =
+    // Math.round((window.devicePixelRatio + Number.EPSILON) * 100) / 100;
 
   return (
     <div className="relative">
@@ -41,7 +41,7 @@ const Parallax = () => {
             y: parallaxTxt,
             // top: -Math.round(50 * scaling),
           }}
-          className={`-top-[250px] 2xl:-top-[50px] text-[30vw] xl:text-[20vw] 2xl:text-[10vw] font-oleo font-bold select-none pointer-events-none text-star relative z-10 bottom-0`}
+          className={`-top-[250px] 2xl:-top-[50px] text-[15vw] xl:text-[20vw] 2xl:text-[10vw] font-oleo font-bold select-none pointer-events-none text-star relative z-10 bottom-0`}
         >
           Hello!
         </motion.h1>

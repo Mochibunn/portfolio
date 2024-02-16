@@ -9,20 +9,23 @@ const HelloComponent = () => {
         <div className="relative z-10">
           <div className="flex flex-col items-center mb-6">
             <h1 className="text-9xl font-gochi-hand">I&apos;m Mochi</h1>
-            <div className="flex gap-2 align-middle *:font-alegreya-medium *:text-2xl">
-              <h2 className="text-xl">Full Stack Web & App Developer</h2>
-              <div aria-hidden>|</div>
+            <div className="flex flex-col xl:flex-row gap-2 align-middle *:font-alegreya-medium *:text-2xl justify-center xl:justify-normal text-center xl:text-left">
+              <h2>Full Stack Web & App Developer</h2>
+              <div aria-hidden className="hidden xl:block">|</div>
+              <div aria-hidden className="visible xl:hidden whiteDivide" />
               <h2>Avid Intermediate Coder</h2>
-              <div aria-hidden>|</div>
+              <div aria-hidden className="hidden xl:block">|</div>
+              <div aria-hidden className="visible xl:hidden whiteDivide" />
               <h2>Vinyl Connoisseur</h2>
-              <div aria-hidden>|</div>
+              <div aria-hidden className="hidden xl:block">|</div>
+              <div aria-hidden className="visible xl:hidden whiteDivide" />
               <h2>Obsessed With Rabbits</h2>
             </div>
           </div>
           <div className="flex flex-col items-center mx-auto">
             <img
               src="./bnu.webp"
-              className="rounded-xl xl:w-[60%] 2xl:w-[30%] select-none pointer-events-none"
+              className="rounded-xl lg:w-[65%] xl:w-[60%] 2xl:w-[30%] select-none pointer-events-none"
               width="1733px"
               height="1155px"
               alt="A bunny rabbit."
@@ -33,7 +36,7 @@ const HelloComponent = () => {
             >
               Yup, I&apos;m a rabbit!
             </span>
-            <div className="xl:w-11/12 2xl:w-9/12 mx-auto *:mb-5 mt-4">
+            <div className="lg:w-10/12 xl:w-11/12 2xl:w-9/12 mx-auto *:mb-5 mt-4">
               <div>
                 <BubbleText noLigatures>
                   I felt shocked when I saw my brother change the Windows XP
