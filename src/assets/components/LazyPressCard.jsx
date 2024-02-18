@@ -8,7 +8,7 @@ import { ClassContext } from "../../Contexts";
 
 const LazyPressCard = () => {
   const context = useContext(ClassContext);
-  const stackClasses = "sm:w-[22px] md:w-[28px] lg:w-[40px] xl:w-[48px] 2xl:w-[64px] aspect-square pointer-events-none";
+  const stackClasses = "w-[22px] md:w-[28px] lg:w-[40px] xl:w-[48px] 2xl:w-[64px] aspect-square pointer-events-none";
   const subheadingClasses = context.stackSubheadingClasses;
   const topCardClasses = context.topCardClasses;
   const tiltClasses = context.tiltClasses;
@@ -29,8 +29,8 @@ const LazyPressCard = () => {
           too long for the deadline so the current solution offers you
           professional website building services with your own CMS for it.
         </BubbleText>
-        <div className="relative flex justify-end mt-4 gap-x-10 lg:gap-x-4 xl:gap-x-12">
-          <div id="stack-gh-lazy" className={"w-1/2 md:w-5/12"}>
+        <div className="relative flex justify-end mt-4 gap-x-12 sm:gap-x-10 lg:gap-x-4 xl:gap-x-12">
+          <div id="stack-gh-lazy" className={"w-8/12 sm:w-1/2 md:w-5/12"}>
             <h1 className={subheadingClasses}>TECH STACK:</h1>
             <div className="flex gap-2" id="stack-container-lazy">
               <a href="https://react.dev/" target="_blank" rel="noreferrer">

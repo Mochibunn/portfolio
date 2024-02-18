@@ -309,7 +309,7 @@ const TechStuff = () => {
                 once: true,
                 amount: 0.8,
               }}
-              className="self-center text-3xl lg:text-5xl font-gochi-hand"
+              className="self-center text-2xl sm:text-3xl lg:text-5xl font-gochi-hand"
             >
               More info on my github
             </motion.p>

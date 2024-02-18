@@ -9,7 +9,7 @@ const transitionOnce = {
 
 const ContactStuff = () => {
   const context = useContext(ClassContext);
-  const headingClasses = context.componenetTitleClasses;
+  const headingClasses = context.componentTitleClasses;
   const contactClasses =
     "w-full p-4 rounded-2xl bg-purple-950 font-asap text-2xl formfield relative z-10";
 
