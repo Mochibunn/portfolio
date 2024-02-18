@@ -101,7 +101,7 @@ class AnimateWiggle extends Component {
 
 const TechStuff = () => {
   const context = useContext(ClassContext);
-  const headingClasses = context.componenetTitleClasses;
+  const headingClasses = context.componentTitleClasses;
   const elementRef = useRef(null);
   const isOnScreen = useOnScreen(elementRef);
 

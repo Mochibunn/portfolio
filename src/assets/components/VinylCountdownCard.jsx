@@ -18,7 +18,7 @@ const VinylCountdownCard = () => {
   const linkClasses = context.linkClasses;
 
   return (
-    <div className={topCardClasses}>
+    <div className={topCardClasses + " flex-col"}>
       <div className={tiltClasses}>
         <Tilt
           tiltAngleXInitial={0}

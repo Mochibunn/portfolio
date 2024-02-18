@@ -16,8 +16,8 @@ const LazyPressCard = () => {
   const linkClasses = context.linkClasses;
 
   return (
-    <div className={topCardClasses}>
-      <div className="w-1/2">
+    <div className={topCardClasses + " flex-col-reverse"}>
+      <div className={infoClasses}>
         <div className="flex items-end justify-center pb-2">
           <LinkStripe href="https://lazypress.net/">LazyPress</LinkStripe>
           <RiExternalLinkLine className={linkClasses} />
@@ -30,7 +30,7 @@ const LazyPressCard = () => {
           professional website building services with your own CMS for it.
         </BubbleText>
         <div className="relative flex justify-end mt-4 gap-x-10 lg:gap-x-4 xl:gap-x-12">
-          <div id="stack-gh-lazy" className={infoClasses + " md:w-5/12"}>
+          <div id="stack-gh-lazy" className={"w-1/2 md:w-5/12"}>
             <h1 className={subheadingClasses}>TECH STACK:</h1>
             <div className="flex gap-2" id="stack-container-lazy">
               <a href="https://react.dev/" target="_blank" rel="noreferrer">

@@ -9,7 +9,7 @@ import { ClassContext } from "../../Contexts";
 
 const Projects = () => {
   const context = useContext(ClassContext);
-  const headingClasses = context.componenetTitleClasses;
+  const headingClasses = context.componentTitleClasses;
 
   return (
     <AnimatePresence>

@@ -106,10 +106,10 @@ const ContactStuff = () => {
           name="contact"
           data-netlify="true"
           method="POST"
-          className="flex flex-col items-center w-11/12 lg:w-10/12 xl:w-7/12"
+          className="flex flex-col items-center w-full md:w-11/12 lg:w-10/12 xl:w-7/12"
         >
           <input type="hidden" name="form-name" value="contact" />
-          <div className="w-7/12">
+          <div className="w-9/12 md:w-7/12">
             <label htmlFor="name">
               <motion.p
                 initial={{
@@ -155,7 +155,7 @@ const ContactStuff = () => {
               className={contactClasses}
             />
           </div>
-          <div className="w-7/12 mt-4">
+          <div className="w-9/12 mt-4 md:w-7/12">
             <label htmlFor="email">
               <motion.p
               initial={{

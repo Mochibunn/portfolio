@@ -16,7 +16,7 @@ const MochiblogCard = () => {
   const linkClasses = context.linkClasses;
 
   return (
-    <div className={topCardClasses}>
+    <div className={topCardClasses + " flex-col-reverse"}>
       <div className={infoClasses}>
         <div className="flex items-baseline justify-center pb-2">
           <LinkStripe href="https://mochibunn.github.io/Mochiblog/">
