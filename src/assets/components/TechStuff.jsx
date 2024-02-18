@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { Component, useRef } from "react";
+import { Component, useContext, useRef } from "react";
+import { ClassContext } from "../../Contexts";
 import useOnScreen from "./useOnScreen";
 
 const cardClasses =
@@ -99,13 +100,15 @@ class AnimateWiggle extends Component {
 }
 
 const TechStuff = () => {
+  const context = useContext(ClassContext);
+  const headingClasses = context.componenetTitleClasses;
   const elementRef = useRef(null);
   const isOnScreen = useOnScreen(elementRef);
 
   return (
     <AnimatePresence>
       <div className="relative flex flex-col items-center w-screen py-12">
-        <h1 className="text-9xl font-alegreya-bold">MY TOOLS</h1>
+        <h1 className={headingClasses}>MY TOOLS</h1>
         <div className="relative h-[200px]" />
           <motion.div
             className={cardClasses}
@@ -285,7 +288,7 @@ const TechStuff = () => {
               </div>
             </motion.div>
           </motion.div>
-        <h2 className="pb-12 text-6xl font-alegreya-bold">..AND MORE!</h2>
+        <h2 className="pb-12 text-4xl lg:text-6xl font-alegreya-bold">..AND MORE!</h2>
         <div className="flex gap-12 align-middle">
           <div className="relative flex">
             <motion.p
@@ -306,7 +309,7 @@ const TechStuff = () => {
                 once: true,
                 amount: 0.8,
               }}
-              className="self-center text-5xl font-gochi-hand"
+              className="self-center text-3xl lg:text-5xl font-gochi-hand"
             >
               More info on my github
             </motion.p>
@@ -328,8 +331,9 @@ const TechStuff = () => {
                 once: false,
                 amount: 0.8,
               }}
-              className="w-[128px] -scale-y-100 opacity-[0.87] absolute -right-12 top-12 select-none pointer-events-none"
+              className="w-[100px] lg:w-[128px] -scale-y-100 opacity-[0.87] absolute -right-12 top-12 select-none pointer-events-none"
               src="./arrow-curved.svg"
+              alt="Arrow"
             />
           </div>
           <motion.a
@@ -355,7 +359,8 @@ const TechStuff = () => {
               }}
               viewport={viewport}
               src="./github.svg"
-              className="w-[128px] pointer-events-none"
+              alt="Octocat logo"
+              className="w-[96px] lg:w-[128px] pointer-events-none"
             />
           </motion.a>
         </div>

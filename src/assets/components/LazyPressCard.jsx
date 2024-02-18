@@ -13,13 +13,14 @@ const LazyPressCard = () => {
   const topCardClasses = context.topCardClasses;
   const tiltClasses = context.tiltClasses;
   const infoClasses = context.infoClasses;
+  const linkClasses = context.linkClasses;
 
   return (
     <div className={topCardClasses}>
       <div className="w-1/2">
-        <div className="flex items-baseline justify-center pb-2">
+        <div className="flex items-end justify-center pb-2">
           <LinkStripe href="https://lazypress.net/">LazyPress</LinkStripe>
-          <RiExternalLinkLine className="scale-[1.30]" />
+          <RiExternalLinkLine className={linkClasses} />
         </div>
         <BubbleText noLigatures>
           LazyPress was my final group project for the web dev school. It&apos;s
@@ -28,8 +29,8 @@ const LazyPressCard = () => {
           too long for the deadline so the current solution offers you
           professional website building services with your own CMS for it.
         </BubbleText>
-        <div className="relative flex justify-end mt-4 gap-x-4 xl:gap-x-12">
-          <div id="stack-gh-lazy" className={infoClasses}>
+        <div className="relative flex justify-end mt-4 gap-x-10 lg:gap-x-4 xl:gap-x-12">
+          <div id="stack-gh-lazy" className={infoClasses + " md:w-5/12"}>
             <h1 className={subheadingClasses}>TECH STACK:</h1>
             <div className="flex gap-2" id="stack-container-lazy">
               <a href="https://react.dev/" target="_blank" rel="noreferrer">
@@ -89,18 +90,18 @@ const LazyPressCard = () => {
           </div>
           <div className="w-1/2">
             <h1 className={subheadingClasses}>SAMPLE WEBSITE:</h1>
-            <div className="h-[12px] sm:h-[22px] md:h-[28px] lg:h-[40px] xl:h-[48px] 2xl:h-[60px] flex flex-col justify-center items-start min-w-full">
-              <div className="flex items-baseline justify-center py-auto">
+            <div className="h-[12px] sm:h-[22px] md:h-[28px] lg:h-[40px] xl:h-[48px] 2xl:h-[60px] flex flex-col justify-center items-start w-fit">
+              <div className="flex items-end justify-center my-auto">
                 <LinkStripe
-                  extra="lg:text-5xl 2xl:text-6xl"
+                  extra="md:text-3xl lg:text-5xl 2xl:text-6xl"
                   href="https://foodblog-lazypress.netlify.app/"
                 >
                   Food&nbsp;&nbsp;Blog
                 </LinkStripe>
-                <RiExternalLinkLine className="scale-[1.30]" />
+                <RiExternalLinkLine className="origin-bottom scale-[0.8] lg:scale-[1.30]" />
               </div>
             </div>
-            <div className="w-full mt-4">
+            <div className="w-full mt-3 lg:mt-4">
               <h1 className={subheadingClasses}>REPO:</h1>
               <GitHubLogo href="https://github.com/priyankapasrija/FoodBlogLazyPress" />
             </div>

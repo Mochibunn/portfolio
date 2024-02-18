@@ -15,6 +15,7 @@ const VinylCountdownCard = () => {
   const topCardClasses = context.topCardClasses;
   const tiltClasses = context.tiltClasses;
   const infoClasses = context.infoClasses;
+  const linkClasses = context.linkClasses;
 
   return (
     <div className={topCardClasses}>
@@ -47,7 +48,7 @@ const VinylCountdownCard = () => {
           <LinkStripe href="https://legacyvinylcountdown.netlify.app">
             Vinyl&nbsp;&nbsp;Countdown
           </LinkStripe>
-          <RiExternalLinkLine className="scale-[1.30]" />
+          <RiExternalLinkLine className={linkClasses} />
         </div>
         <BubbleText>
           Vinyl Countdown is my personal favorite. It was the most fun time I
@@ -99,18 +100,18 @@ const VinylCountdownCard = () => {
                 </a>
               </div>
             </div>
-            <h1 className={subheadingClasses + " mt-4"}>REPO:</h1>
+            <h1 className={subheadingClasses + " mt-6 lg:mt-4"}>REPO:</h1>
             <GitHubLogo href="https://github.com/Mochibunn/VinylCountdownLegacy" />
           </div>
           <div className="relative">
             <img
               src="./arrow-orang.svg"
               alt="Arrow"
-              className="h-[100px] relative -top-6 pointer-events-none"
+              className="h-[92px] lg:h-[100px] relative -top-6 pointer-events-none"
             />
           </div>
           <div className="min-w-5/12">
-            <h1 className={subheadingClasses}>ALTERNATE VERSION:</h1>
+            <h1 className={subheadingClasses + " text-nowrap"}>ALTERNATE VERSION:</h1>
             <motion.div
               initial={{
                 filter: "drop-shadow(0px 0px 0px rgba(0, 0, 0, 0))",
@@ -132,8 +133,8 @@ const VinylCountdownCard = () => {
               >
                 <img
                   src="./vinylC.svg"
-                  alt="Viny Countdown logo"
-                  className="h-[64px] pointer-events-none"
+                  alt="Vinyl Countdown logo"
+                  className="max-h-[64px] lg:max-h-full lg:h-[64px] pointer-events-none"
                 />
               </a>
             </motion.div>

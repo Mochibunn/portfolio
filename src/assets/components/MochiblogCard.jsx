@@ -13,6 +13,7 @@ const MochiblogCard = () => {
   const topCardClasses = context.topCardClasses;
   const tiltClasses = context.tiltClasses;
   const infoClasses = context.infoClasses;
+  const linkClasses = context.linkClasses;
 
   return (
     <div className={topCardClasses}>
@@ -21,7 +22,7 @@ const MochiblogCard = () => {
           <LinkStripe href="https://mochibunn.github.io/Mochiblog/">
             MochibloG
           </LinkStripe>
-          <RiExternalLinkLine className="scale-[1.30]" />
+          <RiExternalLinkLine className={linkClasses} />
         </div>
         <BubbleText noLigatures>
           This simple page was created to show off the things we learned in HTML and CSS in just 2 weeks time. It might be not much but it is my honest work and I love the look and colors of it. If I ever revisit the idea of keeping a personal internet blog around, I will definitely be basing the design off of this page. You can clearly witness my fondness of white blurry acrylic backgrounds, old school typefaces and rounded corners for elements, the polka dot background also adds a bit of that nostalgic feeling, perhaps?

@@ -13,6 +13,7 @@ const PsdToHtmlCard = () => {
   const topCardClasses = context.topCardClasses;
   const tiltClasses = context.tiltClasses;
   const infoClasses = context.infoClasses;
+  const linkClasses = context.linkClasses;
 
   return (
     <div className={topCardClasses}>
@@ -45,7 +46,7 @@ const PsdToHtmlCard = () => {
           <LinkStripe href="https://c4ti4.github.io/psdtohtml/">
             PSD&nbsp;&nbsp;To&nbsp;&nbsp;HTML
           </LinkStripe>
-          <RiExternalLinkLine className="scale-[1.30]" />
+          <RiExternalLinkLine className={linkClasses} />
         </div>
         <BubbleText>
           The aim of this page is literally in the title, we were given a mock project with a Photoshop document and it was our task as a group to translate that document, the vision of the imaginary client&apos;s page mockup into reality.

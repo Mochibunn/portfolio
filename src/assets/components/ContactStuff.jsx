@@ -1,4 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
+import { useContext } from "react";
+import { ClassContext } from "../../Contexts";
 const transitionOnce = {
   type: "spring",
   bounce: 0.6,
@@ -6,13 +8,15 @@ const transitionOnce = {
 };
 
 const ContactStuff = () => {
+  const context = useContext(ClassContext);
+  const headingClasses = context.componenetTitleClasses;
   const contactClasses =
     "w-full p-4 rounded-2xl bg-purple-950 font-asap text-2xl formfield relative z-10";
 
   return (
     <AnimatePresence>
       <div className="relative flex flex-col items-center w-screen py-12 bg-purp min-h-[600px]">
-        <h1 className="text-9xl font-alegreya-bold">CONTACT</h1>
+        <h1 className={headingClasses}>CONTACT</h1>
         {/* <div className="relative mt-12">
           <div className="relative">
             <motion.h2
@@ -102,7 +106,7 @@ const ContactStuff = () => {
           name="contact"
           data-netlify="true"
           method="POST"
-          className="flex flex-col items-center lg:w-10/12 xl:w-7/12"
+          className="flex flex-col items-center w-11/12 lg:w-10/12 xl:w-7/12"
         >
           <input type="hidden" name="form-name" value="contact" />
           <div className="w-7/12">

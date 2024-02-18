@@ -13,6 +13,7 @@ const ToDoJSCard = () => {
   const topCardClasses = context.topCardClasses;
   const tiltClasses = context.tiltClasses;
   const infoClasses = context.infoClasses;
+  const linkClasses = context.linkClasses;
 
   return (
     <div className={topCardClasses}>
@@ -41,11 +42,11 @@ const ToDoJSCard = () => {
         </Tilt>
       </div>
       <div className={infoClasses}>
-        <div className="flex items-baseline justify-center pb-2">
+        <div className="flex items-end justify-center pb-2">
           <LinkStripe href="https://mochibunn.github.io/ToDoBeastList/">
             To-Do&nbsp;&nbsp;Beast&nbsp;&nbsp;List
           </LinkStripe>
-          <RiExternalLinkLine className="scale-[1.30]" />
+          <RiExternalLinkLine className={linkClasses} />
         </div>
         <BubbleText>
           This may appear to be just another to-do list, but it is one that

@@ -8,6 +8,8 @@ const classList = {
   topCardClasses: "flex w-full p-6 xl:p-12 justify-stretch xl:justify-evenly rounded-2xl relative",
   tiltClasses: "sticky w-1/2 xl:w-5/12 h-full rounded-2xl top-[30%] z-40",
   infoClasses: "w-1/2",
+  linkClasses: "origin-bottom scale-[1.0] lg:scale-[1.3]",
+  componenetTitleClasses: "text-6xl lg:text-9xl font-alegreya-bold",
 };
 
 const Contexts = () => {

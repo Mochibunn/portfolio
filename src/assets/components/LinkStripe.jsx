@@ -8,10 +8,10 @@ import PropTypes from "prop-types";
  * @returns
  */
 const LinkStripe = ({ children, href, extra}) => {
-  const text = extra || "text-6xl";
+  const text = extra || "text-4xl lg:text-6xl";
   return (
     <ul className={"text-center nav-ul font-alegreya-bold " + text}>
-      <li className="nav-li">
+      <li className="flex flex-col justify-center nav-li">
         <a
           target="_blank"
           rel="noreferrer"
