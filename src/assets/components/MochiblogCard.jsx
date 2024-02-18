@@ -27,7 +27,7 @@ const MochiblogCard = () => {
         <BubbleText noLigatures>
           This simple page was created to show off the things we learned in HTML and CSS in just 2 weeks time. It might be not much but it is my honest work and I love the look and colors of it. If I ever revisit the idea of keeping a personal internet blog around, I will definitely be basing the design off of this page. You can clearly witness my fondness of white blurry acrylic backgrounds, old school typefaces and rounded corners for elements, the polka dot background also adds a bit of that nostalgic feeling, perhaps?
         </BubbleText>
-        <div className="relative flex justify-start mt-4 gap-x-12">
+        <div className="relative flex justify-start mt-4 md:gap-x-4 lg:gap-x-12">
           <div id="stack-todo" className="mt-4 mr-9 w-fit">
             <h1 className={subheadingClasses}>TECH STACK:</h1>
             <div className="flex gap-2 mt-2" id="stack-container-todo">

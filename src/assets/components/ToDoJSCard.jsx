@@ -57,7 +57,7 @@ const ToDoJSCard = () => {
           page may appear bare and uninteresting, but this was intentional
           because I wanted to achieve a clean minimalist Notion look.
         </BubbleText>
-        <div className="relative flex justify-start mt-4 gap-x-12">
+        <div className="relative flex justify-start mt-4 gap-x-6 lg:gap-x-12">
           <div id="stack-todo" className="mt-4 mr-9 w-fit">
             <h1 className={subheadingClasses}>TECH STACK:</h1>
             <div className="flex gap-2 mt-2" id="stack-container-todo">

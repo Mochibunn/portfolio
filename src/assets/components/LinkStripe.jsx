@@ -7,15 +7,15 @@ import PropTypes from "prop-types";
  * @param {string} href
  * @returns
  */
-const LinkStripe = ({ children, href, extra}) => {
+const LinkStripe = ({ children, href, extra, lazypress}) => {
   const text = extra || "text-4xl lg:text-6xl";
   return (
     <ul className={"text-center nav-ul font-alegreya-bold " + text}>
-      <li className="flex flex-col justify-center nav-li">
+      <li className={"flex flex-col justify-center nav-li " + lazypress}>
         <a
           target="_blank"
           rel="noreferrer"
-          className="nav-a"
+          className="nav-a "
           href={href || "#"}
           >
           <span className="nav-a-letters">
@@ -49,6 +49,7 @@ LinkStripe.propTypes = {
   children: PropTypes.string.isRequired,
   href: PropTypes.string,
   extra: PropTypes.string,
+  lazypress: PropTypes.string,
 };
 Text.propTypes = {
   children: PropTypes.string.isRequired,

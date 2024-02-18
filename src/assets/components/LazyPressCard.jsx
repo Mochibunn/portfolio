@@ -90,18 +90,21 @@ const LazyPressCard = () => {
           </div>
           <div className="w-1/2">
             <h1 className={subheadingClasses}>SAMPLE WEBSITE:</h1>
-            <div className="h-[12px] sm:h-[22px] md:h-[28px] lg:h-[40px] xl:h-[48px] 2xl:h-[60px] flex flex-col justify-center items-start w-fit">
-              <div className="flex items-end justify-center my-auto">
-                <LinkStripe
-                  extra="md:text-3xl lg:text-5xl 2xl:text-6xl"
-                  href="https://foodblog-lazypress.netlify.app/"
-                >
-                  Food&nbsp;&nbsp;Blog
-                </LinkStripe>
-                <RiExternalLinkLine className="origin-bottom scale-[0.8] lg:scale-[1.30]" />
+            <div className="inline-block w-full">
+              <div className="flex flex-col items-start justify-center w-full">
+                <div className="flex items-end w-full h-auto">
+                  <LinkStripe
+                    extra="w-fit text-[4vw]"
+                    lazypress="max-h-[64px] w-full"
+                    href="https://foodblog-lazypress.netlify.app/"
+                  >
+                    Food&nbsp;&nbsp;Blog
+                  </LinkStripe>
+                  <RiExternalLinkLine className="origin-bottom scale-[0.8] lg:scale-[1.30]" />
+                </div>
               </div>
             </div>
-            <div className="w-full mt-3 lg:mt-4">
+            <div className="w-full mt-3 lg:mt-5 xl:mt-5 2xl:mt-6">
               <h1 className={subheadingClasses}>REPO:</h1>
               <GitHubLogo href="https://github.com/priyankapasrija/FoodBlogLazyPress" />
             </div>

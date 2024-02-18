@@ -51,8 +51,8 @@ const PsdToHtmlCard = () => {
         <BubbleText>
           The aim of this page is literally in the title, we were given a mock project with a Photoshop document and it was our task as a group to translate that document, the vision of the imaginary client&apos;s page mockup into reality.
         </BubbleText>
-        <div className="relative flex justify-start mt-4 gap-x-12">
-          <div id="stack-todo" className="mt-4 mr-9 w-fit">
+        <div className="relative flex justify-start mt-4 gap-x-0 lg:gap-x-12">
+          <div id="stack-todo" className="mt-4 mr-6 lg:mr-9 w-fit">
             <h1 className={subheadingClasses}>TECH STACK:</h1>
             <div className="flex gap-2 mt-2" id="stack-container-todo">
               <StackImage
