@@ -6,6 +6,7 @@ import MochiblogCard from "./MochiblogCard";
 import PsdToHtmlCard from "./PsdToHtmlCard";
 import { useContext } from "react";
 import { ClassContext } from "../../Contexts";
+import MoreProjects from "./MoreProjects";
 
 const Projects = () => {
   const context = useContext(ClassContext);
@@ -15,7 +16,7 @@ const Projects = () => {
     <AnimatePresence>
       <div
         id="projects-root"
-        className="relative flex flex-col items-center w-screen min-h-screen pt-20 bg-purp gap-y-10"
+        className="relative flex flex-col items-center w-screen min-h-screen pt-20 pb-6 bg-purp gap-y-10"
       >
         <h1 className={"mb-12 " + headingClasses}>MY PROJECTS</h1>
         {/* Card component */}
@@ -24,6 +25,7 @@ const Projects = () => {
         <ToDoJSCard />
         <MochiblogCard />
         <PsdToHtmlCard />
+        <MoreProjects />
       </div>
     </AnimatePresence>
   );

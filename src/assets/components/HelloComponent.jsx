@@ -49,11 +49,11 @@ const HelloComponent = () => {
               <div>
                 <BubbleText noLigatures>
                   Ever since
-                  then, I&nbsp;ve been fascinated with computers, writing simple
+                  then, I&apos;ve been fascinated with computers, writing simple
                   Windows batch scripts and fake viruses, getting in trouble for
                   opening the PC side panel for a peek, spelunking down
                   C:\Windows, and nerding out in the tech section of classic
-                  YouTube (rate 5 starts please)
+                  YouTube (rate 5 stars please)
                 </BubbleText>
               </div> 
               <div>

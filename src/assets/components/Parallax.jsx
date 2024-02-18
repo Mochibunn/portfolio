@@ -32,7 +32,7 @@ const Parallax = () => {
   return (
     <div className="relative">
       <div
-        className="relative grid w-full h-[220vh] overflow-hidden place-items-center"
+        className="relative grid w-full h-[180vh] sm:h-[220vh] overflow-hidden place-items-center"
         ref={ref}
       >
         <motion.h1
@@ -56,7 +56,7 @@ const Parallax = () => {
           }}
         />
         <div
-          className="absolute inset-0 z-20 w-full bg-cover top-4"
+          className="absolute inset-0 z-20 bg-cover top-4"
           style={{
             backgroundImage: "url(/bg-front.webp)",
             backgroundPosition: "bottom",
