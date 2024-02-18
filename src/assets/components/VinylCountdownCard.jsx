@@ -105,6 +105,7 @@ const VinylCountdownCard = () => {
           <div className="relative">
             <img
               src="./arrow-orang.svg"
+              alt="Arrow"
               className="h-[100px] relative -top-6 pointer-events-none"
             />
           </div>

@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 
 export const GitHubLogo = ({ href }) => {
   const ghClasses = {
-    img: "aspect-square w-[96px] mt-2 pointer-events-none",
-    div: "aspect-square w-[96px] origin-center",
+    img: "aspect-square w-[72px] xl:w-[96px] mt-2 pointer-events-none",
+    div: "aspect-square w-[72px] xl:w-[96px] origin-center",
   };
 
   return (

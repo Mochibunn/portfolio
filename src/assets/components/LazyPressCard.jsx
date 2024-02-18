@@ -8,7 +8,7 @@ import { ClassContext } from "../../Contexts";
 
 const LazyPressCard = () => {
   const context = useContext(ClassContext);
-  const stackClasses = context.stackClasses;
+  const stackClasses = "sm:w-[22px] md:w-[28px] lg:w-[40px] xl:w-[48px] 2xl:w-[64px] aspect-square pointer-events-none";
   const subheadingClasses = context.stackSubheadingClasses;
   const topCardClasses = context.topCardClasses;
   const tiltClasses = context.tiltClasses;
@@ -28,7 +28,7 @@ const LazyPressCard = () => {
           too long for the deadline so the current solution offers you
           professional website building services with your own CMS for it.
         </BubbleText>
-        <div className="relative flex justify-end mt-4 gap-x-12">
+        <div className="relative flex justify-end mt-4 gap-x-4 xl:gap-x-12">
           <div id="stack-gh-lazy" className={infoClasses}>
             <h1 className={subheadingClasses}>TECH STACK:</h1>
             <div className="flex gap-2" id="stack-container-lazy">
@@ -77,7 +77,7 @@ const LazyPressCard = () => {
               </a>
             </div>
             <div className="flex mt-4">
-              <div className="mr-9">
+              <div className="w-1/2 mr-0 xl:w-auto xl:mr-9">
                 <h1 className={subheadingClasses}>REPO:</h1>
                 <GitHubLogo href="https://github.com/Mochibunn/product-lazypress" />
               </div>
@@ -89,10 +89,10 @@ const LazyPressCard = () => {
           </div>
           <div className="w-1/2">
             <h1 className={subheadingClasses}>SAMPLE WEBSITE:</h1>
-            <div className="xl:h-[48px] 2xl:h-[60px] flex flex-col justify-center items-start">
+            <div className="h-[12px] sm:h-[22px] md:h-[28px] lg:h-[40px] xl:h-[48px] 2xl:h-[60px] flex flex-col justify-center items-start min-w-full">
               <div className="flex items-baseline justify-center py-auto">
                 <LinkStripe
-                  extra="xl:text-5xl 2xl:text-6xl"
+                  extra="lg:text-5xl 2xl:text-6xl"
                   href="https://foodblog-lazypress.netlify.app/"
                 >
                   Food&nbsp;&nbsp;Blog

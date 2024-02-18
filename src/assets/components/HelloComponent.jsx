@@ -3,22 +3,25 @@ import MarqueeComponent from "./MarqueeComponent";
 // import ParallaxText from "./Temp";
 
 const HelloComponent = () => {
+  const vertical = "hidden xl:block";
+  const horizontal = "visible xl:hidden whiteDivide";
+
   return (
     <>
       <div className="helloMain">
         <div className="relative z-10">
           <div className="flex flex-col items-center mb-6">
-            <h1 className="text-9xl font-gochi-hand">I&apos;m Mochi</h1>
-            <div className="flex flex-col xl:flex-row gap-2 align-middle *:font-alegreya-medium *:text-2xl justify-center xl:justify-normal text-center xl:text-left">
+            <h1 className="text-[20vw] xl:text-9xl font-gochi-hand">I&apos;m Mochi</h1>
+            <div className="flex flex-col xl:flex-row gap-3 xl:gap-2 align-middle *:font-alegreya-medium *:text-4xl *:xl:text-2xl justify-center xl:justify-normal text-center xl:text-left">
               <h2>Full Stack Web & App Developer</h2>
-              <div aria-hidden className="hidden xl:block">|</div>
-              <div aria-hidden className="visible xl:hidden whiteDivide" />
+              <div aria-hidden className={vertical}>|</div>
+              <div aria-hidden className={horizontal} />
               <h2>Avid Intermediate Coder</h2>
-              <div aria-hidden className="hidden xl:block">|</div>
-              <div aria-hidden className="visible xl:hidden whiteDivide" />
+              <div aria-hidden className={vertical}>|</div>
+              <div aria-hidden className={horizontal} />
               <h2>Vinyl Connoisseur</h2>
-              <div aria-hidden className="hidden xl:block">|</div>
-              <div aria-hidden className="visible xl:hidden whiteDivide" />
+              <div aria-hidden className={vertical}>|</div>
+              <div aria-hidden className={horizontal} />
               <h2>Obsessed With Rabbits</h2>
             </div>
           </div>

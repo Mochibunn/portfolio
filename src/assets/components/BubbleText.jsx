@@ -54,7 +54,7 @@ const BubbleText = ({ children, noLigatures }) => {
   return (
     <h2
       className={
-        "text-4xl font-thin text-justify text-indigo-300 hover-text bubble" +
+        "text-3xl xl:text-4xl font-thin text-justify text-indigo-300 hover-text bubble" +
         (noLigatures ? " no-ligatures" : "")
       }
     >
