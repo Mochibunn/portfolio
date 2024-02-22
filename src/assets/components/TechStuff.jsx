@@ -4,12 +4,12 @@ import { ClassContext } from "../../Contexts";
 import useOnScreen from "./useOnScreen";
 
 const cardClasses =
-  "h-[128px] sm:h-[164px] md:h-[190px] lg:h-[250px] xl:h-[300px] flex items-center";
-const divClasses = "gap-3 sm:gap-5 md:gap-6 lg:gap-8 xl:gap-12 flex";
+  "h-[128px] sm:h-[164px] md:h-[190px] lg:h-[250px] xl:h-[240px] 2xl:h-[300px] flex items-center";
+const divClasses = "gap-3 sm:gap-5 md:gap-6 lg:gap-8 xl:gap-18 2xl:gap-12 flex";
 const labelClasses =
-  "text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl my-auto font-alegreya-bold";
+  "text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-7xl 2xl:text-9xl my-auto font-alegreya-bold";
 const imageClasses =
-  "w-[100px] sm:w-[110px] md:w-[132px] lg:w-[192px] xl:w-[256px] aspect-square pointer-events-none";
+  "w-[100px] sm:w-[110px] md:w-[132px] lg:w-[192px] xl:w-[192px] 2xl:w-[256px] aspect-square pointer-events-none";
 
 const transition = {
   duration: 1.5,

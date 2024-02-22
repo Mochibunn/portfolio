@@ -9,7 +9,7 @@ const classList = {
   tiltClasses: "relative md:sticky w-11/12 md:w-1/2 xl:w-5/12 h-fit md:h-full rounded-2xl md:top-[30%] z-40",
   infoClasses: "w-11/12 pt-10 md:pt-0 md:w-1/2",
   linkClasses: "origin-bottom scale-[1.0] lg:scale-[1.3]",
-  componentTitleClasses: "text-6xl lg:text-9xl font-alegreya-bold",
+  componentTitleClasses: "text-6xl xl:text-8xl 2xl:text-9xl font-alegreya-bold",
 };
 
 const Contexts = () => {
