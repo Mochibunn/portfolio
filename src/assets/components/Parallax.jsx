@@ -47,12 +47,19 @@ const Parallax = () => {
         </motion.h1>
         <div className="absolute inset-0 z-30" id="postCodeGradient" />
         <motion.div
-          className="absolute top-0 bottom-0 left-0 right-0 z-0 min-h-screen"
+          className="absolute top-0 bottom-0 left-0 right-0 z-0 min-h-screen "
           style={{
             backgroundImage: "url(/bg-back.webp)",
             backgroundPosition: "bottom",
             backgroundSize: "cover",
             y: parallaxBg,
+          }}
+        />
+        <div className="absolute bottom-0 z-30"
+          style={{
+            backgroundImage: "url(/noise-grad.png)",
+            backgroundPosition: "bottom",
+            backgroundRepeat: "repeat-x",
           }}
         />
         <div
@@ -63,9 +70,12 @@ const Parallax = () => {
             // backgroundSize: "150%",
             backgroundRepeat: "no-repeat",
           }}
-        />
+          />
       </div>
-      <div className="absolute inset-0 z-30 min-h-[300px]" id="houseGradient" />
+      <div
+        className="absolute inset-0 z-30 min-h-[300px] grain"
+      />
+      <div className="absolute inset-0 z-40 min-h-[300px]" id="houseGradient" />
     </div>
   );
 };

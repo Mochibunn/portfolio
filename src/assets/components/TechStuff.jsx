@@ -107,7 +107,7 @@ const TechStuff = () => {
 
   return (
     <AnimatePresence>
-      <div className="relative flex flex-col items-center w-screen py-12">
+      <div className="relative flex flex-col items-center w-screen py-12 grain">
         <h1 className={headingClasses}>MY TOOLS</h1>
         <div className="relative h-[200px]" />
           <motion.div

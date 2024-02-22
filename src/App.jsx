@@ -11,14 +11,22 @@ import Footer from "./assets/components/Footer";
 function App() {
   return (
     <>
-      <div className="h-screen">
+      <div className="h-screen huose grain">
         <TopComponent />
       </div>
       <div className="" aria-hidden height="800px" />
       <div className="min-h-screen">
         <Parallax />
-        <div className="relative min-h-[1400px]" id="postHouseGradient">
-          <div className="h-[300px]" />
+        <div className="relative min-h-[1400px] grain" id="postHouseGradient">
+          <div
+            className="h-[300px]"
+            style={{
+              backgroundImage: "url(/noise-grad.png)",
+              backgroundPosition: "bottom",
+              backgroundRepeat: "repeat-x",
+
+            }}
+        />
           <HelloComponent />
           <TechStuff />
         </div>
