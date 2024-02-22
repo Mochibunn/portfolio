@@ -7,7 +7,7 @@ import { EditorView } from "@codemirror/view";
 const CodeEdit = () => {
   const value = `<!-- Hello and welcome to mochibun.me! -->
 <!-- Cookies help me deliver the best experience on my webpage. By using my webpage, you agree to the use of cookies. -->
-<!-- This is a fully functional markdown text editor with code highlighting ;) -->
+<!-- Write some HTML! This is a fully functional markdown text editor with code highlighting ;) -->
 <!-- Scroll down to continue -->
 `;
 

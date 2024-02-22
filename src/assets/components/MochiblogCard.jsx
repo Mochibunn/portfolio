@@ -41,12 +41,6 @@ const MochiblogCard = () => {
                 src="./CSS3.svg"
                 alt="CSS 3 logo"
               />
-              <StackImage
-                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-                src="./javascript.svg"
-                alt="JavaScript logo"
-                extra="rounded-md"
-              />
             </div>
           </div>
           <div className="w-fit">

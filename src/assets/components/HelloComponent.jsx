@@ -39,7 +39,7 @@ const HelloComponent = () => {
             >
               Yup, I&apos;m a rabbit!
             </span>
-            <div className="w-11/12 lg:w-10/12 xl:w-11/12 2xl:w-9/12 mx-auto *:mb-5 mt-4">
+            <div className="w-11/12 lg:w-10/12 xl:w-11/12 2xl:w-6/12 mx-auto *:mb-5 mt-4">
               <div>
                 <BubbleText noLigatures>
                   I felt shocked when I saw my brother change the Windows XP
