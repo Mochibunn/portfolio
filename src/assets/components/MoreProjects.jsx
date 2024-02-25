@@ -41,7 +41,7 @@ const MoreProjects = () => {
           once: true,
           amount: 0.8,
         }}
-        className="self-center text-2xl sm:text-3xl lg:text-5xl font-gochi-hand"
+        className="self-center text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-gochi-hand"
       >
         Other repos on my github
       </motion.p>
@@ -63,7 +63,7 @@ const MoreProjects = () => {
           once: false,
           amount: 0.8,
         }}
-        className="w-[100px] lg:w-[128px] scale-y-100 opacity-[0.87] absolute -right-12 -top-8 select-none pointer-events-none"
+        className="w-[100px] xl:w-[128px] scale-y-100 opacity-[0.87] absolute -right-12 -top-8 select-none pointer-events-none"
         src="./arrow-curved.svg"
         alt="Arrow"
       />
@@ -92,7 +92,7 @@ const MoreProjects = () => {
         viewport={viewport}
         src="./github.svg"
         alt="Octocat logo"
-        className="w-[96px] lg:w-[128px] pointer-events-none"
+        className="w-[96px] xl:w-[128px] pointer-events-none"
       />
     </motion.a>
   </div>
