@@ -66,6 +66,7 @@ const ContactStuff = () => {
               }}
               type="text"
               name="name"
+              aria-label="name"
               required
               className={contactClasses}
             />
@@ -109,6 +110,7 @@ const ContactStuff = () => {
               }}
               type="email"
               name="email"
+              aria-label="email"
               required
               className={contactClasses}
             />
@@ -154,6 +156,7 @@ const ContactStuff = () => {
                 amount: 0,
               }}
               name="message"
+              aria-label="Your message"
               required
               className={contactClasses + " rounded-br-3xl"}
               rows="15"
