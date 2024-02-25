@@ -124,8 +124,9 @@ const LazyPressCard = () => {
           glarePosition="left"
           className="w-fit overflow-clip rounded-2xl"
         >
-          <a href="https://lazypress.net/" target="_blank" rel="noreferrer">
+          <a href="https://lazypress.net/" target="_blank" rel="noreferrer" aria-label="Link to LazyPress">
             <video
+              aria-hidden
               loop={true}
               muted={true}
               autoPlay={true}
