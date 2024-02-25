@@ -8,7 +8,7 @@ import PropTypes from "prop-types";
  * @returns
  */
 const LinkStripe = ({ children, href, extra, lazypress}) => {
-  const text = extra || "text-4xl sm:text-6xl md:text-4xl lg:text-4xl xl:text-6xl";
+  const text = extra || "text-4xl sm:text-6xl md:text-3xl lg:text-4xl xl:text-6xl";
   return (
     <ul className={"text-center nav-ul font-alegreya-bold " + text}>
       <li className={"flex flex-col justify-center nav-li " + lazypress}>

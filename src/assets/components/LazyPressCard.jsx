@@ -30,7 +30,7 @@ const LazyPressCard = () => {
           professional website building services with your own CMS for it.
         </BubbleText>
         <div className="relative flex justify-end mt-4 gap-x-12 sm:gap-x-10 lg:gap-x-4 xl:gap-x-12">
-          <div id="stack-gh-lazy" className={"w-8/12 sm:w-1/2 md:w-5/12"}>
+          <div id="stack-gh-lazy" className={"w-8/12 sm:w-1/2 md:w-6/12 lg:w-5/12"}>
             <h1 className={subheadingClasses}>TECH STACK:</h1>
             <div className="flex gap-2" id="stack-container-lazy">
               <a href="https://react.dev/" target="_blank" rel="noreferrer">
@@ -78,7 +78,7 @@ const LazyPressCard = () => {
               </a>
             </div>
             <div className="flex mt-4">
-              <div className="w-1/2 mr-0 xl:w-auto xl:mr-9">
+              <div className="w-1/2 mr-4 lg:mr-0 xl:w-auto xl:mr-9">
                 <h1 className={subheadingClasses}>REPO:</h1>
                 <GitHubLogo href="https://github.com/Mochibunn/product-lazypress" />
               </div>

@@ -10,8 +10,8 @@ const HelloComponent = () => {
       <div className="helloMain">
         <div className="relative z-10">
           <div className="flex flex-col items-center mb-10 sm:mb-6">
-            <h1 className="text-[20vw] lg:text-9xl font-gochi-hand pb-6 sm:pb-0">I&apos;m Mochi</h1>
-            <div className="flex flex-col xl:flex-row gap-[12px] sm:gap-4 md:gap-3 xl:gap-2 align-middle *:font-alegreya-medium *:text-4xl *:sm:text-3xl *:md:text-3xl *:xl:text-2xl justify-center xl:justify-normal text-center xl:text-left">
+            <h1 className="text-[20vw] md:text-8xl lg:text-9xl font-gochi-hand pb-6 sm:pb-0">I&apos;m Mochi</h1>
+            <div className="flex flex-col xl:flex-row gap-[12px] sm:gap-4 md:gap-3 xl:gap-2 align-middle *:font-alegreya-medium *:text-4xl *:sm:text-3xl *:md:text-xl *:xl:text-2xl justify-center xl:justify-normal text-center xl:text-left">
               <h2>Full Stack Web & App Developer</h2>
               <div aria-hidden className={vertical}>|</div>
               <div aria-hidden className={horizontal} />
@@ -27,7 +27,7 @@ const HelloComponent = () => {
           <div className="flex flex-col items-center mx-auto">
             <img
               src="./bnu.webp"
-              className="rounded-xl w-[95%] sm:w-[90%] md:w-[75%] lg:w-[50%] xl:w-[40%] 2xl:w-[30%] select-none pointer-events-none"
+              className="rounded-xl w-[95%] sm:w-[90%] md:w-[55%] lg:w-[50%] xl:w-[40%] 2xl:w-[30%] select-none pointer-events-none"
               width="1733px"
               height="1155px"
               alt="A bunny rabbit."
@@ -38,7 +38,7 @@ const HelloComponent = () => {
             >
               Yup, I&apos;m a rabbit!
             </span>
-            <div className="w-11/12 lg:w-8/12 xl:w-7/12 2xl:w-6/12 mx-auto *:mb-5 mt-4">
+            <div className="w-11/12 md:w-8/12 lg:w-8/12 xl:w-7/12 2xl:w-6/12 mx-auto *:mb-5 mt-4">
               <div>
                 <BubbleText noLigatures>
                   I felt shocked when I saw my brother change the Windows XP

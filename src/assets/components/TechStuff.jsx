@@ -109,7 +109,7 @@ const TechStuff = () => {
     <AnimatePresence>
       <div className="relative flex flex-col items-center w-screen py-12 grain">
         <h1 className={headingClasses}>MY TOOLS</h1>
-        <div className="relative h-[200px]" />
+        <div className="relative h-[100px] lg:h-[200px]" />
           <motion.div
             className={cardClasses}
             id="react-div"
