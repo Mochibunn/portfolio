@@ -1,4 +1,3 @@
-// import * as styles from "../styles/bubble.modules.css";
 import { useEffect } from "react";
 import PropTypes from "prop-types";
 
@@ -72,7 +71,7 @@ const Text = ({ children }) => {
             transition: "0.1s font-weight, 0.08s color"
             }}
           key={idx}
-          className={(child == " " ? " after:px-[2px]" : "")}
+          className={(child == " " ? " after:px-[1px]" : "")}
           >
           {child}
         </span>

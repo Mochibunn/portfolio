@@ -98,7 +98,7 @@ html {
   margin: 0.15em auto;
 }
 .bg-purp, .grain {
-  background-image: url("./noise.png");
+  background-image: url("./noise.webp");
 }
 .formfield {
   /* border: 1px solid rgba(255, 255, 255, 1); */
@@ -346,7 +346,7 @@ div.cm-content.cm-lineWrapping {
 }
 .helloMain {
   overflow: hidden;
-  background-image: url("./noise.png");
+  background-image: url("./noise.webp");
 }
 
 @keyframes scroll {

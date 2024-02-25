@@ -3,8 +3,6 @@ import HelloComponent from "./assets/components/HelloComponent";
 import Parallax from "./assets/components/Parallax";
 import TechStuff from "./assets/components/TechStuff";
 import Projects from "./assets/components/Projects";
-// import Zoom from "./assets/components/Zoom";
-// import LoremIpsum from "./assets/components/LoremIpsum";
 import ContactStuff from "./assets/components/ContactStuff";
 import Footer from "./assets/components/Footer";
 
@@ -21,22 +19,17 @@ function App() {
           <div
             className="h-[300px]"
             style={{
-              backgroundImage: "url(/noise-grad.png)",
+              backgroundImage: "url(/noise-grad.webp)",
               backgroundPosition: "bottom",
               backgroundRepeat: "repeat-x",
-
             }}
-        />
+          />
           <HelloComponent />
           <TechStuff />
         </div>
         <Projects />
         <ContactStuff />
         <Footer />
-        {/* <div className="min-h-[600px] bg-purp" /> */}
-        {/* <LoremIpsum />
-        <LoremIpsum />
-        <LoremIpsum /> */}
       </div>
 
       <script

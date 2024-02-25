@@ -288,8 +288,8 @@ const TechStuff = () => {
               </div>
             </motion.div>
           </motion.div>
-        <h2 className="pb-12 text-4xl lg:text-6xl font-alegreya-bold">..AND MORE!</h2>
-        <div className="flex gap-12 align-middle">
+        <h2 className="py-12 text-4xl lg:text-6xl font-alegreya-bold">..AND MORE!</h2>
+        <div className="flex gap-12 pb-12 align-middle">
           <div className="relative flex">
             <motion.p
               initial={{

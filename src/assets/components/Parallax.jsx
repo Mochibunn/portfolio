@@ -26,9 +26,6 @@ const Parallax = () => {
     ["0%", "300%"]
   );
 
-  // const scaling =
-    // Math.round((window.devicePixelRatio + Number.EPSILON) * 100) / 100;
-
   return (
     <div className="relative">
       <div
@@ -39,7 +36,6 @@ const Parallax = () => {
           id="hello"
           style={{
             y: parallaxTxt,
-            // top: -Math.round(50 * scaling),
           }}
           className={`-top-[250px] 2xl:-top-[50px] text-[15vw] xl:text-[20vw] 2xl:text-[10vw] font-oleo font-bold select-none pointer-events-none text-star relative z-10 bottom-0`}
         >
@@ -60,7 +56,6 @@ const Parallax = () => {
           style={{
             backgroundImage: "url(/bg-front.webp)",
             backgroundPosition: "bottom",
-            // backgroundSize: "150%",
             backgroundRepeat: "no-repeat",
           }}
           />

@@ -56,8 +56,7 @@ const VinylCountdownCard = () => {
           component and put it in the code. NextUI was abolutely the right
           choice for the UI. Most of the front end and some of the back end done
           by me. All of the albums available are from my physical vinyl
-          collection. Feel free to contact me to discuss music! Feel free to
-          contact me to discuss music!
+          collection. Feel free to contact me to discuss music!
         </BubbleText>
         <div className="relative flex justify-start mt-4">
           <div id="stack-gh-vc" className="min-w-5/12">

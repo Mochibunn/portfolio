@@ -49,7 +49,6 @@ const MochiblogCard = () => {
           </div>
         </div>
       </div>
-      {/* Tilt */}
       <div className={tiltClasses}>
         <Tilt
           tiltAngleXInitial={0}

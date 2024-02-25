@@ -1,6 +1,5 @@
 import BubbleText from "./BubbleText";
 import MarqueeComponent from "./MarqueeComponent";
-// import ParallaxText from "./Temp";
 
 const HelloComponent = () => {
   const vertical = "hidden xl:block";
@@ -78,7 +77,6 @@ const HelloComponent = () => {
         </div>
         <div className="absolute inset-0 z-0 top-64 overflow-x-clip">
           <MarqueeComponent />
-          {/* <ParallaxText /> */}
         </div>
       </div>
     </>
