@@ -133,7 +133,7 @@ const VinylCountdownCard = () => {
                 <img
                   src="./vinylC.svg"
                   alt="Vinyl Countdown logo"
-                  className="max-h-[64px] lg:max-h-full md:h-[32px] lg:h-[64px] pointer-events-none"
+                  className="max-h-[64px] lg:max-h-full min-h-[20px] h-[45px] sm:h-[62px] md:h-[32px] lg:h-[64px] pointer-events-none"
                 />
               </a>
             </motion.div>

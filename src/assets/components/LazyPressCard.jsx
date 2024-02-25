@@ -94,7 +94,7 @@ const LazyPressCard = () => {
               <div className="flex flex-col items-start justify-center w-full">
                 <div className="flex items-end w-full h-auto">
                   <LinkStripe
-                    extra="w-fit text-[2.3vw]"
+                    extra="w-fit text-base sm:text-[2.3vw]"
                     lazypress="max-h-[64px] w-full"
                     href="https://foodblog-lazypress.netlify.app/"
                   >
