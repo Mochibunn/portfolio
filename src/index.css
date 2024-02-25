@@ -292,7 +292,7 @@ div.cm-content.cm-lineWrapping {
   background: rgb(24, 26, 27);
   background: linear-gradient(
     180deg,
-    rgba(24, 26, 27, 1) 0%,
+    rgba(24, 26, 27, 1) 1%,
     rgba(0, 0, 0, 0) 40%
   );
 }
@@ -335,10 +335,6 @@ div.cm-content.cm-lineWrapping {
   scale: 2rem;
   opacity: 15%;
   white-space: nowrap;
-}
-.huose {
-  mask-image: -webkit-gradient(linear, left top, 
-    left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
 }
 .marquee {
   gap: var(--gap);

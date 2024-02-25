@@ -55,13 +55,6 @@ const Parallax = () => {
             y: parallaxBg,
           }}
         />
-        <div className="absolute bottom-0 z-30"
-          style={{
-            backgroundImage: "url(/noise-grad.png)",
-            backgroundPosition: "bottom",
-            backgroundRepeat: "repeat-x",
-          }}
-        />
         <div
           className="absolute inset-0 z-20 bg-cover top-4"
           style={{
@@ -73,7 +66,7 @@ const Parallax = () => {
           />
       </div>
       <div
-        className="absolute inset-0 z-30 min-h-[300px] grain"
+        className="absolute inset-0 z-30 min-h-[300px]"
       />
       <div className="absolute inset-0 z-40 min-h-[300px]" id="houseGradient" />
     </div>

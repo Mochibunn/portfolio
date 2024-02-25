@@ -11,7 +11,7 @@ import Footer from "./assets/components/Footer";
 function App() {
   return (
     <>
-      <div className="h-screen huose grain">
+      <div className="h-screen">
         <TopComponent />
       </div>
       <div className="" aria-hidden height="800px" />
