@@ -54,7 +54,7 @@ const BubbleText = ({ children, noLigatures }) => {
   return (
     <h2
       className={
-        "text-2xl sm:text-4xl md:text-xl lg:text-3xl xl:text-xl 2xl:text-2xl font-thin text-left text-indigo-300 hover-text bubble *:leading-relaxed *:pr-[1px]" +
+        "text-2xl sm:text-4xl md:text-xl lg:text-3xl xl:text-xl 2xl:text-2xl font-thin text-left text-indigo-300 hover-text bubble *:leading-relaxed" +
         (noLigatures ? " no-ligatures" : "")
       }
     >
@@ -68,9 +68,12 @@ const Text = ({ children }) => {
     <>
       {children.split("").map((child, idx) => (
         <span
-          style={{ transition: "0.1s font-weight, 0.08s color" }}
+          style={{
+            transition: "0.1s font-weight, 0.08s color"
+            }}
           key={idx}
-        >
+          className={(child == " " ? " after:px-[2px]" : "")}
+          >
           {child}
         </span>
       ))}
